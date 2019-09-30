@@ -1,0 +1,643 @@
+fileFormatVersion: 2
+guid: 3da9af8e319a98146902378d3104864f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3946399241966500336
+    second: Spritesheet_andor_0
+  - first:
+      213: -4585867337424214514
+    second: Spritesheet_andor_1
+  - first:
+      213: -3444498993405137711
+    second: Spritesheet_andor_2
+  - first:
+      213: -3086204344115063487
+    second: Spritesheet_andor_3
+  - first:
+      213: -4619144707250324939
+    second: Spritesheet_andor_4
+  - first:
+      213: 2132649791762512695
+    second: Spritesheet_andor_5
+  - first:
+      213: 8495041810170587582
+    second: Spritesheet_andor_6
+  - first:
+      213: -1032471272923736073
+    second: Spritesheet_andor_7
+  - first:
+      213: -1621431390789485302
+    second: Spritesheet_andor_8
+  - first:
+      213: 7343937037696984426
+    second: Spritesheet_andor_9
+  - first:
+      213: 4395664071095570562
+    second: Spritesheet_andor_10
+  - first:
+      213: 1347434437688006954
+    second: Spritesheet_andor_11
+  - first:
+      213: 2914543969811173031
+    second: Spritesheet_andor_12
+  - first:
+      213: -4048007649606005663
+    second: Spritesheet_andor_13
+  - first:
+      213: 2683805652803566227
+    second: Spritesheet_andor_14
+  - first:
+      213: -740849089039488975
+    second: Spritesheet_andor_15
+  - first:
+      213: -4804053882764759123
+    second: Spritesheet_andor_16
+  - first:
+      213: 5659068348511456471
+    second: Spritesheet_andor_17
+  - first:
+      213: 7082436282951760561
+    second: Spritesheet_andor_18
+  - first:
+      213: 9048519625312247645
+    second: Spritesheet_andor_19
+  - first:
+      213: -4416040246020729464
+    second: Spritesheet_andor_20
+  - first:
+      213: 4270184690726139307
+    second: Spritesheet_andor_21
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Spritesheet_andor_0
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 1438
+        width: 201
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdf3064e953014b49bc595720a6d2603
+      internalID: -3946399241966500336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_andor_1
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 1438
+        width: 210
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 893319a8e240a124a882972724a9b4b6
+      internalID: -4585867337424214514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_andor_2
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 1438
+        width: 217
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c026ab2f1a680848bb9dc60909af56c
+      internalID: -3444498993405137711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_andor_3
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 1438
+        width: 221
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f5c4509a4f4bd647b30ac40997a4799
+      internalID: -3086204344115063487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_andor_4
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 1438
+        width: 217
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c48803b0ea8e68f46a7389c05ffe49fb
+      internalID: -4619144707250324939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_andor_5
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 1082
+        width: 210
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f7fe4b89daf6184ab7ba8ecc1ec8c8e
+      internalID: 2132649791762512695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_andor_6
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 1092
+        width: 188
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1648bddadf81d5744a46ee658cd26a84
+      internalID: 8495041810170587582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_andor_7
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 1092
+        width: 188
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fdf28e6299ecdf4496daa250859590c
+      internalID: -1032471272923736073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_andor_8
+      rect:
+        serializedVersion: 2
+        x: 1241
+        y: 1105
+        width: 200
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2445f6b402265234e9ae970bd24dd899
+      internalID: -1621431390789485302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_andor_9
+      rect:
+        serializedVersion: 2
+        x: 1594
+        y: 1162
+        width: 235
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f43a9b757b3d9b4fa9a3ebb7d6a72b1
+      internalID: 7343937037696984426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_andor_10
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 763
+        width: 251
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb61c8b950df4764da798bf436c6bde5
+      internalID: 4395664071095570562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_andor_11
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 736
+        width: 229
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72d587df0742e3e48b8b2dc8ee69f513
+      internalID: 1347434437688006954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_andor_12
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 730
+        width: 220
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e34a800ceab5e964aa021abdc9b44fc5
+      internalID: 2914543969811173031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_andor_13
+      rect:
+        serializedVersion: 2
+        x: 1193
+        y: 730
+        width: 212
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 104d22109d7fd2f4d871be7a204e602c
+      internalID: -4048007649606005663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_andor_14
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 727
+        width: 230
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0bb346fb73f9d4429bd11316e3e924f
+      internalID: 2683805652803566227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_andor_15
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 371
+        width: 222
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77be313eab7c8fe4990ef5f78de8dbaf
+      internalID: -740849089039488975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_andor_16
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 374
+        width: 231
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04264ba0d359f144fb8d390cdc6a3c0a
+      internalID: -4804053882764759123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_andor_17
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 376
+        width: 220
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38e5725d20219d949aff130c1d50dca6
+      internalID: 5659068348511456471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_andor_18
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 376
+        width: 220
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e53622000c9b765419ffb1922a9364fb
+      internalID: 7082436282951760561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_andor_19
+      rect:
+        serializedVersion: 2
+        x: 1569
+        y: 377
+        width: 228
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7967c878b569d0c4da0ab3c8721cd8c6
+      internalID: 9048519625312247645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_andor_20
+      rect:
+        serializedVersion: 2
+        x: 1691
+        y: 378
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1be58af73d8ef2249a15b8c448fb5b6d
+      internalID: -4416040246020729464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_andor_21
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 20
+        width: 212
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b6a65676f1fd69488990033f17097b9
+      internalID: 4270184690726139307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
