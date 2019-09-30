@@ -120,8 +120,27 @@ public class PlayerLogic : MonoBehaviour
     {
         if (Input.touchCount > 0 || Input.GetButtonDown("Fire1"))
         {
-            GameObject fire_ball_instance = Instantiate(fire_ball, this.transform);
-            fire_ball_instance.GetComponent<Rigidbody2D>().velocity = new Vector2(fire_ball_speed, 0);
+            Vector2 player_pos = Camera.main.WorldToScreenPoint(this.transform.position);
+            Vector2 target = new Vector2();
+            if(Input.touchCount > 0)
+            {
+                target = Input.GetTouch(0).position;
+            }
+            else
+            {
+                target = Input.mousePosition;
+            }
+            if (target.x < player_pos.x)
+            {
+                return;
+            }
+            else
+            {
+                Vector2 direction = target - player_pos;
+                direction = direction.normalized;
+                GameObject fire_ball_instance = Instantiate(fire_ball, this.transform.position, Quaternion.Euler(new Vector3(0, 0, 30)));
+                fire_ball_instance.GetComponent<Rigidbody2D>().velocity = direction * fire_ball_speed; //this.gameObject.GetComponent<Rigidbody2D>().velocity + 
+            }
         }
     }
 }
