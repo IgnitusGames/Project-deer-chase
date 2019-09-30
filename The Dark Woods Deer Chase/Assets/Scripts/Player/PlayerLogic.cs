@@ -8,8 +8,10 @@ using UnityEngine.SceneManagement;
 public class PlayerLogic : MonoBehaviour
 {
     //Variables
+    public GameObject fire_ball;
     public Animator animator;
     public int player_speed = 10;
+    public int fire_ball_speed = 11;
     public int jump_power = 250;
     public int player_max_health;
     public int player_curr_health;
@@ -29,6 +31,7 @@ public class PlayerLogic : MonoBehaviour
     private void Update()
     {
         Movement();
+        Combat();
         if (player_max_health > player_curr_health)
         {
             player_curr_health = player_max_health;
@@ -68,7 +71,7 @@ public class PlayerLogic : MonoBehaviour
             Debug.Log("op platform");
         }
     }
-    void OnCollisionExit2D(Collision2D col)
+    private void OnCollisionExit2D(Collision2D col)
     {
         if (col.gameObject.tag == "movplat")
             this.transform.parent = null;
@@ -112,5 +115,13 @@ public class PlayerLogic : MonoBehaviour
     {
         animator.SetFloat("Speed", Mathf.Abs(player_speed));
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(player_speed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
+    }
+    private void Combat()
+    {
+        if (Input.touchCount > 0 || Input.GetButtonDown("Fire1"))
+        {
+            GameObject fire_ball_instance = Instantiate(fire_ball, this.transform);
+            fire_ball_instance.GetComponent<Rigidbody2D>().velocity = new Vector2(fire_ball_speed, 0);
+        }
     }
 }
