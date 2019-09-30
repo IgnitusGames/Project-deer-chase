@@ -114,7 +114,7 @@ public class PlayerLogic : MonoBehaviour
     }
     private void Movement()
     {
-        animator.SetFloat("Speed", Mathf.Abs(player_speed));
+        //animator.SetFloat("Speed", Mathf.Abs(player_speed));
         //Automatically move the player forwards
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(player_speed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
     }
