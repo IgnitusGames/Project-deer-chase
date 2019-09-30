@@ -8,8 +8,7 @@ using UnityEngine.SceneManagement;
 public class PlayerLogic : MonoBehaviour
 {
     //Variables
-    public GameObject fire_ball;
-    public Animator animator;
+    //public Animator animator;
     public int player_speed = 10;
     public int fire_ball_speed = 11;
     public int jump_power = 250;
@@ -49,11 +48,17 @@ public class PlayerLogic : MonoBehaviour
         //Animations
         if (is_grounded == false)
         {
-            animator.SetBool("is_jumping", true);
+           // animator.SetBool("is_jumping", true);
         }
         if (is_grounded == true)
         {
-            animator.SetBool("is_jumping", false);
+            //animator.SetBool("is_jumping", false);
+        }
+        if (Input.GetButtonDown("Jump"))
+        {
+            Jump();
+            print("jump");
+            // Jump2();
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -113,7 +118,8 @@ public class PlayerLogic : MonoBehaviour
     }
     private void Movement()
     {
-        animator.SetFloat("Speed", Mathf.Abs(player_speed));
+      
+        // animator.SetFloat("Speed", Mathf.Abs(player_speed));
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(player_speed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
     }
     private void Combat()
