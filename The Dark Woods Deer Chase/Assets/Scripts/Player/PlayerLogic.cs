@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,7 +9,8 @@ using UnityEngine.SceneManagement;
 public class PlayerLogic : MonoBehaviour
 {
     //Variables
-    //public Animator animator;
+    public GameObject fire_ball;
+    public Animator animator;
     public int player_speed = 10;
     public int fire_ball_speed = 11;
     public int jump_power = 250;
@@ -48,17 +50,11 @@ public class PlayerLogic : MonoBehaviour
         //Animations
         if (is_grounded == false)
         {
-           // animator.SetBool("is_jumping", true);
+            animator.SetBool("is_jumping", true);
         }
         if (is_grounded == true)
         {
-            //animator.SetBool("is_jumping", false);
-        }
-        if (Input.GetButtonDown("Jump"))
-        {
-            Jump();
-            print("jump");
-            // Jump2();
+            animator.SetBool("is_jumping", false);
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -118,8 +114,7 @@ public class PlayerLogic : MonoBehaviour
     }
     private void Movement()
     {
-      
-        // animator.SetFloat("Speed", Mathf.Abs(player_speed));
+        animator.SetFloat("Speed", Mathf.Abs(player_speed));
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(player_speed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
     }
     private void Combat()
@@ -136,7 +131,7 @@ public class PlayerLogic : MonoBehaviour
             {
                 target = Input.mousePosition;
             }
-            if (target.x < player_pos.x)
+            if (target.x < (player_pos.x) * 2)
             {
                 return;
             }
@@ -144,8 +139,10 @@ public class PlayerLogic : MonoBehaviour
             {
                 Vector2 direction = target - player_pos;
                 direction = direction.normalized;
-                GameObject fire_ball_instance = Instantiate(fire_ball, this.transform.position, Quaternion.Euler(new Vector3(0, 0, 30)));
-                fire_ball_instance.GetComponent<Rigidbody2D>().velocity = direction * fire_ball_speed; //this.gameObject.GetComponent<Rigidbody2D>().velocity + 
+                //Rotation is calculated with the tangent function
+                float rotation = (float)Math.Atan2(target.y - player_pos.y, target.x - player_pos.x) * 100;
+                GameObject fire_ball_instance = Instantiate(fire_ball, this.transform.position, Quaternion.Euler(new Vector3(0, 0, rotation)));
+                fire_ball_instance.GetComponent<Rigidbody2D>().velocity = direction * fire_ball_speed;
             }
         }
     }
