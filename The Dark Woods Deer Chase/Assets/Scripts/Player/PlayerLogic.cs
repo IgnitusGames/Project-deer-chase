@@ -9,6 +9,7 @@ public class PlayerLogic : MonoBehaviour
 {
     //Variables
     //public Animator animator;
+    GameObject fire_ball;
     public int player_speed = 10;
     public int fire_ball_speed = 11;
     public int jump_power = 250;
