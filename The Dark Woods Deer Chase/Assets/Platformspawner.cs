@@ -54,7 +54,7 @@ public class Platformspawner : MonoBehaviour
         //print(SpawnPositionLeft.transform.position);
 
 
-        whatToSpawn = Random.Range(1, 3);
+        whatToSpawn = Random.Range(1, 4);
         Debug.Log(whatToSpawn);
 
         switch(whatToSpawn)
