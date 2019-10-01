@@ -10,7 +10,7 @@ public class PlayerLogic : MonoBehaviour
 {
     //Variables
     public GameObject fire_ball;
-    public Animator animator;
+    //public Animator animator;
     public int player_speed = 10;
     public int fire_ball_speed = 11;
     public int jump_power = 250;
@@ -37,6 +37,8 @@ public class PlayerLogic : MonoBehaviour
         {
             player_curr_health = player_max_health;
         }
+
+      
         //Attacks
         //Death Scenarios
         if (gameObject.transform.position.y < y_death_level)
@@ -47,15 +49,15 @@ public class PlayerLogic : MonoBehaviour
         {
             Die();
         }
-        //Animations
-        if (is_grounded == false)
-        {
-            animator.SetBool("is_jumping", true);
-        }
-        if (is_grounded == true)
-        {
-            animator.SetBool("is_jumping", false);
-        }
+        ////Animations
+        //if (is_grounded == false)
+        //{
+        // //   animator.SetBool("is_jumping", true);
+        //}
+        //if (is_grounded == true)
+        //{
+        // //  animator.SetBool("is_jumping", false);
+        //}
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
