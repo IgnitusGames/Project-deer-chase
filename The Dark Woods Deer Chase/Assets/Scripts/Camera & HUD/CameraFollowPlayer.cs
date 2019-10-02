@@ -6,10 +6,9 @@ public class CameraFollowPlayer : MonoBehaviour
 {
     // Variables
     public GameObject Player;
-    public float x_min;
-    public float x_max;
     public float y_min;
     public float y_max;
+    public float camera_offset;
 
     private Vector3 Offset;
     // Start is called before the first frame update
@@ -20,8 +19,7 @@ public class CameraFollowPlayer : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        float x = Mathf.Clamp(Player.transform.position.x, x_min, x_max);
         float y = Mathf.Clamp(Player.transform.position.y, y_min, y_max);
-        gameObject.transform.position = new Vector3(x, y, gameObject.transform.position.z);
+        gameObject.transform.position = new Vector3(Player.transform.position.x + camera_offset, y, gameObject.transform.position.z);
     }
 }
