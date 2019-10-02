@@ -26,6 +26,7 @@ public class PlayerLogic : MonoBehaviour
     private float original_gravity;
     public int amount_of_jumps = 2;
     public float windspeed = 100;
+    public float slow_speed = 5;
     // Update is called once per frame
     private void Start()
     {
@@ -65,13 +66,14 @@ public class PlayerLogic : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //Resets player jump ability when player has hit the ground
-        if(collision.gameObject.tag == "Ground")
+        if(collision.gameObject.tag == "Ground" && collision.gameObject.tag == "movplat")
         {
             is_grounded = true;
             amount_of_jumps = 2;
         }
         if (collision.gameObject.tag == "movplat")
         {
+            player_speed = 0;
             is_grounded = true;
             this.transform.parent = collision.transform;
             Debug.Log("op platform");
@@ -82,11 +84,12 @@ public class PlayerLogic : MonoBehaviour
         if (col.gameObject.tag == "movplat")
             this.transform.parent = null;
         //Check if player is no longer on the ground
-        if(col.gameObject.tag == "Ground" && amount_of_jumps != 2)
+        if(col.gameObject.tag == "Ground" && amount_of_jumps != 2 && col.gameObject.tag == "movplat")
         {
             print("niet op grond");
             is_grounded = false;
         }
+        player_speed = 15;
     }
     public void Glide()
     {
@@ -130,7 +133,17 @@ public class PlayerLogic : MonoBehaviour
             this.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * windspeed);
             print("Wind");
         }
+        if (collision.gameObject.tag == "Slow")
+        {
+            print("sLOw");
+            player_speed = 5;
+        }
         
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        player_speed = 15;
     }
     private void Combat()
     {

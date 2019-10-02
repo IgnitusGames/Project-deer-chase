@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GateTrigger : MonoBehaviour
+public class PlatformTrigger : MonoBehaviour
 {
-    public GateOpen gate_trigger;
+    public HorizonPlatTrigger plat_trigger;
     private void Awake()
     {
-        gate_trigger = gameObject.GetComponentInParent<GateOpen>();
+        plat_trigger = gameObject.GetComponentInParent<HorizonPlatTrigger>();
     }
     // Start is called before the first frame update
     void Start()
@@ -22,7 +22,7 @@ public class GateTrigger : MonoBehaviour
     {
         if (collision.gameObject.tag == "Attack")
 
-            gate_trigger.Open();
+        plat_trigger.Open();
         Destroy(gameObject);
 
 
