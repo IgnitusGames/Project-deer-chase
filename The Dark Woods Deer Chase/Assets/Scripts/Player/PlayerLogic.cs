@@ -23,11 +23,13 @@ public class PlayerLogic : MonoBehaviour
     public bool gliding = false;
     public float force = 100;
     private Rigidbody2D rb2d;
+    private float original_gravity;
     public int amount_of_jumps = 2;
     // Update is called once per frame
     private void Start()
     {
         rb2d = this.gameObject.GetComponent<Rigidbody2D>();
+        original_gravity = this.GetComponent<Rigidbody2D>().gravityScale;
     }
     private void Update()
     {
@@ -96,7 +98,7 @@ public class PlayerLogic : MonoBehaviour
     public void StopGlide()
     {
         gliding = false;
-        rb2d.gravityScale = 1.0f;
+        rb2d.gravityScale = original_gravity;
     }
     public void Die()
     {
