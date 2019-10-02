@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8119515677734737779}
   - component: {fileID: 8119515677734737778}
+  - component: {fileID: 1505429032848512682}
   m_Layer: 0
   m_Name: VerticalPlatform
-  m_TagString: Untagged
+  m_TagString: movplat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,3 +82,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1505429032848512682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8119515677734737777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ef44e5eaa348444bb15929444775aee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dirX: 0
+  moveSpeed: 3
+  moveRight: 1
+  range: 4

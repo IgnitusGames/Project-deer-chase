@@ -47,14 +47,14 @@ public class Platformspawner : MonoBehaviour
     {
 
         GameObject gold_clone;
-        print("spawn");
+        
         //gold_clone = Instantiate(prefab1,SpawnPositionLeft.transform.position, SpawnPositionLeft.transform.rotation);
         //// gold_clone.GetComponent<Rigidbody2D>().velocity = direction * gold_speed;
         //print(gold_clone.transform.position);
         //print(SpawnPositionLeft.transform.position);
 
 
-        whatToSpawn = Random.Range(1, 4);
+        whatToSpawn = Random.Range(1, 3);
         Debug.Log(whatToSpawn);
 
         switch(whatToSpawn)

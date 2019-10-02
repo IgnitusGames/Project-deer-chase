@@ -1,0 +1,943 @@
+fileFormatVersion: 2
+guid: 85a99267e2f3ba94f8a0de356cad92ac
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8269123339478510265
+    second: Spritesheet_collectables3_0
+  - first:
+      213: 1341333626064553505
+    second: Spritesheet_collectables3_1
+  - first:
+      213: 7923614744190877088
+    second: Spritesheet_collectables3_2
+  - first:
+      213: 4883377473630734140
+    second: Spritesheet_collectables3_3
+  - first:
+      213: 270567495475587264
+    second: Spritesheet_collectables3_4
+  - first:
+      213: -3922719053152072759
+    second: Spritesheet_collectables3_5
+  - first:
+      213: 2075131604921204314
+    second: Spritesheet_collectables3_6
+  - first:
+      213: 5672434258325743990
+    second: Spritesheet_collectables3_7
+  - first:
+      213: -712661561010891121
+    second: Spritesheet_collectables3_8
+  - first:
+      213: 605972225637017939
+    second: Spritesheet_collectables3_9
+  - first:
+      213: 3347087253604685532
+    second: Spritesheet_collectables3_10
+  - first:
+      213: -591182288107299528
+    second: Spritesheet_collectables3_11
+  - first:
+      213: 3832372019148851273
+    second: Spritesheet_collectables3_12
+  - first:
+      213: -6169079415126897978
+    second: Spritesheet_collectables3_13
+  - first:
+      213: -7471061277525941452
+    second: Spritesheet_collectables3_14
+  - first:
+      213: -6251982766934622450
+    second: Spritesheet_collectables3_15
+  - first:
+      213: -5919733601666386289
+    second: Spritesheet_collectables3_16
+  - first:
+      213: 7253163231374918513
+    second: Spritesheet_collectables3_17
+  - first:
+      213: -1945163907836604544
+    second: Spritesheet_collectables3_18
+  - first:
+      213: -7227302782227267304
+    second: Spritesheet_collectables3_19
+  - first:
+      213: -8961903979475744092
+    second: Spritesheet_collectables3_20
+  - first:
+      213: -6528667469339118293
+    second: Spritesheet_collectables3_21
+  - first:
+      213: 8639042150874756819
+    second: Spritesheet_collectables3_22
+  - first:
+      213: -4825772550847325310
+    second: Spritesheet_collectables3_23
+  - first:
+      213: 2023110782142886239
+    second: Spritesheet_collectables3_24
+  - first:
+      213: 916188937609070513
+    second: Spritesheet_collectables3_25
+  - first:
+      213: 3179646886673396586
+    second: Spritesheet_collectables3_26
+  - first:
+      213: -3951250557905193914
+    second: Spritesheet_collectables3_27
+  - first:
+      213: 5580896669302958847
+    second: Spritesheet_collectables3_28
+  - first:
+      213: 18980338017389085
+    second: Spritesheet_collectables3_29
+  - first:
+      213: 79477013309254538
+    second: Spritesheet_collectables3_30
+  - first:
+      213: -6362385467549574011
+    second: Spritesheet_collectables3_31
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Lumin
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Spritesheet_collectables3_0
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 443
+        width: 33
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b60bae963e70b4a4985a89d3c29a58a3
+      internalID: 8269123339478510265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_collectables3_1
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 449
+        width: 33
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 671d4199bf2b33b44b8440ef5dc521fc
+      internalID: 1341333626064553505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_collectables3_2
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 426
+        width: 70
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7b9a070cd5723749850124d5088ff50
+      internalID: 7923614744190877088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_collectables3_3
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 382
+        width: 66
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 152ab549a2b9e354a9faba4de1db5812
+      internalID: 4883377473630734140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_collectables3_4
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 380
+        width: 66
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 095720303f3d1ea409c2e6dcd96d3ca1
+      internalID: 270567495475587264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_collectables3_5
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 411
+        width: 177
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f08ce25a58868b44938d732a7b38f5b
+      internalID: -3922719053152072759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_collectables3_6
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 444
+        width: 134
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a84a0c8c08319d4bb122d2c48aac36d
+      internalID: 2075131604921204314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_collectables3_7
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 327
+        width: 46
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdcdeef168fff4948b7b76b8e6eefac2
+      internalID: 5672434258325743990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_collectables3_8
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 333
+        width: 33
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7e6e7f275de04948a2638b76d7c1c2e
+      internalID: -712661561010891121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_collectables3_9
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 293
+        width: 45
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c86b67b7dd7acc4193a956582335949
+      internalID: 605972225637017939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_collectables3_10
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 385
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d065e83c683a0fd4685bbb8ca8aa8bd4
+      internalID: 3347087253604685532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_collectables3_11
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 378
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bcbe692b5bac444e895216a0d1dee00
+      internalID: -591182288107299528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_collectables3_12
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 366
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a345c5541181e940b363739bbceed70
+      internalID: 3832372019148851273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_collectables3_13
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 374
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a59fd2cb1ab096449688ee67b64ffef
+      internalID: -6169079415126897978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_collectables3_14
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 369
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b57e48df5920b14aa80da6b10999ecb
+      internalID: -7471061277525941452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_collectables3_15
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 252
+        width: 177
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f607b131bab0d0e4ab7d6c9f7daf3e47
+      internalID: -6251982766934622450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_collectables3_16
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 283
+        width: 22
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f8c3654eb7eea246998d3ea75505587
+      internalID: -5919733601666386289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_collectables3_17
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 298
+        width: 132
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbd2886a4aa8de24aabee5a4778971e6
+      internalID: 7253163231374918513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_collectables3_18
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 333
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3b2b265fe7399b42b1c93b28b8091d5
+      internalID: -1945163907836604544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_collectables3_19
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 307
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f97d7e43ff9658440869b3a82f4391b9
+      internalID: -7227302782227267304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_collectables3_20
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 214
+        width: 221
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22b330c32c702c244a694c4d5dff5560
+      internalID: -8961903979475744092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_collectables3_21
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 99
+        width: 56
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a8d00c5f4754eb4c8c715c7c831671a
+      internalID: -6528667469339118293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_collectables3_22
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 94
+        width: 56
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0062a84bbcf3303458d67a669ec33696
+      internalID: 8639042150874756819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_collectables3_23
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 134
+        width: 177
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c81f2f7b27f1fdf4ab9f8c7744b2cdab
+      internalID: -4825772550847325310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_collectables3_24
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 100
+        width: 26
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c6cf941ab3d26342ac804c48a94dcc1
+      internalID: 2023110782142886239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_collectables3_25
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 100
+        width: 26
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc25843d3935d414585964bd8ddc97e1
+      internalID: 916188937609070513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_collectables3_26
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 100
+        width: 26
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd60d2eb1bc0b54438caac8a16d1f334
+      internalID: 3179646886673396586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_collectables3_27
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 65
+        width: 33
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a20b35005143254e9de39b917190746
+      internalID: -3951250557905193914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_collectables3_28
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 71
+        width: 33
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f59bcee1c6af50c4dbe928d14d149aa9
+      internalID: 5580896669302958847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_collectables3_29
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 48
+        width: 70
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae54e7bdc24dd8d4c86e53840d1fe449
+      internalID: 18980338017389085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_collectables3_30
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 80
+        width: 114
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a94a974aaff05c645b184d444c248722
+      internalID: 79477013309254538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_collectables3_31
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 41
+        width: 115
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cbd43cc055a67340824612831d306c6
+      internalID: -6362385467549574011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

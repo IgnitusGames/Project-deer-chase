@@ -25,6 +25,7 @@ public class PlayerLogic : MonoBehaviour
     private Rigidbody2D rb2d;
     private float original_gravity;
     public int amount_of_jumps = 2;
+    public float windspeed = 100;
     // Update is called once per frame
     private void Start()
     {
@@ -121,6 +122,15 @@ public class PlayerLogic : MonoBehaviour
         //animator.SetFloat("Speed", Mathf.Abs(player_speed));
         //Automatically move the player forwards
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(player_speed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "wind")
+        {
+            this.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * windspeed);
+            print("Wind");
+        }
+        
     }
     private void Combat()
     {

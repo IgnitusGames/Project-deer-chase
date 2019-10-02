@@ -3,7 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ground
+  - Attack
+  - wind
+  - enemy
+  - movplat
+  - EnemyCollider
+  - jump_deer
+  - Portal1
+  - Portal2
   layers:
   - Default
   - TransparentFX
