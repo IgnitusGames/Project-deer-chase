@@ -66,10 +66,11 @@ public class PlayerLogic : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //Resets player jump ability when player has hit the ground
-        if(collision.gameObject.tag == "Ground" && collision.gameObject.tag == "movplat")
+        if(collision.gameObject.tag == "Ground" || collision.gameObject.tag == "movplat")
         {
             is_grounded = true;
             amount_of_jumps = 2;
+            print("GROND!!!!");
         }
         if (collision.gameObject.tag == "movplat")
         {
@@ -173,5 +174,28 @@ public class PlayerLogic : MonoBehaviour
                 fire_ball_instance.GetComponent<Rigidbody2D>().velocity = direction * fire_ball_speed;
             }
         }
+    }
+    public IEnumerator KnockBack(float knockDur, float knockBackPwr, Vector3 knockBackDirection)
+    {
+
+        
+
+
+        float timer = 0;
+        float stand_still_dur = 5;
+        while (knockDur > timer)
+        {
+            
+            timer += Time.deltaTime;
+            //<----------------------
+            this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(this.gameObject.GetComponent<Rigidbody2D>().velocity.x, 0);
+            this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector3(-knockBackDirection.x, -knockBackDirection.y + knockBackPwr, transform.position.z));
+            print("yeet");
+
+        }
+
+    
+        yield return 0;
+
     }
 }

@@ -4,19 +4,21 @@ using UnityEngine;
 
 public class Enemy_Deer : MonoBehaviour
 {
-    public bool awake = false;
+   
+
     public float distance;
     public float wakeRange;
     public bool is_grounded = false;
-    public int jump_power = 500;
-    public int jump_power2 = 800;
+    public int jump_power = 200;
+    public int jump_power2 = 500;
+    public int jump_power3 = 800;
     public int EnemySpeed;
     public int XMoveDirection;
     public bool facingRight = false;
     private PlayerLogic player;
     public float wait =5;
-    public Transform target;
-    public int jump_power3 = 200;
+   
+    
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerLogic>();
@@ -25,8 +27,9 @@ public class Enemy_Deer : MonoBehaviour
 
     void Update()
     {
-        RangeCheck();
-      if(is_grounded == true && awake == true)
+
+        //RangeCheck();
+      if(is_grounded == true)
         {
             gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(XMoveDirection, 0) * EnemySpeed;
         }
@@ -139,52 +142,52 @@ public class Enemy_Deer : MonoBehaviour
             transform.localScale = localScale;
         }
     }
-    void RangeCheck()
-    {
-        distance = Vector3.Distance(transform.position, target.transform.position);
+    //void RangeCheck()
+    //{
+    //    distance = Vector3.Distance(transform.position, target.transform.position);
 
-      //  print(distance);
+    //  //print(distance);
+    //    awake = true;
+    //    if (distance < wakeRange)
+    //    {
 
-        if (distance < wakeRange)
-        {
 
-
-            awake = true;
+            
            
-            //lookingRight = true;
+    //        //lookingRight = true;
            
 
 
-            if (target.transform.position.x < transform.position.x)
-            {
-                //animator.SetBool("attackleft", true);
-                //animator.SetBool("attackright", false);
-                //animator.SetBool("idle", false);
+    //        if (target.transform.position.x < transform.position.x)
+    //        {
+    //            //animator.SetBool("attackleft", true);
+    //            //animator.SetBool("attackright", false);
+    //            //animator.SetBool("idle", false);
 
-            }
-            else if (target.transform.position.x > transform.position.x)
-            {
-                //animator.SetBool("attackright", true);
-                //animator.SetBool("attackleft", false);
-                //animator.SetBool("idle", false);
-            }
-
-
-            //Attack(true);
-        }
-        //else animator.SetBool("idle", true);
-        // animator.SetBool("attackleft", false);
-        // animator.SetBool("attackright", false);
+    //        }
+    //        else if (target.transform.position.x > transform.position.x)
+    //        {
+    //            //animator.SetBool("attackright", true);
+    //            //animator.SetBool("attackleft", false);
+    //            //animator.SetBool("idle", false);
+    //        }
 
 
-        if (distance > wakeRange)
-        {
-            awake = false;
-        //   animator.SetBool("idle", true);
-        }
+    //        //Attack(true);
+    //    }
+    //    //else animator.SetBool("idle", true);
+    //    // animator.SetBool("attackleft", false);
+    //    // animator.SetBool("attackright", false);
 
 
-    }
+    //    if (distance > wakeRange)
+    //    {
+    //        awake = false;
+    //    //   animator.SetBool("idle", true);
+    //    }
+
+
+    //}
 
     void Jump()
     {
