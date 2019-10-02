@@ -50,7 +50,9 @@ public class Enemy_Deer : MonoBehaviour
         if (collision.gameObject.tag == "Attack")
         {
 
-            
+            FindObjectOfType<AudioManager>().Play("EnemyShroomDashOnDmg");
+            print("pannenkoekn");
+            gameObject.GetComponent<Animation>().Play("dmgtaken");
         }
      
         if (collision.gameObject.tag == "jump_deer")
