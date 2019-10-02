@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlatformTrigger : MonoBehaviour
+public class HorizontalPlatformTrigger : MonoBehaviour
 {
     public HorizonPlatTrigger plat_trigger;
     private void Awake()
