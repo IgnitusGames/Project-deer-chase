@@ -1,19 +1,31 @@
 fileFormatVersion: 2
-guid: bdbfb2fd7c9eb42eea66cab5e62ed328
+guid: 41e6b158831f0724dab3be9b34ab83df
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7381682393574283185
-    second: Spritesheet_enemies_0
+      213: -7363285837595325371
+    second: Spritesheet_butterfly2_0
   - first:
-      213: 6180791674673007582
-    second: Spritesheet_enemies_1
+      213: 8637965453515451386
+    second: Spritesheet_butterfly2_1
   - first:
-      213: -5510506305257028633
-    second: Spritesheet_enemies_2
+      213: -295459191035210407
+    second: Spritesheet_butterfly2_2
   - first:
-      213: -5750747990425958340
-    second: Spritesheet_enemies_3
+      213: 7548290830432746517
+    second: Spritesheet_butterfly2_3
+  - first:
+      213: 7958621273529347461
+    second: Spritesheet_butterfly2_4
+  - first:
+      213: 824161987883634939
+    second: Spritesheet_butterfly2_5
+  - first:
+      213: 7714444656446200420
+    second: Spritesheet_butterfly2_6
+  - first:
+      213: 4824472377906082637
+    second: Spritesheet_butterfly2_7
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -95,67 +107,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: tvOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Lumin
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -170,85 +122,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Spritesheet_enemies_0
+      name: Spritesheet_butterfly2_0
       rect:
         serializedVersion: 2
-        x: 859
-        y: 99
-        width: 162
-        height: 242
+        x: 76
+        y: 222
+        width: 86
+        height: 100
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6539462a9f19e4e47848019e8b2e9915
-      internalID: 7381682393574283185
+      spriteID: c10367bb364273847b64c640cc1dd9f2
+      internalID: -7363285837595325371
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_enemies_1
+      name: Spritesheet_butterfly2_1
       rect:
         serializedVersion: 2
-        x: 599
-        y: 121
-        width: 166
-        height: 131
+        x: 272
+        y: 222
+        width: 83
+        height: 102
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9f9f1b3b47238b4298d8a196dbadc26
-      internalID: 6180791674673007582
+      spriteID: ba8405191c2f5c34ea70a2d1dec3a7b9
+      internalID: 8637965453515451386
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_enemies_2
+      name: Spritesheet_butterfly2_2
       rect:
         serializedVersion: 2
-        x: 376
-        y: 120
-        width: 142
-        height: 131
+        x: 448
+        y: 211
+        width: 88
+        height: 95
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2180dcb494d9684cb653f00805e6650
-      internalID: -5510506305257028633
+      spriteID: 6f05800896fc4a6459db4344eb787450
+      internalID: -295459191035210407
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_enemies_3
+      name: Spritesheet_butterfly2_3
       rect:
         serializedVersion: 2
-        x: 143
-        y: 186
-        width: 84
-        height: 98
+        x: 664
+        y: 222
+        width: 83
+        height: 102
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ddec1d833b8a8db4e867663e286556d9
-      internalID: -5750747990425958340
+      spriteID: c11fe623ffb7fc141bbe5fe6bf5392ed
+      internalID: 7548290830432746517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_butterfly2_4
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 54
+        width: 83
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e865af451852a845b6c470575c19416
+      internalID: 7958621273529347461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_butterfly2_5
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 43
+        width: 88
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaeb427fa7dba1f49a6c3663f7e723e4
+      internalID: 824161987883634939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_butterfly2_6
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 54
+        width: 83
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 474ceb324241c3d4a9fefacab334ca8b
+      internalID: 7714444656446200420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_butterfly2_7
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 54
+        width: 86
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a44756e655c20fb4088eb3200ff11232
+      internalID: 4824472377906082637
       vertices: []
       indices: 
       edges: []

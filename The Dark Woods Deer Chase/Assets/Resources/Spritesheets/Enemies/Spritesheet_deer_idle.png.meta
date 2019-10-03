@@ -1,19 +1,28 @@
 fileFormatVersion: 2
-guid: bdbfb2fd7c9eb42eea66cab5e62ed328
+guid: 2c31c3ae31c1ea5409e600783eda48cd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7381682393574283185
-    second: Spritesheet_enemies_0
+      213: -7476168167560497022
+    second: Spritesheet_deer_idle_0
   - first:
-      213: 6180791674673007582
-    second: Spritesheet_enemies_1
+      213: -243064906340951461
+    second: Spritesheet_deer_idle_1
   - first:
-      213: -5510506305257028633
-    second: Spritesheet_enemies_2
+      213: -37751939347425762
+    second: Spritesheet_deer_idle_2
   - first:
-      213: -5750747990425958340
-    second: Spritesheet_enemies_3
+      213: -2055867515827093808
+    second: Spritesheet_deer_idle_3
+  - first:
+      213: -3843302933680615048
+    second: Spritesheet_deer_idle_4
+  - first:
+      213: -277622340685755894
+    second: Spritesheet_deer_idle_5
+  - first:
+      213: 5085327236914167511
+    second: Spritesheet_deer_idle_6
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -95,67 +104,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: tvOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Lumin
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -170,85 +119,148 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Spritesheet_enemies_0
+      name: Spritesheet_deer_idle_0
       rect:
         serializedVersion: 2
-        x: 859
-        y: 99
-        width: 162
-        height: 242
+        x: 1120
+        y: 373
+        width: 210
+        height: 243
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6539462a9f19e4e47848019e8b2e9915
-      internalID: 7381682393574283185
+      spriteID: 6b38be303b22e1c4d90c2c126166644c
+      internalID: -7476168167560497022
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_enemies_1
+      name: Spritesheet_deer_idle_1
       rect:
         serializedVersion: 2
-        x: 599
-        y: 121
-        width: 166
-        height: 131
+        x: 1444
+        y: 362
+        width: 239
+        height: 279
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9f9f1b3b47238b4298d8a196dbadc26
-      internalID: 6180791674673007582
+      spriteID: a487aa3ad1505f74f8860a032a0f0e69
+      internalID: -243064906340951461
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_enemies_2
+      name: Spritesheet_deer_idle_2
       rect:
         serializedVersion: 2
-        x: 376
-        y: 120
-        width: 142
-        height: 131
+        x: 52
+        y: 53
+        width: 219
+        height: 237
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2180dcb494d9684cb653f00805e6650
-      internalID: -5510506305257028633
+      spriteID: abed46fe93e23644b860728631fc4826
+      internalID: -37751939347425762
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_enemies_3
+      name: Spritesheet_deer_idle_3
       rect:
         serializedVersion: 2
-        x: 143
-        y: 186
-        width: 84
-        height: 98
+        x: 356
+        y: 48
+        width: 273
+        height: 273
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ddec1d833b8a8db4e867663e286556d9
-      internalID: -5750747990425958340
+      spriteID: 04d6052b54c92544a82d5ccc8fce959f
+      internalID: -2055867515827093808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_deer_idle_4
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 58
+        width: 247
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54d6186eb82117e4ba15912359087d5d
+      internalID: -3843302933680615048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_deer_idle_5
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 55
+        width: 235
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eab1fda06f2b8fc44b6dbbdd7c2cf45a
+      internalID: -277622340685755894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_deer_idle_6
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 33
+        width: 210
+        height: 279
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ea141cf57a942547bb79c0549bcbfcf
+      internalID: 5085327236914167511
       vertices: []
       indices: 
       edges: []

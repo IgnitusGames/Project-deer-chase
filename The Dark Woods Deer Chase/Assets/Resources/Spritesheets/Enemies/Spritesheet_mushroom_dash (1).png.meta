@@ -1,19 +1,31 @@
 fileFormatVersion: 2
-guid: bdbfb2fd7c9eb42eea66cab5e62ed328
+guid: 648dee771f428734b85807ab2f51d206
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7381682393574283185
-    second: Spritesheet_enemies_0
+      213: 2852495586459321460
+    second: Spritesheet_mushroom_dash (1)_0
   - first:
-      213: 6180791674673007582
-    second: Spritesheet_enemies_1
+      213: 2386026125114724091
+    second: Spritesheet_mushroom_dash (1)_1
   - first:
-      213: -5510506305257028633
-    second: Spritesheet_enemies_2
+      213: -8965757027524224381
+    second: Spritesheet_mushroom_dash (1)_2
   - first:
-      213: -5750747990425958340
-    second: Spritesheet_enemies_3
+      213: 397857812309486636
+    second: Spritesheet_mushroom_dash (1)_3
+  - first:
+      213: 708005190795931117
+    second: Spritesheet_mushroom_dash (1)_4
+  - first:
+      213: 4668838916321032472
+    second: Spritesheet_mushroom_dash (1)_5
+  - first:
+      213: 8233303633894623738
+    second: Spritesheet_mushroom_dash (1)_6
+  - first:
+      213: -9203002163575848796
+    second: Spritesheet_mushroom_dash (1)_7
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -95,67 +107,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: tvOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Lumin
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -170,85 +122,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Spritesheet_enemies_0
+      name: Spritesheet_mushroom_dash (1)_0
       rect:
         serializedVersion: 2
-        x: 859
-        y: 99
-        width: 162
-        height: 242
+        x: 60
+        y: 280
+        width: 146
+        height: 134
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6539462a9f19e4e47848019e8b2e9915
-      internalID: 7381682393574283185
+      spriteID: 0ec7587f4f7db934684be4aaa7762b67
+      internalID: 2852495586459321460
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_enemies_1
+      name: Spritesheet_mushroom_dash (1)_1
       rect:
         serializedVersion: 2
-        x: 599
-        y: 121
-        width: 166
-        height: 131
+        x: 296
+        y: 280
+        width: 146
+        height: 134
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9f9f1b3b47238b4298d8a196dbadc26
-      internalID: 6180791674673007582
+      spriteID: 4af70b3c370175049a9e4f06d8c4cfa2
+      internalID: 2386026125114724091
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_enemies_2
+      name: Spritesheet_mushroom_dash (1)_2
       rect:
         serializedVersion: 2
-        x: 376
-        y: 120
-        width: 142
-        height: 131
+        x: 524
+        y: 280
+        width: 165
+        height: 134
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2180dcb494d9684cb653f00805e6650
-      internalID: -5510506305257028633
+      spriteID: 4f5f8616dd5da6e4f85b6e9db6a94ac1
+      internalID: -8965757027524224381
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet_enemies_3
+      name: Spritesheet_mushroom_dash (1)_3
       rect:
         serializedVersion: 2
-        x: 143
-        y: 186
-        width: 84
-        height: 98
+        x: 806
+        y: 280
+        width: 146
+        height: 134
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ddec1d833b8a8db4e867663e286556d9
-      internalID: -5750747990425958340
+      spriteID: 08b66a1b9368ea8419b3525297543631
+      internalID: 397857812309486636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_mushroom_dash (1)_4
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 42
+        width: 146
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17cd2e17d530e1a46868aae9dcded2a0
+      internalID: 708005190795931117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_mushroom_dash (1)_5
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 42
+        width: 165
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9ca1d840660a984bb0305dcfb57ecb6
+      internalID: 4668838916321032472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_mushroom_dash (1)_6
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 42
+        width: 145
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 724d72ab093840d4a98f552c257e4946
+      internalID: 8233303633894623738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_mushroom_dash (1)_7
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 42
+        width: 144
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f22ede3152a74f541ac8544381853c20
+      internalID: -9203002163575848796
       vertices: []
       indices: 
       edges: []
