@@ -23,12 +23,12 @@ public class Platform : MonoBehaviour
 
     void Update()
     {
-        print(start_pos);
+       
         //gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(XMoveDirection, 0) * EnemySpeed;
 
-        if (transform.position.y > (start_pos.y + range))
+        if (transform.position.x > (start_pos.x + range))
             moveRight = false;
-        if (transform.position.y < (start_pos.y - range))
+        if (transform.position.x < (start_pos.x - range))
             moveRight = true;
 
         if (moveRight)

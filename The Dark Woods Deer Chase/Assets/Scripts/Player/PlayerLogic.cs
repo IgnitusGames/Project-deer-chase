@@ -11,7 +11,7 @@ public class PlayerLogic : MonoBehaviour
     //Variables
     public GameObject fire_ball;
     //public Animator animator;
-    public int player_speed = 10;
+    public int player_speed;
     public int fire_ball_speed = 11;
     public int jump_power = 250;
     public int player_max_health;
@@ -24,13 +24,16 @@ public class PlayerLogic : MonoBehaviour
     public float force = 100;
     private Rigidbody2D rb2d;
     private float original_gravity;
+    private int original_player_speed;
     public int amount_of_jumps = 2;
     public float windspeed = 100;
+    public float slow_speed = 5;
     // Update is called once per frame
     private void Start()
     {
         rb2d = this.gameObject.GetComponent<Rigidbody2D>();
         original_gravity = this.GetComponent<Rigidbody2D>().gravityScale;
+        original_player_speed = player_speed;
     }
     private void Update()
     {
@@ -65,13 +68,15 @@ public class PlayerLogic : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //Resets player jump ability when player has hit the ground
-        if(collision.gameObject.tag == "Ground")
+        if(collision.gameObject.tag == "Ground" || collision.gameObject.tag == "movplat")
         {
             is_grounded = true;
             amount_of_jumps = 2;
+            print("GROND!!!!");
         }
         if (collision.gameObject.tag == "movplat")
         {
+            player_speed = 0;
             is_grounded = true;
             this.transform.parent = collision.transform;
             Debug.Log("op platform");
@@ -82,11 +87,12 @@ public class PlayerLogic : MonoBehaviour
         if (col.gameObject.tag == "movplat")
             this.transform.parent = null;
         //Check if player is no longer on the ground
-        if(col.gameObject.tag == "Ground" && amount_of_jumps != 2)
+        if(col.gameObject.tag == "Ground" && amount_of_jumps != 2 && col.gameObject.tag == "movplat")
         {
             print("niet op grond");
             is_grounded = false;
         }
+        player_speed = 15;
     }
     public void Glide()
     {
@@ -130,7 +136,17 @@ public class PlayerLogic : MonoBehaviour
             this.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * windspeed);
             print("Wind");
         }
+        if (collision.gameObject.tag == "Slow")
+        {
+            print("sLOw");
+            player_speed = 5;
+        }
         
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        player_speed = 15;
     }
     private void Combat()
     {
@@ -160,5 +176,28 @@ public class PlayerLogic : MonoBehaviour
                 fire_ball_instance.GetComponent<Rigidbody2D>().velocity = direction * fire_ball_speed;
             }
         }
+    }
+    public IEnumerator KnockBack(float knockDur, float knockBackPwr, Vector3 knockBackDirection)
+    {
+
+        
+
+
+        float timer = 0;
+        float stand_still_dur = 5;
+        while (knockDur > timer)
+        {
+            
+            timer += Time.deltaTime;
+            //<----------------------
+            this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(this.gameObject.GetComponent<Rigidbody2D>().velocity.x, 0);
+            this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector3(-knockBackDirection.x, -knockBackDirection.y + knockBackPwr, transform.position.z));
+            print("yeet");
+
+        }
+
+    
+        yield return 0;
+
     }
 }
