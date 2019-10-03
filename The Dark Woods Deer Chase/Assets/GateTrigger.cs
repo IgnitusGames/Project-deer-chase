@@ -15,13 +15,17 @@ public class GateTrigger : MonoBehaviour
 
     }
 
-    void OnTriggerStay2D(Collider2D trig)
-    {
-        if (trig.gameObject.tag == "Player")
-        {
-            print("trigtrog");
-            gate_trigger.Open();
+    private void OnTriggerEnter2D(Collider2D collision)
 
-        }
+
+
+    {
+        if (collision.gameObject.tag == "Attack")
+
+            gate_trigger.Open();
+        Destroy(gameObject);
+
+
     }
+ 
 }

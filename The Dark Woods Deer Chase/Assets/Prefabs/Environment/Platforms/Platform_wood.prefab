@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2677051815754103783}
   - component: {fileID: 1074610023639225113}
-  - component: {fileID: -2547007970983245795}
+  - component: {fileID: -182533939819804877}
   m_Layer: 0
   m_Name: Platform_wood
   m_TagString: Ground
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &-2547007970983245795
+--- !u!61 &-182533939819804877
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
