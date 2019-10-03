@@ -11,7 +11,7 @@ public class PlayerLogic : MonoBehaviour
     //Variables
     public GameObject fire_ball;
     //public Animator animator;
-    public int player_speed = 10;
+    public int player_speed;
     public int fire_ball_speed = 11;
     public int jump_power = 250;
     public int player_max_health;
@@ -24,6 +24,7 @@ public class PlayerLogic : MonoBehaviour
     public float force = 100;
     private Rigidbody2D rb2d;
     private float original_gravity;
+    private int original_player_speed;
     public int amount_of_jumps = 2;
     public float windspeed = 100;
     public float slow_speed = 5;
@@ -32,6 +33,7 @@ public class PlayerLogic : MonoBehaviour
     {
         rb2d = this.gameObject.GetComponent<Rigidbody2D>();
         original_gravity = this.GetComponent<Rigidbody2D>().gravityScale;
+        original_player_speed = player_speed;
     }
     private void Update()
     {
