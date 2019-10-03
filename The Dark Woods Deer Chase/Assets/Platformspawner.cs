@@ -10,7 +10,7 @@ public class Platformspawner : MonoBehaviour
     [SerializeField]
     private int maximumCount = 5;
     [SerializeField]
-    private GameObject prefab1, prefab2, prefab3;
+    private GameObject prefab1, prefab2, prefab3, prefab4, prefab5;
 
     public float gold_speed = 0;
     // public Transform target;
@@ -19,11 +19,10 @@ public class Platformspawner : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "deer")
         {
-            print("player");
             Spawn();
-
+            
         }
     }
 
@@ -54,7 +53,7 @@ public class Platformspawner : MonoBehaviour
         //print(SpawnPositionLeft.transform.position);
 
 
-        whatToSpawn = Random.Range(1, 3);
+        whatToSpawn = Random.Range(1, 5);
         Debug.Log(whatToSpawn);
 
         switch(whatToSpawn)
@@ -67,6 +66,14 @@ public class Platformspawner : MonoBehaviour
             case 3:
                 gold_clone = Instantiate(prefab3, SpawnPositionLeft.transform.position, SpawnPositionLeft.transform.rotation);
                 break;
+            case 4:
+                gold_clone = Instantiate(prefab4, SpawnPositionLeft.transform.position, SpawnPositionLeft.transform.rotation);
+                break;
+            case 5:
+                gold_clone = Instantiate(prefab5, SpawnPositionLeft.transform.position, SpawnPositionLeft.transform.rotation);
+                break;
+
+
 
         }
 

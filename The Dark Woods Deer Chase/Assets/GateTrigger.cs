@@ -21,7 +21,7 @@ public class GateTrigger : MonoBehaviour
 
     {
         if (collision.gameObject.tag == "Attack")
-
+            print("SESAM OPEN NU");
             gate_trigger.Open();
         Destroy(gameObject);
 
