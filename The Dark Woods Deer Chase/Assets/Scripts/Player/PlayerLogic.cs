@@ -8,10 +8,13 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(BoxCollider2D))]
 public class PlayerLogic : MonoBehaviour
 {
-    //Variables
+    public int gold_score = 0;
+    //VariablesF
     public GameObject fire_ball;
     //public Animator animator;
-    public int player_speed;
+    public float player_speed;
+    public float current_player_speed;
+
     public int fire_ball_speed = 11;
     public int jump_power = 250;
     public int player_max_health;
@@ -24,10 +27,11 @@ public class PlayerLogic : MonoBehaviour
     public float force = 100;
     private Rigidbody2D rb2d;
     private float original_gravity;
-    private int original_player_speed;
+    private float original_player_speed;
     public int amount_of_jumps = 2;
     public float windspeed = 100;
     public float slow_speed = 5;
+    public float gold_speed_mod;
     // Update is called once per frame
     private void Start()
     {
@@ -43,8 +47,8 @@ public class PlayerLogic : MonoBehaviour
         {
             player_curr_health = player_max_health;
         }
+        print("player_speed :" + player_speed);
 
-      
         //Attacks
         //Death Scenarios
         if (gameObject.transform.position.y < y_death_level)
@@ -79,7 +83,12 @@ public class PlayerLogic : MonoBehaviour
             player_speed = 0;
             is_grounded = true;
             this.transform.parent = collision.transform;
-            Debug.Log("op platform");
+
+        }
+        if (collision.gameObject.tag == "deer")
+        {
+            print("rekt");
+
         }
     }
     private void OnCollisionExit2D(Collision2D col)
@@ -92,7 +101,7 @@ public class PlayerLogic : MonoBehaviour
             print("niet op grond");
             is_grounded = false;
         }
-        player_speed = 15;
+        player_speed = original_player_speed + gold_speed_mod;
     }
     public void Glide()
     {
@@ -134,19 +143,26 @@ public class PlayerLogic : MonoBehaviour
         if (collision.gameObject.tag == "wind")
         {
             this.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * windspeed);
-            print("Wind");
+
         }
-        if (collision.gameObject.tag == "Slow")
-        {
-            print("sLOw");
-            player_speed = 5;
-        }
+       
         
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Slow")
+        {
+
+            player_speed = original_player_speed + gold_speed_mod - 10;
+        }
+    }
+
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        player_speed = 15;
+        if(collision.gameObject.tag == "Slow")
+        player_speed = original_player_speed + gold_speed_mod;
+
     }
     private void Combat()
     {
@@ -176,6 +192,20 @@ public class PlayerLogic : MonoBehaviour
                 fire_ball_instance.GetComponent<Rigidbody2D>().velocity = direction * fire_ball_speed;
             }
         }
+    }
+    public void GoldScore(int goldscore)
+    {
+        gold_score += goldscore;
+        gold_speed_mod = gold_score / 100;
+
+        Debug.Log(string.Format("MOD  = {0}", gold_speed_mod));
+        print("gooldld :" + gold_score);
+        //Debug.Log("Gold mod = " + gold_speed_mod.ToString());
+        //
+        player_speed = original_player_speed + gold_speed_mod;
+        print("BLASLDSAKNDAD ASNDKASD SAJB ABS: " + player_speed);
+
+        
     }
     public IEnumerator KnockBack(float knockDur, float knockBackPwr, Vector3 knockBackDirection)
     {

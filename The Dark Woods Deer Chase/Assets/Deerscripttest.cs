@@ -64,18 +64,18 @@ public class Deerscripttest : MonoBehaviour
     {
         if(collision.gameObject.tag == "jump_deer")
         {
-            print("lekkerspringen");
+            
             Jump();
         }
         if (collision.gameObject.tag == "jump_deer2")
         {
-            print("lekkerspringen2");
+        
             Jump2();
 
         }
         if (collision.gameObject.tag == "jump_deer3")
         {
-            print("lekkerspringen3");
+           
             Jump3();
         }
     }
