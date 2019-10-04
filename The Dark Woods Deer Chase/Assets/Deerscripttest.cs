@@ -26,6 +26,7 @@ public class Deerscripttest : MonoBehaviour
     private void Start()
     {
         Flip();
+        StartCoroutine(CheckDistance());
     }
     private void Update()
     {
@@ -148,6 +149,18 @@ public class Deerscripttest : MonoBehaviour
             transform.localScale = localScale;
         }
     }
-
+    //Make the player lose if the distance between player and deer becomes too large
+    private IEnumerator CheckDistance()
+    {
+        for (; ; )
+        {
+            Vector3 player_position = GameObject.FindGameObjectWithTag("Player").transform.position;
+            if (this.transform.position.x - player_position.x > 100)
+            {
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerLogic>().Die();
+            }
+            yield return new WaitForSeconds(2.0f);
+        }
+    }
 
 }

@@ -9,31 +9,23 @@ public class knockbacktest : MonoBehaviour
     void Start()
     {
         player_logic = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerLogic>();
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        //print(player_logic.transform.position);
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            print("cOCOLLISZINZ");
-
-            StartCoroutine(player_logic.KnockBack(0.02f, 350, player_logic.transform.position));
-
-
-        }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            StartCoroutine(player_logic.KnockBack(0.2f, 300, Vector3.up));
-
+            Vector2 contact_point = collision.GetContact(0).normal;
+            player_logic.player_speed = 0;
+            if (contact_point == new Vector2(0.0f, -1.0f))
+            {
+                print("boven");
+                StartCoroutine(player_logic.KnockUp(0.2f, 300, Vector2.up));
+            }
+            else if (contact_point == new Vector2(1.0f, 0.0f))
+            {
+                print("links");
+                StartCoroutine(player_logic.KnockBack(0.2f, 1000, Vector2.left));
+            }
         }
     }
 }
