@@ -154,6 +154,7 @@ public class PlayerLogic : MonoBehaviour
         {
             Vector2 player_pos = Camera.main.WorldToScreenPoint(this.transform.position);
             Vector2 target = new Vector2();
+            
             if(Input.touchCount > 0)
             {
                 target = Input.GetTouch(0).position;
@@ -173,6 +174,7 @@ public class PlayerLogic : MonoBehaviour
                 //Rotation is calculated with the tangent function
                 float rotation = (float)Math.Atan2(target.y - player_pos.y, target.x - player_pos.x) * 100;
                 GameObject fire_ball_instance = Instantiate(fire_ball, this.transform.position, Quaternion.Euler(new Vector3(0, 0, rotation)));
+                print("nhnjnhjnj");
                 fire_ball_instance.GetComponent<Rigidbody2D>().velocity = direction * fire_ball_speed;
             }
         }
