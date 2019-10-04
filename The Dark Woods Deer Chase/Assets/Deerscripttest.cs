@@ -155,7 +155,7 @@ public class Deerscripttest : MonoBehaviour
         for (; ; )
         {
             Vector3 player_position = GameObject.FindGameObjectWithTag("Player").transform.position;
-            if (this.transform.position.x - player_position.x > 100)
+            if (this.transform.position.x - player_position.x > 100 && !GameManager.game_manager.cheat_mode_is_enabled)
             {
                 GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerLogic>().Die();
             }

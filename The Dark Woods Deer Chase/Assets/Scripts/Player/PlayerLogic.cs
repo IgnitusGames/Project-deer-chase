@@ -32,13 +32,13 @@ public class PlayerLogic : MonoBehaviour
     public float windspeed = 100;
     public float slow_speed = 5;
     public float gold_speed_mod;
-    // Update is called once per frame
     private void Start()
     {
         rb2d = this.gameObject.GetComponent<Rigidbody2D>();
         original_gravity = this.GetComponent<Rigidbody2D>().gravityScale;
         original_player_speed = player_speed;
     }
+    // Update is called once per frame
     private void Update()
     {
         Movement();
@@ -124,12 +124,20 @@ public class PlayerLogic : MonoBehaviour
     public void Jump()
     {
         //check if jumping is allowed
-        if(amount_of_jumps > 0)
+        if (!GameManager.game_manager.cheat_mode_is_enabled)
         {
-            amount_of_jumps -= 1;
-            is_grounded = false;
+            if (amount_of_jumps > 0)
+            {
+                amount_of_jumps -= 1;
+                is_grounded = false;
+                this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(this.gameObject.GetComponent<Rigidbody2D>().velocity.x, 0);
+                this.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * jump_power);
+            }
+        }
+        else
+        {
             this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(this.gameObject.GetComponent<Rigidbody2D>().velocity.x, 0);
-            this.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * jump_power);
+            this.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up* jump_power);
         }
     }
     private void Movement()
@@ -137,32 +145,28 @@ public class PlayerLogic : MonoBehaviour
         //animator.SetFloat("Speed", Mathf.Abs(player_speed));
         //Automatically move the player forwards
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(player_speed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
+        print(GetComponent<Rigidbody2D>().velocity);
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "wind")
         {
             this.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * windspeed);
-
         }
-       
-        
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Slow")
+        if (collision.gameObject.tag == "Slow" && !GameManager.game_manager.cheat_mode_is_enabled)
         {
-
             player_speed = original_player_speed + gold_speed_mod - 10;
         }
     }
-
-
     private void OnTriggerExit2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Slow")
-        player_speed = original_player_speed + gold_speed_mod;
-
+        {
+            player_speed = original_player_speed + gold_speed_mod;
+        }
     }
     private void Combat()
     {
@@ -204,30 +208,27 @@ public class PlayerLogic : MonoBehaviour
         //
         player_speed = original_player_speed + gold_speed_mod;
         print("BLASLDSAKNDAD ASNDKASD SAJB ABS: " + player_speed);
-
-        
     }
-    public IEnumerator KnockBack(float knockDur, float knockBackPwr, Vector3 knockBackDirection)
+    public IEnumerator KnockBack(float knockDur, float knockBackPwr, Vector2 knockBackDirection)
     {
-
-        
-
-
         float timer = 0;
-        float stand_still_dur = 5;
         while (knockDur > timer)
         {
-            
             timer += Time.deltaTime;
-            //<----------------------
-            this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(this.gameObject.GetComponent<Rigidbody2D>().velocity.x, 0);
-            this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector3(-knockBackDirection.x, -knockBackDirection.y + knockBackPwr, transform.position.z));
+            this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(knockBackDirection.x * knockBackPwr, knockBackDirection.y));
             print("yeet");
-
         }
-
-    
         yield return 0;
-
+    }
+    public IEnumerator KnockUp(float knockDur, float knockUpPwr, Vector2 knockBackDirection)
+    {
+        float timer = 0;
+        while (knockDur > timer)
+        {
+            timer += Time.deltaTime;
+            this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(knockBackDirection.x, knockBackDirection.y * knockUpPwr));
+            print("yeet");
+        }
+        yield return 0;
     }
 }
