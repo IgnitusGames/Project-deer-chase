@@ -6,7 +6,7 @@ public class Deerscripttest : MonoBehaviour
 {
     //Variables
 
-    //public Animator animator;
+    public Animator animator;
     public int player_speed = 15;
 
     public int jump_power = 250;
@@ -32,6 +32,11 @@ public class Deerscripttest : MonoBehaviour
     {
         Movement();
  
+           if(is_grounded)
+        {
+            animator.SetBool("is_walking", true);
+            animator.SetBool("is_jumping", false);
+        }
      
 
         //Attacks
@@ -52,9 +57,10 @@ public class Deerscripttest : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //Resets player jump ability when player has hit the ground
-        if (collision.gameObject.tag == "Ground" && collision.gameObject.tag == "movplat")
+        if (collision.gameObject.tag == "Ground")
         {
             is_grounded = true;
+         
             
         }
       
@@ -103,8 +109,12 @@ public class Deerscripttest : MonoBehaviour
           is_grounded = false;
           this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(this.gameObject.GetComponent<Rigidbody2D>().velocity.x, 0);
           this.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * jump_power);
-      
-      
+
+        animator.SetBool("is_jumping", true);
+        animator.SetBool("is_walking", false);
+
+
+
     }
     public void Jump2()
     {
@@ -113,6 +123,8 @@ public class Deerscripttest : MonoBehaviour
         is_grounded = false;
         this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(this.gameObject.GetComponent<Rigidbody2D>().velocity.x, 0);
         this.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * jump_power2);
+        animator.SetBool("is_jumping", true);
+        animator.SetBool("is_walking", false);
 
     }
     public void Jump3()
@@ -122,10 +134,15 @@ public class Deerscripttest : MonoBehaviour
         is_grounded = false;
         this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(this.gameObject.GetComponent<Rigidbody2D>().velocity.x, 0);
         this.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * jump_power3);
+        animator.SetBool("is_jumping", true);
+        animator.SetBool("is_walking", false);
 
     }
     private void Movement()
     {
+
+       
+       
         //animator.SetFloat("Speed", Mathf.Abs(player_speed));
         //Automatically move the player forwards
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(player_speed, gameObject.GetComponent<Rigidbody2D>().velocity.y);

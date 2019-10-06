@@ -8,10 +8,14 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(BoxCollider2D))]
 public class PlayerLogic : MonoBehaviour
 {
-    public int gold_score = 0;
+
+
+    public float doublejumptimer;
+
+public int gold_score = 0;
     //VariablesF
     public GameObject fire_ball;
-    //public Animator animator;
+    public Animator animator;
     public float player_speed;
     public float current_player_speed;
 
@@ -49,6 +53,11 @@ public class PlayerLogic : MonoBehaviour
         }
         print("player_speed :" + player_speed);
 
+        if(is_grounded)
+        {
+            animator.SetBool("is_jumping", false);
+        }
+
         //Attacks
         //Death Scenarios
         if (gameObject.transform.position.y < y_death_level)
@@ -76,7 +85,13 @@ public class PlayerLogic : MonoBehaviour
         {
             is_grounded = true;
             amount_of_jumps = 2;
-            print("GROND!!!!");
+            
+
+            animator.SetBool("is_gliding", false);
+            animator.SetBool("is_jumping", false);
+            animator.SetBool("is_double_jumping", false);
+
+
         }
         if (collision.gameObject.tag == "movplat")
         {
@@ -96,9 +111,10 @@ public class PlayerLogic : MonoBehaviour
         if (col.gameObject.tag == "movplat")
             this.transform.parent = null;
         //Check if player is no longer on the ground
-        if(col.gameObject.tag == "Ground" && amount_of_jumps != 2 && col.gameObject.tag == "movplat")
+        if(col.gameObject.tag == "Ground" || col.gameObject.tag == "movplat")
         {
             print("niet op grond");
+            animator.SetBool("is_jumping", true);
             is_grounded = false;
         }
         player_speed = original_player_speed + gold_speed_mod;
@@ -109,12 +125,14 @@ public class PlayerLogic : MonoBehaviour
         {
             gliding = true;
             rb2d.gravityScale = 0.1f;
+            animator.SetBool("is_gliding", true);
         }
     }
     public void StopGlide()
     {
         gliding = false;
         rb2d.gravityScale = original_gravity;
+        animator.SetBool("is_gliding", false);
     }
     public void Die()
     {
@@ -123,6 +141,32 @@ public class PlayerLogic : MonoBehaviour
     }
     public void Jump()
     {
+        if(amount_of_jumps > 1)
+        {
+            animator.SetBool("is_gliding", false);
+            animator.SetBool("is_jumping", true);
+            animator.SetBool("is_double_jumping", false);
+        }
+        if (amount_of_jumps == 1)
+        {
+            animator.SetBool("is_gliding", false);
+            animator.SetBool("is_jumping", false);
+            animator.SetBool("is_double_jumping", true);
+            doublejumptimer += Time.deltaTime;
+
+           if(doublejumptimer >= 0.5f)
+            {
+                animator.SetBool("is_double_jumping", true);
+            }
+
+        }
+        if (amount_of_jumps < 1)
+        {
+          
+            animator.SetBool("is_jumping", true);
+            animator.SetBool("is_double_jumping", false);
+        }
+
         //check if jumping is allowed
         if (!GameManager.game_manager.cheat_mode_is_enabled)
         {
@@ -142,10 +186,12 @@ public class PlayerLogic : MonoBehaviour
     }
     private void Movement()
     {
+       
         //animator.SetFloat("Speed", Mathf.Abs(player_speed));
         //Automatically move the player forwards
+        animator.SetFloat("Speed", Mathf.Abs(player_speed));
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(player_speed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
-        print(GetComponent<Rigidbody2D>().velocity);
+      //  print(GetComponent<Rigidbody2D>().velocity);
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
