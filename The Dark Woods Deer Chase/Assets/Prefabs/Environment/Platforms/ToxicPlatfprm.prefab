@@ -143,6 +143,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2553161058978964519}
   - component: {fileID: 787634575085648885}
+  - component: {fileID: -8112665623444545949}
   m_Layer: 0
   m_Name: ToxicPlatfprm
   m_TagString: Slow
@@ -191,6 +192,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.129959, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-8112665623444545949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5628923286535697871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22be239cbc038c448baeb05a187a779b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4939485382762336759
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -198,11 +211,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2553161058978964519}
     m_Modifications:
-    - target: {fileID: 6560110821491043983, guid: 9b6f95fd5a2bca64194fded5bb700156,
-        type: 3}
-      propertyPath: m_Name
-      value: Platform_mid (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 8945578790235189644, guid: 9b6f95fd5a2bca64194fded5bb700156,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -257,6 +265,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6560110821491043983, guid: 9b6f95fd5a2bca64194fded5bb700156,
+        type: 3}
+      propertyPath: m_Name
+      value: Platform_mid (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b6f95fd5a2bca64194fded5bb700156, type: 3}

@@ -22,7 +22,6 @@ public class Platformspawner : MonoBehaviour
         if (collision.gameObject.tag == "deer")
         {
             Spawn();
-            
         }
     }
 

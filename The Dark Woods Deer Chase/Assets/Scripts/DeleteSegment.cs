@@ -9,10 +9,6 @@ public class DeleteSegment : MonoBehaviour
     {
         StartCoroutine(DeleteDelay());
     }
-    // Update is called once per frame
-    void Update()
-    {
-    }
     private IEnumerator DeleteDelay()
     {
         for(; ; )

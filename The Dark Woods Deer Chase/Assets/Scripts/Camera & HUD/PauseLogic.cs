@@ -5,40 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class PauseLogic : MonoBehaviour
 {
-    public static bool is_paused = false;
     public GameObject PauseMenuUI;
-    // Update is called once per frame
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
-            if(is_paused)
-            {
-                Resume();
-            }
-            else
-            {
-                Pause();
-            }
-        }
-    }
     public void Resume()
     {
         PauseMenuUI.SetActive(false);
         Time.timeScale = 1;
-        is_paused = false;
     }
     public void Pause()
     {
         PauseMenuUI.SetActive(true);
         Time.timeScale = 0;
-        is_paused = true;
     }
     public void GoToMainMenu()
     {
         Time.timeScale = 1;
         SceneManager.LoadScene("Menu");
-        is_paused = false;
     }
     public void ToggleCheatMode()
     {

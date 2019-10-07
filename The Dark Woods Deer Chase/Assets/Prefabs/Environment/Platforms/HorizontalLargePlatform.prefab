@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4452750971351720801}
   - component: {fileID: 6233811519496040124}
   - component: {fileID: 8214350886323782404}
+  - component: {fileID: -2539213345909335178}
   m_Layer: 10
   m_Name: HorizontalLargePlatform
   m_TagString: movplat
@@ -168,3 +169,15 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
+--- !u!114 &-2539213345909335178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6976532420998952521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22be239cbc038c448baeb05a187a779b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

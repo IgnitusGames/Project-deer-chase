@@ -22,51 +22,29 @@ public class Deerscripttest : MonoBehaviour
 
     public float windspeed = 100;
     public float slow_speed = 5;
+
+    private GameObject win_lose_canvas;
     // Update is called once per frame
     private void Start()
     {
         Flip();
         StartCoroutine(CheckDistance());
+        win_lose_canvas = GameObject.FindGameObjectWithTag("WinLose");
     }
     private void Update()
     {
         Movement();
- 
-           if(is_grounded)
-        {
-            animator.SetBool("is_walking", true);
-            animator.SetBool("is_jumping", false);
-        }
-     
-
-        //Attacks
-        //Death Scenarios
-   
-        ////Animations
-        //if (is_grounded == false)
-        //{
-        // //   animator.SetBool("is_jumping", true);
-        //}
-        //if (is_grounded == true)
-        //{
-        // //  animator.SetBool("is_jumping", false);
-        //}
     }
-
-   
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //Resets player jump ability when player has hit the ground
         if (collision.gameObject.tag == "Ground")
         {
             is_grounded = true;
-         
-            
+            animator.SetBool("is_walking", true);
+            animator.SetBool("is_jumping", false);
         }
-      
-      
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "jump_deer")
@@ -86,7 +64,6 @@ public class Deerscripttest : MonoBehaviour
             Jump3();
         }
     }
-
     private void OnCollisionExit2D(Collision2D col)
     {
         if (col.gameObject.tag == "movplat")
@@ -99,9 +76,6 @@ public class Deerscripttest : MonoBehaviour
         }
         player_speed = 15;
     }
-
-
-   
     public void Jump()
     {
         //check if jumping is allowed
@@ -112,9 +86,6 @@ public class Deerscripttest : MonoBehaviour
 
         animator.SetBool("is_jumping", true);
         animator.SetBool("is_walking", false);
-
-
-
     }
     public void Jump2()
     {
@@ -140,9 +111,6 @@ public class Deerscripttest : MonoBehaviour
     }
     private void Movement()
     {
-
-       
-       
         //animator.SetFloat("Speed", Mathf.Abs(player_speed));
         //Automatically move the player forwards
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(player_speed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
@@ -174,10 +142,10 @@ public class Deerscripttest : MonoBehaviour
             Vector3 player_position = GameObject.FindGameObjectWithTag("Player").transform.position;
             if (this.transform.position.x - player_position.x > 100 && !GameManager.game_manager.cheat_mode_is_enabled)
             {
-                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerLogic>().Die();
+                //GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerLogic>().Die();
+                win_lose_canvas.GetComponent<WinLoseScreen>().ActivateDefeatScreen();
             }
             yield return new WaitForSeconds(2.0f);
         }
     }
-
 }

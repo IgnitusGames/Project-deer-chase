@@ -32,9 +32,6 @@ public class GateOpen : MonoBehaviour
         }
         if (transform.position.y > (start_pos.y + range))
             open = false;
-
-
-
     }
 
     public void Open()

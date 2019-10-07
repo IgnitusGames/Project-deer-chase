@@ -8,11 +8,9 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(BoxCollider2D))]
 public class PlayerLogic : MonoBehaviour
 {
-
-
     public float doublejumptimer;
 
-public int gold_score = 0;
+    public int gold_score = 0;
     //VariablesF
     public GameObject fire_ball;
     public Animator animator;
@@ -21,8 +19,6 @@ public int gold_score = 0;
 
     public int fire_ball_speed = 11;
     public int jump_power = 250;
-    public int player_max_health;
-    public int player_curr_health;
     public int player_mana;
     public int y_death_level;
     public bool is_grounded = true;
@@ -36,47 +32,22 @@ public int gold_score = 0;
     public float windspeed = 100;
     public float slow_speed = 5;
     public float gold_speed_mod;
+
+    private GameObject win_lose_canvas;
     private void Start()
     {
+        StartCoroutine(DeathCheck());
+        Time.timeScale = 1;
         rb2d = this.gameObject.GetComponent<Rigidbody2D>();
         original_gravity = this.GetComponent<Rigidbody2D>().gravityScale;
         original_player_speed = player_speed;
+        win_lose_canvas = GameObject.FindGameObjectWithTag("WinLose");
     }
     // Update is called once per frame
     private void Update()
     {
         Movement();
         Combat();
-        if (player_max_health > player_curr_health)
-        {
-            player_curr_health = player_max_health;
-        }
-        print("player_speed :" + player_speed);
-
-        if(is_grounded)
-        {
-            animator.SetBool("is_jumping", false);
-        }
-
-        //Attacks
-        //Death Scenarios
-        if (gameObject.transform.position.y < y_death_level)
-        {
-            Die();
-        }
-        if (player_curr_health <= 0)
-        {
-            Die();
-        }
-        ////Animations
-        //if (is_grounded == false)
-        //{
-        // //   animator.SetBool("is_jumping", true);
-        //}
-        //if (is_grounded == true)
-        //{
-        // //  animator.SetBool("is_jumping", false);
-        //}
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -85,13 +56,9 @@ public int gold_score = 0;
         {
             is_grounded = true;
             amount_of_jumps = 2;
-            
-
             animator.SetBool("is_gliding", false);
             animator.SetBool("is_jumping", false);
             animator.SetBool("is_double_jumping", false);
-
-
         }
         if (collision.gameObject.tag == "movplat")
         {
@@ -102,8 +69,7 @@ public int gold_score = 0;
         }
         if (collision.gameObject.tag == "deer")
         {
-            print("rekt");
-
+            win_lose_canvas.GetComponent<WinLoseScreen>().ActivateVictoryScreen();
         }
     }
     private void OnCollisionExit2D(Collision2D col)
@@ -136,8 +102,7 @@ public int gold_score = 0;
     }
     public void Die()
     {
-        //Kill the player (technically reloading the level)
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        win_lose_canvas.GetComponent<WinLoseScreen>().ActivateDefeatScreen();
     }
     public void Jump()
     {
@@ -185,8 +150,7 @@ public int gold_score = 0;
         }
     }
     private void Movement()
-    {
-       
+    {    
         //animator.SetFloat("Speed", Mathf.Abs(player_speed));
         //Automatically move the player forwards
         animator.SetFloat("Speed", Mathf.Abs(player_speed));
@@ -249,11 +213,8 @@ public int gold_score = 0;
     {
         gold_score += goldscore;
         gold_speed_mod = gold_score / 100;
-
         Debug.Log(string.Format("MOD  = {0}", gold_speed_mod));
         print("gooldld :" + gold_score);
-        //Debug.Log("Gold mod = " + gold_speed_mod.ToString());
-        //
         player_speed = original_player_speed + gold_speed_mod;
         print("BLASLDSAKNDAD ASNDKASD SAJB ABS: " + player_speed);
     }
@@ -278,5 +239,17 @@ public int gold_score = 0;
             print("yeet");
         }
         yield return 0;
+    }
+    public IEnumerator DeathCheck()
+    {
+        for(; ; )
+        {
+            if(this.transform.position.y < y_death_level)
+            {
+                win_lose_canvas.GetComponent<WinLoseScreen>().ActivateDeathScreen();
+                break;
+            }
+            yield return new WaitForSeconds(1.0f);
+        }
     }
 }
