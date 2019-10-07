@@ -5,7 +5,8 @@ using UnityEngine;
 public class GateTrigger : MonoBehaviour
 {
     public GateOpen gate_trigger;
-    
+    public Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,7 @@ public class GateTrigger : MonoBehaviour
         {
             print("SESAM OPEN NU");
             gate_trigger.Open();
+            animator.SetBool("is_open", true);
         }
 
     }

@@ -17,69 +17,6 @@ TextureImporter:
   - first:
       213: 2217347097081550973
     second: Spritesheet_portal_wind_gate_4
-  - first:
-      213: -4803366173841643916
-    second: Spritesheet_portal_wind_gate_5
-  - first:
-      213: -2080681804479918085
-    second: Spritesheet_portal_wind_gate_6
-  - first:
-      213: 9009317202377833909
-    second: Spritesheet_portal_wind_gate_7
-  - first:
-      213: -720853966632235195
-    second: Spritesheet_portal_wind_gate_8
-  - first:
-      213: -7611989252085486902
-    second: Spritesheet_portal_wind_gate_9
-  - first:
-      213: -3290589055784870198
-    second: Spritesheet_portal_wind_gate_10
-  - first:
-      213: -8444087964334679082
-    second: Spritesheet_portal_wind_gate_11
-  - first:
-      213: -6105145761730233884
-    second: Spritesheet_portal_wind_gate_12
-  - first:
-      213: -7653071025134833013
-    second: Spritesheet_portal_wind_gate_13
-  - first:
-      213: -4334147575191746704
-    second: Spritesheet_portal_wind_gate_14
-  - first:
-      213: 445327761324983633
-    second: Spritesheet_portal_wind_gate_15
-  - first:
-      213: 2959442836836745252
-    second: Spritesheet_portal_wind_gate_16
-  - first:
-      213: -5765718511960663965
-    second: Spritesheet_portal_wind_gate_17
-  - first:
-      213: 493731473883338775
-    second: Spritesheet_portal_wind_gate_18
-  - first:
-      213: 1426753726402579302
-    second: Spritesheet_portal_wind_gate_19
-  - first:
-      213: 3169176273598088654
-    second: Spritesheet_portal_wind_gate_20
-  - first:
-      213: -9199938740168739341
-    second: Spritesheet_portal_wind_gate_21
-  - first:
-      213: 681169083485386534
-    second: Spritesheet_portal_wind_gate_22
-  - first:
-      213: 6507902285566182372
-    second: Spritesheet_portal_wind_gate_23
-  - first:
-      213: -4190082367853154351
-    second: Spritesheet_portal_wind_gate_24
-  - first:
-      213: -2534269004372355016
-    second: Spritesheet_portal_wind_gate_25
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -179,10 +116,10 @@ TextureImporter:
       name: Spritesheet_portal_wind_gate_0
       rect:
         serializedVersion: 2
-        x: 62
-        y: 346
-        width: 253
-        height: 359
+        x: 79
+        y: 362
+        width: 247
+        height: 301
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,7 +127,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0ea9aa69bc74914c86eebd348bb6d70
+      spriteID: 6d186a8ec9825ae448f41b80165e8076
       internalID: 5638944109062771805
       vertices: []
       indices: 
@@ -200,10 +137,10 @@ TextureImporter:
       name: Spritesheet_portal_wind_gate_1
       rect:
         serializedVersion: 2
-        x: 168
-        y: 675
-        width: 5
-        height: 4
+        x: 550
+        y: 332
+        width: 365
+        height: 353
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -211,7 +148,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6dd1d0838852b7e43a0bb8b18f032624
+      spriteID: 989480aa978473c4a8c78807cd496efb
       internalID: -7648449930907358811
       vertices: []
       indices: 
@@ -221,10 +158,10 @@ TextureImporter:
       name: Spritesheet_portal_wind_gate_2
       rect:
         serializedVersion: 2
-        x: 581
-        y: 357
-        width: 317
-        height: 326
+        x: 561
+        y: 195
+        width: 143
+        height: 107
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -232,7 +169,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8d3731d9a59567419ae013b6d9e116b
+      spriteID: 34939e464b2950240820de7e07e3a56a
       internalID: -5081326415352535596
       vertices: []
       indices: 
@@ -242,10 +179,10 @@ TextureImporter:
       name: Spritesheet_portal_wind_gate_3
       rect:
         serializedVersion: 2
-        x: 529
-        y: 543
-        width: 12
-        height: 26
+        x: 641
+        y: 45
+        width: 297
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -253,7 +190,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e8ef8fe743c89442a992bc3f006ab70
+      spriteID: 126509ae788cc924984084c1653324db
       internalID: 7295293451795668884
       vertices: []
       indices: 
@@ -263,10 +200,10 @@ TextureImporter:
       name: Spritesheet_portal_wind_gate_4
       rect:
         serializedVersion: 2
-        x: 902
-        y: 477
-        width: 11
-        height: 11
+        x: 741
+        y: 124
+        width: 191
+        height: 101
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -274,449 +211,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a5abcb9eb577534986599ea03b00788
+      spriteID: a8dfa32cf9c7d8b4ca08cacfad0dc2ce
       internalID: 2217347097081550973
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_portal_wind_gate_5
-      rect:
-        serializedVersion: 2
-        x: 894
-        y: 453
-        width: 13
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d65c19285f42834c913ea41a3199d96
-      internalID: -4803366173841643916
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_portal_wind_gate_6
-      rect:
-        serializedVersion: 2
-        x: 885
-        y: 425
-        width: 15
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4013ca46a02ea524bb182ac75a09853d
-      internalID: -2080681804479918085
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_portal_wind_gate_7
-      rect:
-        serializedVersion: 2
-        x: 889
-        y: 400
-        width: 11
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 31d1c537a57c6fd459060f999572f890
-      internalID: 9009317202377833909
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_portal_wind_gate_8
-      rect:
-        serializedVersion: 2
-        x: 114
-        y: 352
-        width: 5
-        height: 4
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c6d7e0575a6525948a3f9073748ae563
-      internalID: -720853966632235195
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_portal_wind_gate_9
-      rect:
-        serializedVersion: 2
-        x: 776
-        y: 338
-        width: 14
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bae5490583c7a4445b1fc1639ef2e5cf
-      internalID: -7611989252085486902
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_portal_wind_gate_10
-      rect:
-        serializedVersion: 2
-        x: 838
-        y: 335
-        width: 8
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 783c4d7e328393a429a74c84333f005f
-      internalID: -3290589055784870198
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_portal_wind_gate_11
-      rect:
-        serializedVersion: 2
-        x: 856
-        y: 335
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 78f247008ad04144cb3efed26881b0d3
-      internalID: -8444087964334679082
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_portal_wind_gate_12
-      rect:
-        serializedVersion: 2
-        x: 44
-        y: 47
-        width: 216
-        height: 285
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8e45b3e84bde5f54683ceddb4c4d0896
-      internalID: -6105145761730233884
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_portal_wind_gate_13
-      rect:
-        serializedVersion: 2
-        x: 295
-        y: 39
-        width: 238
-        height: 292
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d5fbfc735d6ad51488fe0e4626d4968d
-      internalID: -7653071025134833013
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_portal_wind_gate_14
-      rect:
-        serializedVersion: 2
-        x: 571
-        y: 276
-        width: 31
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 52e497ec48d838f40b94d7af047067e8
-      internalID: -4334147575191746704
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_portal_wind_gate_15
-      rect:
-        serializedVersion: 2
-        x: 638
-        y: 255
-        width: 69
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 55fa9eb0333fd0b45850a4ebc6811418
-      internalID: 445327761324983633
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_portal_wind_gate_16
-      rect:
-        serializedVersion: 2
-        x: 574
-        y: 224
-        width: 102
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8ad455284fbbae245a3c86692deac460
-      internalID: 2959442836836745252
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_portal_wind_gate_17
-      rect:
-        serializedVersion: 2
-        x: 688
-        y: 241
-        width: 4
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ae98cfbe3ec4b044f823a808e59a5f9e
-      internalID: -5765718511960663965
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_portal_wind_gate_18
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 217
-        width: 5
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 34d44f03f7020fb49b6f6a9ed4ecd3e2
-      internalID: 493731473883338775
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_portal_wind_gate_19
-      rect:
-        serializedVersion: 2
-        x: 610
-        y: 196
-        width: 92
-        height: 26
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a78c979036a55424b9147c9b4c3c8aaa
-      internalID: 1426753726402579302
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_portal_wind_gate_20
-      rect:
-        serializedVersion: 2
-        x: 672
-        y: 216
-        width: 60
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4de43101afcf65d4481be500be5ff50f
-      internalID: 3169176273598088654
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_portal_wind_gate_21
-      rect:
-        serializedVersion: 2
-        x: 810
-        y: 171
-        width: 70
-        height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 33aebcfd5b7d6514893c24ae40ee1ac1
-      internalID: -9199938740168739341
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_portal_wind_gate_22
-      rect:
-        serializedVersion: 2
-        x: 746
-        y: 132
-        width: 28
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a3073bb5adb10a248be6d168dc23363b
-      internalID: 681169083485386534
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_portal_wind_gate_23
-      rect:
-        serializedVersion: 2
-        x: 898
-        y: 134
-        width: 29
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c4b7d001a0208e3418bff4c242e7e865
-      internalID: 6507902285566182372
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_portal_wind_gate_24
-      rect:
-        serializedVersion: 2
-        x: 652
-        y: 45
-        width: 116
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d3536628f86c0a47a4646a110cf6978
-      internalID: -4190082367853154351
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet_portal_wind_gate_25
-      rect:
-        serializedVersion: 2
-        x: 826
-        y: 43
-        width: 86
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d2a7a4876a6cb0a4ca464702a4429e5f
-      internalID: -2534269004372355016
       vertices: []
       indices: 
       edges: []
