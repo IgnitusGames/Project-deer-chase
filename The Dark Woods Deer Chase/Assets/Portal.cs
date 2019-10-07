@@ -21,7 +21,7 @@ public class Portal : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.Rotate(Vector3.forward * -3);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
