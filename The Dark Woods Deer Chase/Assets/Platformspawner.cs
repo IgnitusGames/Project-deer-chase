@@ -10,18 +10,22 @@ public class Platformspawner : MonoBehaviour
     [SerializeField]
     private int maximumCount = 5;
     [SerializeField]
-    private GameObject prefab1, prefab2, prefab3, prefab4, prefab5;
+    private GameObject prefab1, prefab2, prefab3, prefab4, prefab5, prefab6, prefab7, prefab8, prefab9, prefab10;
 
     public float gold_speed = 0;
     // public Transform target;
     public Transform  SpawnPositionLeft;
     int whatToSpawn;
 
+    
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "deer")
         {
             Spawn();
+   
             
         }
     }
@@ -42,17 +46,12 @@ public class Platformspawner : MonoBehaviour
     //    set { this.prefab = value; }
     //}
 
-    public void Spawn()
+
+        public void Spawn()
     {
 
         GameObject gold_clone;
         
-        //gold_clone = Instantiate(prefab1,SpawnPositionLeft.transform.position, SpawnPositionLeft.transform.rotation);
-        //// gold_clone.GetComponent<Rigidbody2D>().velocity = direction * gold_speed;
-        //print(gold_clone.transform.position);
-        //print(SpawnPositionLeft.transform.position);
-
-
         whatToSpawn = Random.Range(1, 5);
         Debug.Log(whatToSpawn);
 
@@ -71,6 +70,21 @@ public class Platformspawner : MonoBehaviour
                 break;
             case 5:
                 gold_clone = Instantiate(prefab5, SpawnPositionLeft.transform.position, SpawnPositionLeft.transform.rotation);
+                break;
+            case 6:
+                gold_clone = Instantiate(prefab6, SpawnPositionLeft.transform.position, SpawnPositionLeft.transform.rotation);
+                break;
+            case 7:
+                gold_clone = Instantiate(prefab7, SpawnPositionLeft.transform.position, SpawnPositionLeft.transform.rotation);
+                break;
+            case 8:
+                gold_clone = Instantiate(prefab8, SpawnPositionLeft.transform.position, SpawnPositionLeft.transform.rotation);
+                break;
+            case 9:
+                gold_clone = Instantiate(prefab9, SpawnPositionLeft.transform.position, SpawnPositionLeft.transform.rotation);
+                break;
+            case 10:
+                gold_clone = Instantiate(prefab10, SpawnPositionLeft.transform.position, SpawnPositionLeft.transform.rotation);
                 break;
 
 

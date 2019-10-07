@@ -26,6 +26,9 @@ public class Deerscripttest : MonoBehaviour
     private void Start()
     {
         Flip();
+
+       // StartCoroutine(CheckDistance());
+
     }
     private void Update()
     {
