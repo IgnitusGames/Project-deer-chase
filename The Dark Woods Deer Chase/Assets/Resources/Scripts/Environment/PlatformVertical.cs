@@ -22,7 +22,7 @@ public class PlatformVertical : MonoBehaviour
 
     void Update()
     {
-        print(start_pos);
+
         //gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(XMoveDirection, 0) * EnemySpeed;
 
         if (transform.position.y > (start_pos.y + range))

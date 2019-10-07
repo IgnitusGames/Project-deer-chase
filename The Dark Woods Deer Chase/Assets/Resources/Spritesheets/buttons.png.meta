@@ -8,6 +8,9 @@ TextureImporter:
   - first:
       213: -4974849404504335729
     second: AttackIcon
+  - first:
+      213: -177602419335775945
+    second: PauseButton
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -172,7 +175,7 @@ TextureImporter:
         width: 147
         height: 144
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -193,7 +196,7 @@ TextureImporter:
         width: 148
         height: 144
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -201,6 +204,27 @@ TextureImporter:
       bones: []
       spriteID: 8a5633c3dae411f49ac343edd7bc0deb
       internalID: -4974849404504335729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PauseButton
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 0
+        width: 148
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9ef3318cd087664dbdd49cc8eaac00c
+      internalID: -177602419335775945
       vertices: []
       indices: 
       edges: []

@@ -42,7 +42,7 @@ public class HorizonPlatTrigger : MonoBehaviour
 
 
         }
-        print(start_pos);
+
         //gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(XMoveDirection, 0) * EnemySpeed;
 
       

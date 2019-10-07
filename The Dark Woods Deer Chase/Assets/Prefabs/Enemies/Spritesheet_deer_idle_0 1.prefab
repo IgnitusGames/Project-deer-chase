@@ -163,6 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccb5f9e23dc3a544992a9daf3e0600d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 3660825092161375393}
   player_speed: 15
   jump_power: 350
   jump_power2: 500

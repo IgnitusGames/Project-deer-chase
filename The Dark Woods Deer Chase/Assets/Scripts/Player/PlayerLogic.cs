@@ -8,10 +8,17 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(BoxCollider2D))]
 public class PlayerLogic : MonoBehaviour
 {
-    //Variables
+
+
+    public float doublejumptimer;
+
+public int gold_score = 0;
+    //VariablesF
     public GameObject fire_ball;
-    //public Animator animator;
-    public int player_speed;
+    public Animator animator;
+    public float player_speed;
+    public float current_player_speed;
+
     public int fire_ball_speed = 11;
     public int jump_power = 250;
     public int player_max_health;
@@ -24,17 +31,18 @@ public class PlayerLogic : MonoBehaviour
     public float force = 100;
     private Rigidbody2D rb2d;
     private float original_gravity;
-    private int original_player_speed;
+    private float original_player_speed;
     public int amount_of_jumps = 2;
     public float windspeed = 100;
     public float slow_speed = 5;
-    // Update is called once per frame
+    public float gold_speed_mod;
     private void Start()
     {
         rb2d = this.gameObject.GetComponent<Rigidbody2D>();
         original_gravity = this.GetComponent<Rigidbody2D>().gravityScale;
         original_player_speed = player_speed;
     }
+    // Update is called once per frame
     private void Update()
     {
         Movement();
@@ -43,8 +51,13 @@ public class PlayerLogic : MonoBehaviour
         {
             player_curr_health = player_max_health;
         }
+        print("player_speed :" + player_speed);
 
-      
+        if(is_grounded)
+        {
+            animator.SetBool("is_jumping", false);
+        }
+
         //Attacks
         //Death Scenarios
         if (gameObject.transform.position.y < y_death_level)
@@ -72,14 +85,25 @@ public class PlayerLogic : MonoBehaviour
         {
             is_grounded = true;
             amount_of_jumps = 2;
-            print("GROND!!!!");
+            
+
+            animator.SetBool("is_gliding", false);
+            animator.SetBool("is_jumping", false);
+            animator.SetBool("is_double_jumping", false);
+
+
         }
         if (collision.gameObject.tag == "movplat")
         {
             player_speed = 0;
             is_grounded = true;
             this.transform.parent = collision.transform;
-            Debug.Log("op platform");
+
+        }
+        if (collision.gameObject.tag == "deer")
+        {
+            print("rekt");
+
         }
     }
     private void OnCollisionExit2D(Collision2D col)
@@ -87,12 +111,13 @@ public class PlayerLogic : MonoBehaviour
         if (col.gameObject.tag == "movplat")
             this.transform.parent = null;
         //Check if player is no longer on the ground
-        if(col.gameObject.tag == "Ground" && amount_of_jumps != 2 && col.gameObject.tag == "movplat")
+        if(col.gameObject.tag == "Ground" || col.gameObject.tag == "movplat")
         {
             print("niet op grond");
+            animator.SetBool("is_jumping", true);
             is_grounded = false;
         }
-        player_speed = 15;
+        player_speed = original_player_speed + gold_speed_mod;
     }
     public void Glide()
     {
@@ -100,12 +125,14 @@ public class PlayerLogic : MonoBehaviour
         {
             gliding = true;
             rb2d.gravityScale = 0.1f;
+            animator.SetBool("is_gliding", true);
         }
     }
     public void StopGlide()
     {
         gliding = false;
         rb2d.gravityScale = original_gravity;
+        animator.SetBool("is_gliding", false);
     }
     public void Die()
     {
@@ -114,39 +141,78 @@ public class PlayerLogic : MonoBehaviour
     }
     public void Jump()
     {
-        //check if jumping is allowed
-        if(amount_of_jumps > 0)
+        if(amount_of_jumps > 1)
         {
-            amount_of_jumps -= 1;
-            is_grounded = false;
+            animator.SetBool("is_gliding", false);
+            animator.SetBool("is_jumping", true);
+            animator.SetBool("is_double_jumping", false);
+        }
+        if (amount_of_jumps == 1)
+        {
+            animator.SetBool("is_gliding", false);
+            animator.SetBool("is_jumping", false);
+            animator.SetBool("is_double_jumping", true);
+            doublejumptimer += Time.deltaTime;
+
+           if(doublejumptimer >= 0.5f)
+            {
+                animator.SetBool("is_double_jumping", true);
+            }
+
+        }
+        if (amount_of_jumps < 1)
+        {
+          
+            animator.SetBool("is_jumping", true);
+            animator.SetBool("is_double_jumping", false);
+        }
+
+        //check if jumping is allowed
+        if (!GameManager.game_manager.cheat_mode_is_enabled)
+        {
+            if (amount_of_jumps > 0)
+            {
+                amount_of_jumps -= 1;
+                is_grounded = false;
+                this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(this.gameObject.GetComponent<Rigidbody2D>().velocity.x, 0);
+                this.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * jump_power);
+            }
+        }
+        else
+        {
             this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(this.gameObject.GetComponent<Rigidbody2D>().velocity.x, 0);
-            this.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * jump_power);
+            this.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up* jump_power);
         }
     }
     private void Movement()
     {
+       
         //animator.SetFloat("Speed", Mathf.Abs(player_speed));
         //Automatically move the player forwards
+        animator.SetFloat("Speed", Mathf.Abs(player_speed));
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(player_speed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
+      //  print(GetComponent<Rigidbody2D>().velocity);
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "wind")
         {
             this.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * windspeed);
-            print("Wind");
         }
-        if (collision.gameObject.tag == "Slow")
-        {
-            print("sLOw");
-            player_speed = 5;
-        }
-        
     }
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Slow" && !GameManager.game_manager.cheat_mode_is_enabled)
+        {
+            player_speed = original_player_speed + gold_speed_mod - 10;
+        }
+    }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        player_speed = 15;
+        if(collision.gameObject.tag == "Slow")
+        {
+            player_speed = original_player_speed + gold_speed_mod;
+        }
     }
     private void Combat()
     {
@@ -154,6 +220,7 @@ public class PlayerLogic : MonoBehaviour
         {
             Vector2 player_pos = Camera.main.WorldToScreenPoint(this.transform.position);
             Vector2 target = new Vector2();
+            
             if(Input.touchCount > 0)
             {
                 target = Input.GetTouch(0).position;
@@ -173,31 +240,43 @@ public class PlayerLogic : MonoBehaviour
                 //Rotation is calculated with the tangent function
                 float rotation = (float)Math.Atan2(target.y - player_pos.y, target.x - player_pos.x) * 100;
                 GameObject fire_ball_instance = Instantiate(fire_ball, this.transform.position, Quaternion.Euler(new Vector3(0, 0, rotation)));
+                print("nhnjnhjnj");
                 fire_ball_instance.GetComponent<Rigidbody2D>().velocity = direction * fire_ball_speed;
             }
         }
     }
-    public IEnumerator KnockBack(float knockDur, float knockBackPwr, Vector3 knockBackDirection)
+    public void GoldScore(int goldscore)
     {
+        gold_score += goldscore;
+        gold_speed_mod = gold_score / 100;
 
-        
-
-
+        Debug.Log(string.Format("MOD  = {0}", gold_speed_mod));
+        print("gooldld :" + gold_score);
+        //Debug.Log("Gold mod = " + gold_speed_mod.ToString());
+        //
+        player_speed = original_player_speed + gold_speed_mod;
+        print("BLASLDSAKNDAD ASNDKASD SAJB ABS: " + player_speed);
+    }
+    public IEnumerator KnockBack(float knockDur, float knockBackPwr, Vector2 knockBackDirection)
+    {
         float timer = 0;
-        float stand_still_dur = 5;
         while (knockDur > timer)
         {
-            
             timer += Time.deltaTime;
-            //<----------------------
-            this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(this.gameObject.GetComponent<Rigidbody2D>().velocity.x, 0);
-            this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector3(-knockBackDirection.x, -knockBackDirection.y + knockBackPwr, transform.position.z));
+            this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(knockBackDirection.x * knockBackPwr, knockBackDirection.y));
             print("yeet");
-
         }
-
-    
         yield return 0;
-
+    }
+    public IEnumerator KnockUp(float knockDur, float knockUpPwr, Vector2 knockBackDirection)
+    {
+        float timer = 0;
+        while (knockDur > timer)
+        {
+            timer += Time.deltaTime;
+            this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(knockBackDirection.x, knockBackDirection.y * knockUpPwr));
+            print("yeet");
+        }
+        yield return 0;
     }
 }

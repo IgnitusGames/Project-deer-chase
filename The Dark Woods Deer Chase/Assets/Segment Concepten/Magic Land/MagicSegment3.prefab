@@ -129,6 +129,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3052943982439967582}
+  - component: {fileID: 1789012705702063221}
   m_Layer: 0
   m_Name: MagicSegment3
   m_TagString: Untagged
@@ -201,6 +202,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1789012705702063221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3052943982439967577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed27d30fbe3ff3543a70be297d6a73b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4818491039330990867
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,12 +434,12 @@ PrefabInstance:
     - target: {fileID: 9051915601605329759, guid: afa4f9e84d00c4769ac9b32d9d577031,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 67.77
+      value: 68.3
       objectReference: {fileID: 0}
     - target: {fileID: 9051915601605329759, guid: afa4f9e84d00c4769ac9b32d9d577031,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.4
+      value: -4.5
       objectReference: {fileID: 0}
     - target: {fileID: 9051915601605329759, guid: afa4f9e84d00c4769ac9b32d9d577031,
         type: 3}

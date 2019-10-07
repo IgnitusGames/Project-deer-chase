@@ -11,6 +11,14 @@ public class GateOpen : MonoBehaviour
     private Vector2 start_pos;
     public float range = 4;
 
+    public GateTrigger gate_trigger;
+
+
+    private void Awake()
+    {
+        gate_trigger = gameObject.GetComponentInParent<GateTrigger>();
+    }
+
     private void Start()
     {
         start_pos = gameObject.transform.position;
@@ -29,16 +37,6 @@ public class GateOpen : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D trig)
-    {
-
-        if (trig.gameObject.tag == "EnemyCollider")
-        {
-            Stop();
-            print("asdasd");
-        }
-
-    }
     public void Open()
     {
         open = true;
