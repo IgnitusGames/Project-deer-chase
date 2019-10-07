@@ -62,7 +62,7 @@ public int gold_score = 0;
         //Death Scenarios
         if (gameObject.transform.position.y < y_death_level)
         {
-            Die();
+           // Die();
         }
         if (player_curr_health <= 0)
         {
