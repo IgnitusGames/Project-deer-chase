@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7994528424452825662}
   - component: {fileID: 7994528424452825657}
   - component: {fileID: 1320473050713508486}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Gate 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -155,7 +155,8 @@ GameObject:
   - component: {fileID: 7994528424637780636}
   - component: {fileID: 7994528424637780639}
   - component: {fileID: 7994528424637780638}
-  m_Layer: 0
+  - component: {fileID: 5318523439900469546}
+  m_Layer: 10
   m_Name: ActualGate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -211,8 +212,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1075475103
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 5638944109062771805, guid: 7a34145f699de474cbbcf7b51173a276,
     type: 3}
@@ -268,3 +269,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.47, y: 3.01}
   m_EdgeRadius: 0
+--- !u!114 &5318523439900469546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7994528424637780632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc72c7f6c09b67247a7bd423c45ee511, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
