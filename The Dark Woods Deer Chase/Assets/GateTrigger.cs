@@ -19,6 +19,7 @@ public class GateTrigger : MonoBehaviour
         {
             print("SESAM OPEN NU");
             gate_trigger.Open();
+            FindObjectOfType<AudioManager>().Play("Trigger");
             animator.SetBool("is_open", true);
         }
 

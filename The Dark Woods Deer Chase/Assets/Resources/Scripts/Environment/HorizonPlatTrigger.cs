@@ -10,6 +10,7 @@ public class HorizonPlatTrigger : MonoBehaviour
     public bool face_right = true;
     private Vector2 start_pos;
     public float range = 4;
+
     public bool open = false;
 
 

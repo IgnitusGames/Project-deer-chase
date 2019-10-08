@@ -52,7 +52,10 @@ public sealed class HealthComponent : MonoBehaviour
     {
         get { return this.onDied; }
     }
-
+   public void Die()
+    {
+        Destroy(gameObject);
+    }
 
     //private void OnEnable()
     //{

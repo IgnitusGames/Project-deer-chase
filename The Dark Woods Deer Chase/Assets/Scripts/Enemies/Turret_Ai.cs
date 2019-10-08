@@ -29,6 +29,7 @@ public class Turret_Ai : MonoBehaviour
     private void Awake()
     {
         animator = gameObject.GetComponent<Animator>();
+
         enemy_health_component = gameObject.GetComponentInParent<HealthComponent>();
 
     }
@@ -49,7 +50,10 @@ public class Turret_Ai : MonoBehaviour
     void RangeCheck()
     {
         distance = Vector3.Distance(transform.position, target.transform.position);
- 
+
+
+        print("asdsad  zzz " + distance);
+            print("asjdfsfas"+ target.transform.position);
 
 
         if (distance < wakeRange)

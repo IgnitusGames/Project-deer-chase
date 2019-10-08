@@ -34,6 +34,7 @@ public class PlayerLogic : MonoBehaviour
     public float gold_speed_mod;
 
     private GameObject win_lose_canvas;
+    private HealthComponent enemy_health;
     private void Start()
     {
         StartCoroutine(DeathCheck());
@@ -117,12 +118,8 @@ public class PlayerLogic : MonoBehaviour
             animator.SetBool("is_gliding", false);
             animator.SetBool("is_jumping", false);
             animator.SetBool("is_double_jumping", true);
-            doublejumptimer += Time.deltaTime;
-
-           if(doublejumptimer >= 0.5f)
-            {
-                animator.SetBool("is_double_jumping", true);
-            }
+            FindObjectOfType<AudioManager>().Play("Wing");
+           
 
         }
         if (amount_of_jumps < 1)
@@ -141,6 +138,7 @@ public class PlayerLogic : MonoBehaviour
                 is_grounded = false;
                 this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(this.gameObject.GetComponent<Rigidbody2D>().velocity.x, 0);
                 this.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * jump_power);
+                
             }
         }
         else
@@ -182,6 +180,8 @@ public class PlayerLogic : MonoBehaviour
     {
         if (Input.touchCount > 0 || Input.GetButtonDown("Fire1"))
         {
+
+           
             Vector2 player_pos = Camera.main.WorldToScreenPoint(this.transform.position);
             Vector2 target = new Vector2();
             
@@ -205,7 +205,9 @@ public class PlayerLogic : MonoBehaviour
                 float rotation = (float)Math.Atan2(target.y - player_pos.y, target.x - player_pos.x) * 100;
                 GameObject fire_ball_instance = Instantiate(fire_ball, this.transform.position, Quaternion.Euler(new Vector3(0, 0, rotation)));
                 print("nhnjnhjnj");
+                FindObjectOfType<AudioManager>().Play("Fireball");
                 fire_ball_instance.GetComponent<Rigidbody2D>().velocity = direction * fire_ball_speed;
+              
             }
         }
     }
@@ -217,6 +219,15 @@ public class PlayerLogic : MonoBehaviour
         print("gooldld :" + gold_score);
         player_speed = original_player_speed + gold_speed_mod;
         print("BLASLDSAKNDAD ASNDKASD SAJB ABS: " + player_speed);
+
+        if(100 < gold_score && 200 > gold_score && gold_score < 105)
+        {
+            FindObjectOfType<AudioManager>().Play("100gold");
+        }
+        if (200 < gold_score && 300 > gold_score && gold_score < 205)
+        {
+            FindObjectOfType<AudioManager>().Play("200gold");
+        }
     }
     public IEnumerator KnockBack(float knockDur, float knockBackPwr, Vector2 knockBackDirection)
     {

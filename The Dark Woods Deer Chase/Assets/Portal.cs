@@ -28,7 +28,7 @@ public class Portal : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-
+            FindObjectOfType<AudioManager>().Play("Portal");
             // player.transform.position = portal2_pos;
             player.transform.position = portal_2_pos.position;
         }

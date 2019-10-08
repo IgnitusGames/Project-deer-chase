@@ -45,62 +45,74 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Theme
-    clip: {fileID: 8300000, guid: b3f929e835bf77f48ace890166c1b061, type: 3}
-    volume: 0
+    clip: {fileID: 8300000, guid: 65ecd9203ef675344bdbb90992871972, type: 3}
+    volume: 0.059
     pitch: 0.548
-    loop: 1
-    source: {fileID: 0}
-  - name: EnemyShroomDashSound
-    clip: {fileID: 8300000, guid: b1a155aef1fd54a418d143d513ee6078, type: 3}
-    volume: 0.487
-    pitch: 0.499
     loop: 0
     source: {fileID: 0}
-  - name: EnemyTurretBulletHit
-    clip: {fileID: 8300000, guid: 535774a087181744bb452a5c0c0fded2, type: 3}
-    volume: 0.528
-    pitch: 0.552
+  - name: Wing
+    clip: {fileID: 8300000, guid: 10add6401aee534498f29ad751412de9, type: 3}
+    volume: 0.212
+    pitch: 0.548
+    loop: 0
+    source: {fileID: 0}
+  - name: Fireball
+    clip: {fileID: 8300000, guid: 4de83486828781e4e9fe9595547f74a3, type: 3}
+    volume: 0.542
+    pitch: 0.548
+    loop: 0
+    source: {fileID: 0}
+  - name: ShroomJump
+    clip: {fileID: 8300000, guid: b1a155aef1fd54a418d143d513ee6078, type: 3}
+    volume: 0.542
+    pitch: 0.548
+    loop: 0
+    source: {fileID: 0}
+  - name: ShroomHit
+    clip: {fileID: 8300000, guid: 680b631e7aef72449a2cb578af0c6bee, type: 3}
+    volume: 0.542
+    pitch: 0.548
     loop: 0
     source: {fileID: 0}
   - name: EnemyTurretShoot
     clip: {fileID: 8300000, guid: 65cc4f990756e9949b2184c53f699f72, type: 3}
-    volume: 0.427
-    pitch: 0.469
-    loop: 1
-    source: {fileID: 0}
-  - name: ShroomEnemyAttack
-    clip: {fileID: 8300000, guid: d43b63670c164784a994c1867d1467ca, type: 3}
-    volume: 0.459
-    pitch: 0.48
+    volume: 0.542
+    pitch: 0.548
     loop: 0
     source: {fileID: 0}
-  - name: ShroomMeleeDmg
-    clip: {fileID: 8300000, guid: 37925a976110c4c42957c68e3b6d684c, type: 3}
-    volume: 0.464
-    pitch: 0.469
-    loop: 0
-    source: {fileID: 0}
-  - name: ShroomDashDmg
+  - name: ShroomDmg
     clip: {fileID: 8300000, guid: 680b631e7aef72449a2cb578af0c6bee, type: 3}
-    volume: 0.4
-    pitch: 0.469
+    volume: 0.542
+    pitch: 0.548
     loop: 0
     source: {fileID: 0}
-  - name: EnemyTurretDmg
-    clip: {fileID: 8300000, guid: 535774a087181744bb452a5c0c0fded2, type: 3}
-    volume: 0.469
-    pitch: 0.469
+  - name: GateOpen
+    clip: {fileID: 8300000, guid: c77632afffe22f045834bbc076d4e5bc, type: 3}
+    volume: 0.464
+    pitch: 0.491
     loop: 0
     source: {fileID: 0}
-  - name: VlinderDmg
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+  - name: Trigger
+    clip: {fileID: 8300000, guid: 95e6bc4211de37741b4ba43029e3fb66, type: 3}
+    volume: 0.542
+    pitch: 0.548
     loop: 0
     source: {fileID: 0}
-  - name: HealthPickUp
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+  - name: Portal
+    clip: {fileID: 8300000, guid: 744ae8c2375227b4d9f9fcb7228ee0c5, type: 3}
+    volume: 0.542
+    pitch: 0.548
+    loop: 0
+    source: {fileID: 0}
+  - name: 100gold
+    clip: {fileID: 8300000, guid: b268e521c76e7374aa5992c084e3764d, type: 3}
+    volume: 0.542
+    pitch: 0.548
+    loop: 0
+    source: {fileID: 0}
+  - name: 200gold
+    clip: {fileID: 8300000, guid: 753db255dfeaacd4481e7aad515ffa42, type: 3}
+    volume: 0.542
+    pitch: 0.548
     loop: 0
     source: {fileID: 0}
