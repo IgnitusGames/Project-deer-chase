@@ -54,7 +54,6 @@ public class Shroom_Dash_Enemy_Move : MonoBehaviour
         {
 
             FindObjectOfType<AudioManager>().Play("EnemyShroomDashOnDmg");
-            print("pannenkoekn");
             gameObject.GetComponent<Animation>().Play("dmgtaken");
         }
         if (collision.CompareTag("Player"))
@@ -63,51 +62,22 @@ public class Shroom_Dash_Enemy_Move : MonoBehaviour
           //  player.StartCoroutine(player.KnockBack(0.02f, 100, player.transform.position));
 
         }
-
     }
-
-
     public void Attack()
     {
-
-        //
         if (facingRight == true && hitTimer >= hitInterval)
         {
-
-
-
-
-
             hitTimer = 0;
-
-
             GetComponent<Rigidbody2D>().AddForce(Vector2.right * force);
-
             FindObjectOfType<AudioManager>().Play("EnemyShroomDashSound");
-
             StartCoroutine(DashBack());
-            
-
         }
         else if (facingRight == false && hitTimer >= hitInterval)
         {
-
-
-
-
             hitTimer = 0;
-
-
-            GetComponent<Rigidbody2D>().AddForce(Vector2.left * force);
-
-            Debug.Log("Aanval naar rechts");
-            
+            GetComponent<Rigidbody2D>().AddForce(Vector2.left * force);      
             StartCoroutine(DashBack2());
-           
         }
-
-
-
     }
 
     void Flip()
@@ -131,18 +101,12 @@ public class Shroom_Dash_Enemy_Move : MonoBehaviour
     }
     IEnumerator DashBack()
     {
-
         yield return new WaitForSeconds(dash_time);
-
         GetComponent<Rigidbody2D>().AddForce(Vector2.left * (force * 2));
-
     }
     IEnumerator DashBack2()
     {
-
         yield return new WaitForSeconds(dash_time);
-
         GetComponent<Rigidbody2D>().AddForce(Vector2.right * (force* 2));
-
     }
 }

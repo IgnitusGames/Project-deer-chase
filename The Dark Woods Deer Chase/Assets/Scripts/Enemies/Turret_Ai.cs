@@ -52,12 +52,6 @@ public class Turret_Ai : MonoBehaviour
     void RangeCheck()
     {
         distance = Vector3.Distance(transform.position, target.transform.position);
-
-
-        print("asdsad  zzz " + distance);
-            print("asjdfsfas"+ target.transform.position);
-
-
         if (distance < wakeRange)
         {
  

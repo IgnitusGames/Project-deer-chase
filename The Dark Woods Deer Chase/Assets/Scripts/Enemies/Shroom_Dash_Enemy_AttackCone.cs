@@ -25,7 +25,6 @@ public class Shroom_Dash_Enemy_AttackCone : MonoBehaviour
             enemy_move.EnemySpeed = 0;
             enemy_move.Attack();
             animator.SetBool("attack", true);
-            // print("inrange");
             //animator.SetBool("attack", true);
         }
     }
@@ -36,7 +35,6 @@ public class Shroom_Dash_Enemy_AttackCone : MonoBehaviour
             {
                 enemy_move.EnemySpeed = 4;
                 animator.SetBool("attack", false);
-                print("inrange");
             }
         }
     }

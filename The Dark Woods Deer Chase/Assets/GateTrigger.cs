@@ -17,29 +17,16 @@ public class GateTrigger : MonoBehaviour
     {
         if (collision.gameObject.tag == "Attack")
         {
-            print("SESAM OPEN NU");
             gate_trigger.Open();
             FindObjectOfType<AudioManager>().Play("Trigger");
             animator.SetBool("is_open", true);
         }
 
     }
-
- 
-
-
-
     //private void OnTriggerEnter2D(Collider2D collision)
-
-
-
     //{
     //    if (collision.gameObject.tag == "Attack")
-    //        print("SESAM OPEN NU");
     //        gate_trigger.Open();
     //   // Destroy(gameObject);
-
-
     //}
- 
 }

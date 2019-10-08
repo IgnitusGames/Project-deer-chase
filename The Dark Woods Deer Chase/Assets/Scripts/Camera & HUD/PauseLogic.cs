@@ -39,6 +39,5 @@ public class PauseLogic : MonoBehaviour
             GameManager.game_manager.cheat_mode_click_counter = 4;
             GameManager.game_manager.cheat_mode_is_enabled = false;
         }
-        print(GameManager.game_manager.cheat_mode_is_enabled);
     }
 }

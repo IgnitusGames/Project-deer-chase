@@ -32,17 +32,13 @@ public class HingeStaaf : MonoBehaviour
 
             if(transform.rotation.z < 0)
             {
-                print("pannekoek");
                 motorstaaf.motorSpeed = speed;
                 hjstaaf.motor = motorstaaf;
-                print(motorstaaf.motorSpeed);
             }
             if (transform.rotation.z > 0)
             {
-                print("pannezxczxckoek");
                 motorstaaf.motorSpeed = -speed;
                 hjstaaf.motor = motorstaaf;
-                print(motorstaaf.motorSpeed);
             }
         }
     }

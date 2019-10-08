@@ -5,7 +5,7 @@ using UnityEngine;
 public class HorizontalPlatformTrigger : MonoBehaviour
 {
     public HorizonPlatTrigger plat_trigger;
-    public Animator animator;
+  
     private void Awake()
     {
         plat_trigger = gameObject.GetComponentInParent<HorizonPlatTrigger>();
@@ -26,7 +26,7 @@ public class HorizontalPlatformTrigger : MonoBehaviour
         plat_trigger.Open();
         Destroy(gameObject);
         FindObjectOfType<AudioManager>().Play("Trigger");
-        animator.SetBool("is_open", true);
+      
        
 
 

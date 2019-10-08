@@ -13,9 +13,6 @@ public class Portal : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerLogic>();
         //portal2_pos = GameObject.FindGameObjectWithTag("Portal2").transform.position;
-
-        //print(portal2_pos);
-
     }
 
     // Update is called once per frame
