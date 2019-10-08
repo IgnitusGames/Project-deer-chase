@@ -676,15 +676,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3675879790760563432, guid: 4bf83231f3955744187de99b6589d9af,
-        type: 3}
-      propertyPath: m_Distance
-      value: 5.9439692
-      objectReference: {fileID: 0}
     - target: {fileID: 275796363026391260, guid: 4bf83231f3955744187de99b6589d9af,
         type: 3}
       propertyPath: m_Layer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3675879790760563432, guid: 4bf83231f3955744187de99b6589d9af,
+        type: 3}
+      propertyPath: m_Distance
+      value: 5.9439692
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4bf83231f3955744187de99b6589d9af, type: 3}
