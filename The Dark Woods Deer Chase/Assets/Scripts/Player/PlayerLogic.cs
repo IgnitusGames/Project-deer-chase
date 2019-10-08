@@ -54,7 +54,7 @@ public class PlayerLogic : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //Resets player jump ability when player has hit the ground
-        if(collision.gameObject.tag == "Ground" || collision.gameObject.tag == "movplat")
+        if((collision.gameObject.tag == "Ground" || collision.gameObject.tag == "movplat") && collision.GetContact(0).normal == new Vector2(0.0f, -1.0f))
         {
             is_grounded = true;
             amount_of_jumps = 2;
