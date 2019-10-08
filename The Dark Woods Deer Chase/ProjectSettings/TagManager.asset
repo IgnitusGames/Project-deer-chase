@@ -18,6 +18,7 @@ TagManager:
   - jump_deer3
   - Slow
   - Menu
+  - WinLose
   layers:
   - Default
   - TransparentFX
@@ -30,7 +31,7 @@ TagManager:
   - Tiers
   - Deer
   - Moveplatform
-  - 
+  - Background
   - 
   - 
   - 
@@ -54,4 +55,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3344312541
+    locked: 0
+  - name: Foreground
+    uniqueID: 1075475103
     locked: 0

@@ -29,12 +29,10 @@ public class GateOpen : MonoBehaviour
         if (open == true)
         {
             transform.position = new Vector2(transform.position.x, transform.position.y + moveSpeed * Time.deltaTime);
+            FindObjectOfType<AudioManager>().Play("GateOpen");
         }
         if (transform.position.y > (start_pos.y + range))
             open = false;
-
-
-
     }
 
     public void Open()

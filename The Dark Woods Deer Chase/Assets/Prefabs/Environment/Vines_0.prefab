@@ -11,9 +11,13 @@ GameObject:
   - component: {fileID: 3212264445388258252}
   - component: {fileID: 1357268635649476432}
   - component: {fileID: 160906975736370714}
+  - component: {fileID: 691520865}
+  - component: {fileID: 691520866}
+  - component: {fileID: 691520870}
+  - component: {fileID: 691520871}
   m_Layer: 10
   m_Name: Vines_0
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -67,8 +71,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1075475103
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -406496011657995516, guid: 91397009de5534546b35cdbd28ac9f2f,
     type: 3}
@@ -108,3 +112,73 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.21, y: 3.78}
   m_EdgeRadius: 0
+--- !u!111 &691520865
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2278074573455136944}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 47a7c7b88182fca4097e542993fcdfc2, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 47a7c7b88182fca4097e542993fcdfc2, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!114 &691520866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2278074573455136944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd3a4f6fed62e4448bbdd83a0e0fa12c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onDied:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2278074573455136944}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  take_damage: 0
+  enemy_curr_health: 0
+  enemy_max_health: 2
+  take_dmg_time: 0
+--- !u!114 &691520870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2278074573455136944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2507d258c342bd4b855c2b37c463bca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &691520871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2278074573455136944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0df5d43d651bbf48a55bcb4d72c76d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -45,7 +45,5 @@ public class HingeStaaf : MonoBehaviour
                 print(motorstaaf.motorSpeed);
             }
         }
-            
-        
     }
 }

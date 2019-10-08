@@ -20,6 +20,7 @@ public class knockbacktest : MonoBehaviour
             {
                 print("boven");
                 StartCoroutine(player_logic.KnockUp(0.2f, 300, Vector2.up));
+                FindObjectOfType<AudioManager>().Play("ShroomJump");
             }
             else if (contact_point == new Vector2(1.0f, 0.0f))
             {

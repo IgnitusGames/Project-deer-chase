@@ -39,18 +39,18 @@ public sealed class PrefabSpawner : MonoBehaviour
         GameObject gold_clone;
         Vector2 direction = SpawnPositionLeft.transform.position - transform.position;
         gold_clone = Instantiate(this.prefab, SpawnPositionLeft.transform.position, SpawnPositionLeft.transform.rotation) ;
-        gold_clone.GetComponent<Rigidbody2D>().velocity = direction * gold_speed;
+      
 
 
-        //GameObject gold_clone2;
-        //Vector2 direction2 = SpawnPositionMid.transform.position - transform.position;
-        //gold_clone2 = Instantiate(this.prefab, this.transform.position, SpawnPositionMid.transform.rotation);
-        //gold_clone2.GetComponent<Rigidbody2D>().velocity = direction2 * gold_speed;
+        GameObject gold_clone2;
+        Vector2 direction2 = SpawnPositionMid.transform.position - transform.position;
+        gold_clone2 = Instantiate(this.prefab, this.transform.position, SpawnPositionMid.transform.rotation);
+       
 
-        //GameObject gold_clone3;
-        //Vector2 direction3 = SpawnPositionRight.transform.position - transform.position;
-        //gold_clone3 = Instantiate(this.prefab, this.transform.position, SpawnPositionRight.transform.rotation);
-        //gold_clone3.GetComponent<Rigidbody2D>().velocity = direction3 * gold_speed;
+        GameObject gold_clone3;
+        Vector2 direction3 = SpawnPositionRight.transform.position - transform.position;
+        gold_clone3 = Instantiate(this.prefab, this.transform.position, SpawnPositionRight.transform.rotation);
+
         //// Randomly pick the count of prefabs to spawn.
         //int count = Random.Range(this.MinimumCount, this.MaximumCount);
         //// Spawn them!
