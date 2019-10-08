@@ -105,7 +105,6 @@ public class Enemy_Vlinder : MonoBehaviour
         {
 
             FindObjectOfType<AudioManager>().Play("EnemyShroomDashOnDmg");
-            print("pannenkoekn");
             //player.StartCoroutine(player.KnockBack(0.02f, 100, player.transform.position));
         }
 

@@ -71,7 +71,6 @@ public class Deerscripttest : MonoBehaviour
         //Check if player is no longer on the ground
         if (col.gameObject.tag == "Ground" && col.gameObject.tag == "movplat")
         {
-            print("niet op grond");
             is_grounded = false;
         }
         player_speed = 15;

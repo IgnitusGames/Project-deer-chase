@@ -17,7 +17,6 @@ public class WinLoseScreen : MonoBehaviour
     public void Retry()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        print("GNAR" + Time.timeScale);
     }
     public void ActivateVictoryScreen()
     {

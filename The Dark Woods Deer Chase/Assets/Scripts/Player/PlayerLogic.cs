@@ -56,7 +56,6 @@ public class PlayerLogic : MonoBehaviour
         //Resets player jump ability when player has hit the ground
         if((collision.gameObject.tag == "Ground" || collision.gameObject.tag == "movplat"))
         {
-            print(collision.GetContact(0).normal);
             is_grounded = true;
             amount_of_jumps = 2;
             animator.SetBool("is_gliding", false);
@@ -82,7 +81,6 @@ public class PlayerLogic : MonoBehaviour
         //Check if player is no longer on the ground
         if(col.gameObject.tag == "Ground" || col.gameObject.tag == "movplat")
         {
-            print("niet op grond");
             animator.SetBool("is_jumping", true);
             is_grounded = false;
         }
@@ -155,7 +153,6 @@ public class PlayerLogic : MonoBehaviour
         //Automatically move the player forwards
         animator.SetFloat("Speed", Mathf.Abs(player_speed));
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(player_speed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
-      //  print(GetComponent<Rigidbody2D>().velocity);
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -217,7 +214,6 @@ public class PlayerLogic : MonoBehaviour
         Debug.Log(string.Format("MOD  = {0}", gold_speed_mod));
      
         player_speed = original_player_speed + gold_speed_mod;
-        print("BLASLDSAKNDAD ASNDKASD SAJB ABS: " + player_speed);
 
         if(100 < gold_score && 200 > gold_score && gold_score < 105)
         {
@@ -235,7 +231,6 @@ public class PlayerLogic : MonoBehaviour
         {
             timer += Time.deltaTime;
             this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(knockBackDirection.x * knockBackPwr, knockBackDirection.y));
-            print("yeet");
         }
         yield return 0;
     }
@@ -246,7 +241,6 @@ public class PlayerLogic : MonoBehaviour
         {
             timer += Time.deltaTime;
             this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(knockBackDirection.x, knockBackDirection.y * knockUpPwr));
-            print("yeet");
         }
         yield return 0;
     }

@@ -54,7 +54,6 @@ public class Enemy_Deer : MonoBehaviour
         {
 
             FindObjectOfType<AudioManager>().Play("EnemyShroomDashOnDmg");
-            print("pannenkoekn");
             gameObject.GetComponent<Animation>().Play("dmgtaken");
         }
      
@@ -62,10 +61,8 @@ public class Enemy_Deer : MonoBehaviour
         {
             //is_grounded = true;
             gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(XMoveDirection, 0) * EnemySpeed;
-            print(collision.gameObject.tag);
             is_grounded = false;
             // EnemySpeed = 0;
-            print("jump1");
             Jump();
             //  is_grounded = false;
             // Debug.Log("op de grond");
@@ -74,10 +71,8 @@ public class Enemy_Deer : MonoBehaviour
         {
             //is_grounded = true;
             gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(XMoveDirection, 0) * EnemySpeed;
-            print(collision.gameObject.tag);
             is_grounded = false;
             // EnemySpeed = 0;
-            print("jump2");
             Jump2();
             //  is_grounded = false;
             // Debug.Log("op de grond");\
@@ -87,21 +82,13 @@ public class Enemy_Deer : MonoBehaviour
             {
                 //is_grounded = true;
                 gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(XMoveDirection, 0) * EnemySpeed;
-                print(collision.gameObject.tag);
                 is_grounded = false;
-
-            print("jump3");
                 // EnemySpeed = 0;
                 Jump3();
                 //  is_grounded = false;
                 // Debug.Log("op de grond");
             }
-
-
         }
-
-
-   
     private void OnCollisionEnter2D(Collision2D collision)
     {
       
@@ -110,11 +97,8 @@ public class Enemy_Deer : MonoBehaviour
         {
             //is_grounded = true;
             //  gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(XMoveDirection, 0) * EnemySpeed;
-            // print(collision.gameObject.tag);
             //EnemySpeed = 0;
             is_grounded = true;
-            print(" awtawtetw");
-            // Debug.Log("op de grond");
         }
     }
 
@@ -146,7 +130,6 @@ public class Enemy_Deer : MonoBehaviour
     //{
     //    distance = Vector3.Distance(transform.position, target.transform.position);
 
-    //  //print(distance);
     //    awake = true;
     //    if (distance < wakeRange)
     //    {

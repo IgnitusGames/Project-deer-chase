@@ -48,26 +48,14 @@ public class Shroom_Enemy_Melee_Move : MonoBehaviour
         }
         if (collision.gameObject.tag == "Attack")
         {
-
             FindObjectOfType<AudioManager>().Play("EnemyShroomDashOnDmg");
             gameObject.GetComponent<Animation>().Play("shroommeleedmg");
-            print("pannenkoekn");
         }
-     
-
     }
-
-
     public void Attack()
-    {
-        
+    {   
         //RaycastHit2D hit = Physics2D.Raycast(transform.position, new Vector2(XMoveDirection, 0));
         RaycastHit2D hit = Physics2D.Raycast(new Vector2(transform.position.x + raycast_hit_offset, transform.position.y), new Vector2(XMoveDirection, 0));
-
-        //bulletTimer >= bulletInterval
-
-        print(hit.distance);
-        print(hit.collider.tag);
         if(facingRight == true)
         {
             if (hit.collider.tag == "Player" && hit.distance < hitDistance && hitTimer >= hitInterval)
@@ -76,7 +64,6 @@ public class Shroom_Enemy_Melee_Move : MonoBehaviour
                 EnemySpeed = 0;
                // hit.collider.gameObject.GetComponent<Player_Health_Collectible>().Damage(1);
                 hitTimer = 0;
-                print("valalalltl aana");
                 FindObjectOfType<AudioManager>().Play("ShroomEnemyAttack");
                 animator.SetBool("IsAttack", true);
                 //player_logic.StartCoroutine(player_logic.KnockBack(0.02f, 50, Vector2.left*200));
@@ -87,24 +74,15 @@ public class Shroom_Enemy_Melee_Move : MonoBehaviour
             raycast_hit_offset = (-1.5f);
             if (hit.collider.tag == "Player" && hit.distance < hitDistance && hitTimer >= hitInterval)
             {
-
                 EnemySpeed = 0;
                 //hit.collider.gameObject.GetComponent<Player_Health_Collectible>().Damage(1);
                 hitTimer = 0;
-                print("valalalltl aana");
                 FindObjectOfType<AudioManager>().Play("ShroomEnemyAttack");
                 animator.SetBool("IsAttack", true);
                // player_logic.StartCoroutine(player_logic.KnockBack(0.02f, 50, Vector2.right * 200));
             }
         }
-
-  
-
-
-
     }
-
-
     void Flip()
     {
         if (XMoveDirection > 0)
@@ -126,4 +104,3 @@ public class Shroom_Enemy_Melee_Move : MonoBehaviour
     }
 
 }
-

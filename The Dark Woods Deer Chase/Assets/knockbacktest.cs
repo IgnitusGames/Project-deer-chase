@@ -18,13 +18,11 @@ public class knockbacktest : MonoBehaviour
             player_logic.player_speed = 0;
             if (contact_point == new Vector2(0.0f, -1.0f))
             {
-                print("boven");
                 StartCoroutine(player_logic.KnockUp(0.2f, 300, Vector2.up));
                 FindObjectOfType<AudioManager>().Play("ShroomJump");
             }
             else if (contact_point == new Vector2(1.0f, 0.0f))
             {
-                print("links");
                 StartCoroutine(player_logic.KnockBack(0.2f, 1000, Vector2.left));
             }
         }

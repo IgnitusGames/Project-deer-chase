@@ -87,7 +87,6 @@ public sealed class HealthComponent : MonoBehaviour
         if (enemy_curr_health <= 0)
         {
             this.OnDiedEvent();
-            print("dood");
             Destroy(gameObject);
         }
    

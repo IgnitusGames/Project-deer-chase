@@ -19,11 +19,9 @@ public class Shroom_Melee_Cone : MonoBehaviour
     {
         if (trig.gameObject.tag == "Player")
         {
-            print("inrange");
             enemy_move.Attack();
             enemy_move.EnemySpeed = 0;
             //animator.SetBool("attack", true);
-            // print("inrange");
             //animator.SetBool("attack", true);
         }
     }
@@ -37,10 +35,4 @@ public class Shroom_Melee_Cone : MonoBehaviour
             }
         }
     }
-
-
-
-
-
 }
-
