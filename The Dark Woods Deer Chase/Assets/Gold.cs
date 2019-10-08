@@ -17,6 +17,8 @@ public class Gold : MonoBehaviour
         {
             collision.gameObject.GetComponent<PlayerLogic>().GoldScore(gold_value);
             Destroy(this.gameObject);
+
+            FindObjectOfType<AudioManager>().Play("Gold1");
         }
     }
 }
