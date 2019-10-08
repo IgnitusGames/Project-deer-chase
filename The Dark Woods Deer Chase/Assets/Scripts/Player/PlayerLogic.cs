@@ -54,8 +54,9 @@ public class PlayerLogic : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //Resets player jump ability when player has hit the ground
-        if((collision.gameObject.tag == "Ground" || collision.gameObject.tag == "movplat") && collision.GetContact(0).normal == new Vector2(0.0f, -1.0f))
+        if((collision.gameObject.tag == "Ground" || collision.gameObject.tag == "movplat"))
         {
+            print(collision.GetContact(0).normal);
             is_grounded = true;
             amount_of_jumps = 2;
             animator.SetBool("is_gliding", false);
@@ -214,7 +215,7 @@ public class PlayerLogic : MonoBehaviour
         gold_score += goldscore;
         gold_speed_mod = gold_score / 100;
         Debug.Log(string.Format("MOD  = {0}", gold_speed_mod));
-        print("gooldld :" + gold_score);
+     
         player_speed = original_player_speed + gold_speed_mod;
         print("BLASLDSAKNDAD ASNDKASD SAJB ABS: " + player_speed);
 
