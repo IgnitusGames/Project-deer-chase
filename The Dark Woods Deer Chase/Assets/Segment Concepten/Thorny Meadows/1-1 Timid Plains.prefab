@@ -68,8 +68,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1075475103
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7588346329028024331, guid: 17eafd9d96538442e8775053aa98a9f7,
     type: 3}
@@ -196,8 +196,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1075475103
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7588346329028024331, guid: 17eafd9d96538442e8775053aa98a9f7,
     type: 3}
@@ -324,8 +324,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1075475103
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7588346329028024331, guid: 17eafd9d96538442e8775053aa98a9f7,
     type: 3}
@@ -452,8 +452,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1075475103
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7588346329028024331, guid: 17eafd9d96538442e8775053aa98a9f7,
     type: 3}
@@ -580,8 +580,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1075475103
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7588346329028024331, guid: 17eafd9d96538442e8775053aa98a9f7,
     type: 3}
@@ -708,8 +708,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1075475103
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7588346329028024331, guid: 17eafd9d96538442e8775053aa98a9f7,
     type: 3}
@@ -881,8 +881,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1075475103
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7588346329028024331, guid: 17eafd9d96538442e8775053aa98a9f7,
     type: 3}
@@ -1257,8 +1257,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1075475103
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7588346329028024331, guid: 17eafd9d96538442e8775053aa98a9f7,
     type: 3}
@@ -1396,6 +1396,7 @@ Transform:
   - {fileID: 6150871877664026254}
   - {fileID: 1626614490490699374}
   - {fileID: 5982476480449400954}
+  - {fileID: 589918428005749881}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2350,6 +2351,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5910738477005644062, guid: abd9e1358703b49f4a5932885b40cb8b,
     type: 3}
   m_PrefabInstance: {fileID: 804853560693279290}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &857334029998795881
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1876379597437212908}
+    m_Modifications:
+    - target: {fileID: 273052087562270739, guid: 17eca34544e32b0498176c38c7ac0def,
+        type: 3}
+      propertyPath: m_Name
+      value: BackGroundNight
+      objectReference: {fileID: 0}
+    - target: {fileID: 273052087562270736, guid: 17eca34544e32b0498176c38c7ac0def,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 273052087562270736, guid: 17eca34544e32b0498176c38c7ac0def,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 273052087562270736, guid: 17eca34544e32b0498176c38c7ac0def,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 379.50125
+      objectReference: {fileID: 0}
+    - target: {fileID: 273052087562270736, guid: 17eca34544e32b0498176c38c7ac0def,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 273052087562270736, guid: 17eca34544e32b0498176c38c7ac0def,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 273052087562270736, guid: 17eca34544e32b0498176c38c7ac0def,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 273052087562270736, guid: 17eca34544e32b0498176c38c7ac0def,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 273052087562270736, guid: 17eca34544e32b0498176c38c7ac0def,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 273052087562270736, guid: 17eca34544e32b0498176c38c7ac0def,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 273052087562270736, guid: 17eca34544e32b0498176c38c7ac0def,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 273052087562270736, guid: 17eca34544e32b0498176c38c7ac0def,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 17eca34544e32b0498176c38c7ac0def, type: 3}
+--- !u!4 &589918428005749881 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 273052087562270736, guid: 17eca34544e32b0498176c38c7ac0def,
+    type: 3}
+  m_PrefabInstance: {fileID: 857334029998795881}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1158641270345521422
 PrefabInstance:
