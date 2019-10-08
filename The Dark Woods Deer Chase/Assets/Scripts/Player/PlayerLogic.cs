@@ -35,6 +35,7 @@ public class PlayerLogic : MonoBehaviour
 
     private GameObject win_lose_canvas;
     private HealthComponent enemy_health;
+    private bool can_fire = true;
     private void Start()
     {
         StartCoroutine(DeathCheck());
@@ -178,13 +179,10 @@ public class PlayerLogic : MonoBehaviour
     }
     private void Combat()
     {
-        if (Input.touchCount > 0 || Input.GetButtonDown("Fire1"))
+        if ((Input.touchCount > 0 && can_fire) || Input.GetButtonDown("Fire1"))
         {
-
-           
             Vector2 player_pos = Camera.main.WorldToScreenPoint(this.transform.position);
             Vector2 target = new Vector2();
-            
             if(Input.touchCount > 0)
             {
                 target = Input.GetTouch(0).position;
@@ -193,21 +191,21 @@ public class PlayerLogic : MonoBehaviour
             {
                 target = Input.mousePosition;
             }
-            if (target.x < (player_pos.x) * 2)
+            if (target.x < (player_pos.x) * 1.5)
             {
                 return;
             }
             else
             {
+                can_fire = false;
                 Vector2 direction = target - player_pos;
                 direction = direction.normalized;
                 //Rotation is calculated with the tangent function
                 float rotation = (float)Math.Atan2(target.y - player_pos.y, target.x - player_pos.x) * 100;
                 GameObject fire_ball_instance = Instantiate(fire_ball, this.transform.position, Quaternion.Euler(new Vector3(0, 0, rotation)));
-                print("nhnjnhjnj");
                 FindObjectOfType<AudioManager>().Play("Fireball");
                 fire_ball_instance.GetComponent<Rigidbody2D>().velocity = direction * fire_ball_speed;
-              
+                StartCoroutine(FireCooldown());
             }
         }
     }
@@ -262,5 +260,10 @@ public class PlayerLogic : MonoBehaviour
             }
             yield return new WaitForSeconds(1.0f);
         }
+    }
+    private IEnumerator FireCooldown()
+    {
+        yield return new WaitForSeconds(0.5f);
+        can_fire = true;
     }
 }
