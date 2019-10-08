@@ -7,8 +7,14 @@ public class FireBallLogic : MonoBehaviour
 {
     //Variables
     public float Damage = 10;
+
+    private string[] destroy_on_collide;
     //Unity functions
-    public void Update()
+    private void Start()
+    {
+        destroy_on_collide = new string[3] { "enemy", "Ground", "movplat" };
+    }
+    private void Update()
     {
         Destroy(this.gameObject, 5);
     }
@@ -18,12 +24,13 @@ public class FireBallLogic : MonoBehaviour
         if (collision.gameObject.tag == "enemy")
         {
             collision.GetComponent<HealthComponent>().TakeDamage(Damage);
-            Debug.Log("Dealing " + Damage + " damage");
-            Destroy(this.gameObject);
         }
-        else if (collision.gameObject.tag != "Attack" && collision.gameObject.tag != "Player" && collision.gameObject.tag != "EnemyCollider")
+        foreach(string tag in destroy_on_collide)
         {
-            Destroy(this.gameObject);
+            if(collision.gameObject.tag == tag)
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
 }

@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4755584901693389596}
   - component: {fileID: 4755584901693389595}
   - component: {fileID: 4755584901693389594}
-  - component: {fileID: 864249789164257912}
   m_Layer: 0
   m_Name: Water_short
   m_TagString: Slow
@@ -109,15 +108,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.0517406, y: 0.87999994}
   m_EdgeRadius: 0
---- !u!114 &864249789164257912
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4755584901693389592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22be239cbc038c448baeb05a187a779b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
