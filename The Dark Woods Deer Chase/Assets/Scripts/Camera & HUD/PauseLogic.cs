@@ -6,18 +6,22 @@ using UnityEngine.SceneManagement;
 public class PauseLogic : MonoBehaviour
 {
     public GameObject PauseMenuUI;
+    public static bool is_paused = false;
     public void Resume()
     {
+        is_paused = false;
         PauseMenuUI.SetActive(false);
         Time.timeScale = 1;
     }
     public void Pause()
     {
+        is_paused = true;
         PauseMenuUI.SetActive(true);
         Time.timeScale = 0;
     }
     public void GoToMainMenu()
     {
+        is_paused = false;
         Time.timeScale = 1;
         SceneManager.LoadScene("Menu");
     }
