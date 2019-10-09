@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8017825286161007642}
   - component: {fileID: 1891283039721485353}
   - component: {fileID: 4548366535483375081}
+  - component: {fileID: -4727936308994234416}
   m_Layer: 10
   m_Name: Blockade_rock
   m_TagString: Ground
@@ -108,3 +109,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.107974, y: 5.67}
   m_EdgeRadius: 0
+--- !u!114 &-4727936308994234416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7069979854219656285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bae679c9c14f774984e70c166d3da2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -177,7 +177,7 @@ public class PlayerLogic : MonoBehaviour
     }
     private void Combat()
     {
-        if ((Input.touchCount > 0 && can_fire) || Input.GetButtonDown("Fire1"))
+        if (((Input.touchCount > 0 && can_fire) || Input.GetButtonDown("Fire1")) && !PauseLogic.is_paused)
         {
             Vector2 player_pos = Camera.main.WorldToScreenPoint(this.transform.position);
             Vector2 target = new Vector2();
