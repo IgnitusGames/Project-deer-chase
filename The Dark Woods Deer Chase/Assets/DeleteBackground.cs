@@ -26,8 +26,11 @@ public class DeleteBackground : MonoBehaviour
 
 
         player_position = GameObject.FindGameObjectWithTag("Player").transform.position;
+        Vector3 kaas;
 
-        print("player ps" + player_position.x);
+
+        kaas = player_position+ distance;
+        print("player ps" + kaas);
         print("dit object" + this.gameObject.transform.position.x );
 
 
