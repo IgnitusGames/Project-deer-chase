@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8813499516704090417}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SpawnPositionLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4007743187532374231}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SpawnPositionRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7106324330506699645}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SpawnPositionMid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 4606662919500440035}
   - component: {fileID: 859976512}
   - component: {fileID: 859976519}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Spritesheet_mushroom_dash_0
   m_TagString: enemy
   m_Icon: {fileID: 0}

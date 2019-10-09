@@ -10,7 +10,7 @@ public class Platformspawner : MonoBehaviour
     [SerializeField]
     private int maximumCount = 5;
     [SerializeField]
-    private GameObject prefab1, prefab2, prefab3, prefab4, prefab5;
+    private GameObject prefab1, prefab2, prefab3, prefab4, prefab5, background1, background2, background3;
 
     public float gold_speed = 0;
     // public Transform target;
@@ -22,6 +22,7 @@ public class Platformspawner : MonoBehaviour
         if (collision.gameObject.tag == "deer")
         {
             Spawn();
+            SpawnBackGround();
         }
     }
 
@@ -40,6 +41,16 @@ public class Platformspawner : MonoBehaviour
     //    get { return this.prefab; }
     //    set { this.prefab = value; }
     //}
+
+    public void SpawnBackGround()
+    {
+        GameObject background_clone;
+       background_clone = Instantiate(background1, SpawnPositionLeft.transform.position, SpawnPositionLeft.transform.rotation);
+        background_clone = Instantiate(background2, SpawnPositionLeft.transform.position, SpawnPositionLeft.transform.rotation);
+        background_clone = Instantiate(background3, SpawnPositionLeft.transform.position, SpawnPositionLeft.transform.rotation);
+
+
+    }
 
     public void Spawn()
     {
