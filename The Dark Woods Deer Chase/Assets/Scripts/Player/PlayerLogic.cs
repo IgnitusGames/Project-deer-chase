@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class PlayerLogic : MonoBehaviour
 {
     public float doublejumptimer;
-
+    
     public int gold_score = 0;
     //VariablesF
     public GameObject fire_ball;
@@ -226,10 +226,17 @@ public class PlayerLogic : MonoBehaviour
     }
     public IEnumerator KnockBack(float knockDur, float knockBackPwr, Vector2 knockBackDirection)
     {
-        float timer = 0;
+
+       // player_speed = original_player_speed + gold_speed_mod - 10;
+
+
+         float timer = 0;
+
         while (knockDur > timer)
         {
             timer += Time.deltaTime;
+        
+            print(timer);
             this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(knockBackDirection.x * knockBackPwr, knockBackDirection.y));
         }
         yield return 0;
@@ -241,6 +248,21 @@ public class PlayerLogic : MonoBehaviour
         {
             timer += Time.deltaTime;
             this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(knockBackDirection.x, knockBackDirection.y * knockUpPwr));
+        }
+        yield return 0;
+    }
+
+    public IEnumerator SlowDown()
+    {
+        float timer = 0;
+        float duration = 3.0f;
+        print("slow");
+
+        while (duration > timer)
+        { 
+            timer += Time.deltaTime;
+            player_speed = 0;
+            print("daadwerkelijkgeslow");
         }
         yield return 0;
     }
