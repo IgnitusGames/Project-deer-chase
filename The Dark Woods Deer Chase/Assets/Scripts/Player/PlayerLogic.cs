@@ -84,7 +84,7 @@ public class PlayerLogic : MonoBehaviour
             animator.SetBool("is_jumping", true);
             is_grounded = false;
         }
-        player_speed = original_player_speed + gold_speed_mod;
+      //  player_speed = original_player_speed + gold_speed_mod;
     }
     public void Glide()
     {
@@ -252,19 +252,14 @@ public class PlayerLogic : MonoBehaviour
         yield return 0;
     }
 
-    public IEnumerator SlowDown()
+    public IEnumerator SlowDown(float duration)
     {
-        float timer = 0;
-        float duration = 3.0f;
-        print("slow");
 
-        while (duration > timer)
-        { 
-            timer += Time.deltaTime;
-            player_speed = 0;
-            print("daadwerkelijkgeslow");
-        }
-        yield return 0;
+        player_speed = 5;
+        print("slow");
+        yield return new WaitForSeconds(duration);
+
+        player_speed = original_player_speed;
     }
     public IEnumerator DeathCheck()
     {
