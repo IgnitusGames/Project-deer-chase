@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8855679618446101545}
   - component: {fileID: 8855679618446101550}
   - component: {fileID: 8855679618446101551}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Enemy_Turret 1 1 1
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -305,7 +305,7 @@ GameObject:
   - component: {fileID: 8855679618742029830}
   - component: {fileID: 8855679618742029824}
   - component: {fileID: 8855679618742029825}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AttackRangeLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -382,7 +382,7 @@ GameObject:
   - component: {fileID: 8855679619389562785}
   - component: {fileID: 8855679619389562787}
   - component: {fileID: 8855679619389562784}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AttackRangeRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -456,7 +456,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8855679619677249961}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShootPointLeft
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -486,7 +486,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8855679619761394560}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShootPointRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -516,7 +516,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8855679619779020948}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AttackRangeTriger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
