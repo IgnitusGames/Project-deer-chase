@@ -253,7 +253,7 @@ GameObject:
   - component: {fileID: 5923907985224178806}
   - component: {fileID: 4688705138261385233}
   m_Layer: 0
-  m_Name: Achtergrond_day2
+  m_Name: BG1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -380,7 +380,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6883720379976860966}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 113.8, y: 2.4, z: 0}
+  m_LocalPosition: {x: 115, y: 2.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5923907985224178800}
@@ -460,7 +460,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8721118167003361669}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 57.12, y: 0, z: 0}
+  m_LocalPosition: {x: 57.3, y: 1.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5923907985224178800}

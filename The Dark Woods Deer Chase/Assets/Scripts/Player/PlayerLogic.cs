@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class PlayerLogic : MonoBehaviour
 {
     public float doublejumptimer;
-    
+
     public int gold_score = 0;
     //VariablesF
     public GameObject fire_ball;
@@ -54,7 +54,7 @@ public class PlayerLogic : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //Resets player jump ability when player has hit the ground
-        if((collision.gameObject.tag == "Ground" || collision.gameObject.tag == "movplat"))
+        if ((collision.gameObject.tag == "Ground" || collision.gameObject.tag == "movplat"))
         {
             is_grounded = true;
             amount_of_jumps = 2;
@@ -79,12 +79,13 @@ public class PlayerLogic : MonoBehaviour
         if (col.gameObject.tag == "movplat")
             this.transform.parent = null;
         //Check if player is no longer on the ground
-        if(col.gameObject.tag == "Ground" || col.gameObject.tag == "movplat")
+        if (col.gameObject.tag == "Ground" || col.gameObject.tag == "movplat" )
         {
             animator.SetBool("is_jumping", true);
             is_grounded = false;
+            player_speed = original_player_speed + gold_speed_mod;
         }
-      //  player_speed = original_player_speed + gold_speed_mod;
+        //  player_speed = original_player_speed + gold_speed_mod;
     }
     public void Glide()
     {
@@ -214,15 +215,32 @@ public class PlayerLogic : MonoBehaviour
         Debug.Log(string.Format("MOD  = {0}", gold_speed_mod));
      
         player_speed = original_player_speed + gold_speed_mod;
-
-        if(100 < gold_score && 200 > gold_score && gold_score < 105)
-        {
-            FindObjectOfType<AudioManager>().Play("100gold");
-        }
-        if (200 < gold_score && 300 > gold_score && gold_score < 205)
-        {
-            FindObjectOfType<AudioManager>().Play("200gold");
-        }
+        print(gold_score);
+        //if (gold_score > 25 && gold_score < 28)
+        //{
+        //    print("gold tussen 25 en 28");
+        //    FindObjectOfType<AudioManager>().Play("100gold");
+        //}
+        //if (gold_score > 50 && gold_score < 53)
+        //{
+        //    FindObjectOfType<AudioManager>().Play("200gold");
+        //}
+        //if (gold_score > 75 && gold_score < 88)
+        //{
+        //    FindObjectOfType<AudioManager>().Play("300gold");
+        //}
+        //if (gold_score > 100 && gold_score < 103)
+        //{
+        //    FindObjectOfType<AudioManager>().Play("400gold");
+        //}
+        //if (gold_score > 125 && gold_score < 128)
+        //{
+        //    FindObjectOfType<AudioManager>().Play("500gold");
+        //}
+        //if (gold_score > 150 && gold_score < 153)
+        //{
+        //    FindObjectOfType<AudioManager>().Play("600gold");
+        //}
     }
     public IEnumerator KnockBack(float knockDur, float knockBackPwr, Vector2 knockBackDirection)
     {
@@ -243,6 +261,7 @@ public class PlayerLogic : MonoBehaviour
     }
     public IEnumerator KnockUp(float knockDur, float knockUpPwr, Vector2 knockBackDirection)
     {
+        player_speed = original_player_speed +  gold_speed_mod;
         float timer = 0;
         while (knockDur > timer)
         {
@@ -256,7 +275,7 @@ public class PlayerLogic : MonoBehaviour
     {
 
         player_speed = 5;
-        print("slow");
+
         yield return new WaitForSeconds(duration);
 
         player_speed = original_player_speed;

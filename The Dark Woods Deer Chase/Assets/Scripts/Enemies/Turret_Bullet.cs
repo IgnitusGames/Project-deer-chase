@@ -23,7 +23,8 @@ public class Turret_Bullet : MonoBehaviour
 
 
 
-            StartCoroutine(player_logic.KnockBack(0.2f, 1000, Vector2.left));
+            StartCoroutine(player_logic.KnockBack(0.2f, 350, Vector2.left));
+            StartCoroutine(player_logic.SlowDown(2.0f));
             //  player_health.Damage(1);
             // player.StartCoroutine(player.KnockBack(0.02f, 100, player.transform.position));
             Destroy(this.gameObject, 1);
