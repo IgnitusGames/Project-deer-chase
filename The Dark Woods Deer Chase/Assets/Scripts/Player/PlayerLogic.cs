@@ -120,12 +120,9 @@ public class PlayerLogic : MonoBehaviour
             animator.SetBool("is_jumping", false);
             animator.SetBool("is_double_jumping", true);
             FindObjectOfType<AudioManager>().Play("Wing");
-           
-
         }
         if (amount_of_jumps < 1)
         {
-          
             animator.SetBool("is_jumping", true);
             animator.SetBool("is_double_jumping", false);
         }
@@ -154,6 +151,18 @@ public class PlayerLogic : MonoBehaviour
         //Automatically move the player forwards
         animator.SetFloat("Speed", Mathf.Abs(player_speed));
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(player_speed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
+        if(Input.GetButtonDown("Jump"))
+        {
+            Jump();
+        }
+        if(Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            Glide();
+        }
+        if(Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            StopGlide();
+        }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -190,7 +199,7 @@ public class PlayerLogic : MonoBehaviour
             {
                 target = Input.mousePosition;
             }
-            if (target.x < (player_pos.x) * 1.5)
+            if (target.x < (player_pos.x) * 3)
             {
                 return;
             }

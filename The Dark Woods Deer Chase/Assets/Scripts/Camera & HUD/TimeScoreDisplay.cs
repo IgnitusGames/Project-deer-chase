@@ -2,17 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class TimeScoreDisplay : MonoBehaviour
 {
-    
-
     public static int score_value = 0;
     public float time_counter;
     public GameObject time_ui;
     public GameObject score_ui;
     private PlayerLogic player;
-
 
     Text time_score;
 
@@ -27,10 +25,8 @@ public class TimeScoreDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        time_counter -= Time.deltaTime;
-
+        time_counter += Time.deltaTime;
         //gold_score.text = "Gold Score: " + player.gold_score;
-         time_score.text = "Time :" + time_counter;
-
+         time_score.text = "Time :" + Math.Floor(time_counter);
     }
 }
