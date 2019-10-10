@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3175819767218688655}
   - component: {fileID: 3175819767218688648}
   - component: {fileID: 912418271812761530}
+  - component: {fileID: 1418877197117288550}
   m_Layer: 10
   m_Name: Enemy_Vlinder 1 1
   m_TagString: enemy
@@ -71,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1075475103
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -5750747990425958340, guid: a009e5135f7dd984aaa52e89db52fd84,
     type: 3}
@@ -152,7 +153,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 50
+  MaxDistance: 20
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -258,3 +259,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2507d258c342bd4b855c2b37c463bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1418877197117288550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3175819767218688649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f953c330851d4d40939bcabed48493f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dirX: 0
+  moveSpeed: 1.5
+  moveRight: 0
+  face_right: 1
+  range: 4

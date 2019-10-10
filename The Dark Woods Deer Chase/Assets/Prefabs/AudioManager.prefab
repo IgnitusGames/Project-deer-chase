@@ -106,19 +106,43 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: 100gold
     clip: {fileID: 8300000, guid: b268e521c76e7374aa5992c084e3764d, type: 3}
-    volume: 0.952
+    volume: 1
     pitch: 0.548
     loop: 0
     source: {fileID: 0}
   - name: 200gold
     clip: {fileID: 8300000, guid: 753db255dfeaacd4481e7aad515ffa42, type: 3}
-    volume: 0.88
-    pitch: 0.548
+    volume: 1
+    pitch: 0.748
     loop: 0
     source: {fileID: 0}
   - name: Gold1
     clip: {fileID: 8300000, guid: b3c5001cd9888984c97fb7212baba276, type: 3}
     volume: 0.838
-    pitch: 0.548
+    pitch: 0.784
+    loop: 0
+    source: {fileID: 0}
+  - name: 300gold
+    clip: {fileID: 8300000, guid: 107ffecf607cda541a84d9c2540b4396, type: 3}
+    volume: 1
+    pitch: 0.782
+    loop: 0
+    source: {fileID: 0}
+  - name: 400gold
+    clip: {fileID: 8300000, guid: 0e0bbd4eff2c5a34791040707d93506b, type: 3}
+    volume: 1
+    pitch: 0.796
+    loop: 0
+    source: {fileID: 0}
+  - name: 500gold
+    clip: {fileID: 8300000, guid: a336f2d51a73eb74db4b563afd66a246, type: 3}
+    volume: 1
+    pitch: 0.8
+    loop: 0
+    source: {fileID: 0}
+  - name: 600gold
+    clip: {fileID: 8300000, guid: eb0cc195795647c4aa5dcf1b541623ce, type: 3}
+    volume: 1
+    pitch: 0.844
     loop: 0
     source: {fileID: 0}
