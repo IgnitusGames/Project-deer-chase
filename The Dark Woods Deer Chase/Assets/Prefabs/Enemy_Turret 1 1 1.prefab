@@ -124,11 +124,11 @@ MonoBehaviour:
   cur_Health: 0
   max_Health: 0
   distance: 0
-  wakeRange: 9
+  wakeRange: 15
   shoot: 0
   bulletSpeed: 10
   bulletTimer: 2
-  bulletInterval: 3
+  bulletInterval: 2
   awake: 0
   lookingRight: 0
   bullet: {fileID: 5441341888509901255, guid: 2aa42d6def2fc2e4fb1bfede0b4bd976, type: 3}
@@ -352,8 +352,9 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: -3.6276946, y: 2.2193935}
-      - {x: -5.3687425, y: 2.2917428}
-      - {x: -5.4751153, y: -1.2198784}
+      - {x: -13.079655, y: 2.512575}
+      - {x: -13.181786, y: -1.4625742}
+      - {x: -8.873396, y: -1.3963244}
       - {x: 0.33238125, y: -1.0005707}
       - {x: 0.37639523, y: 0.18131459}
 --- !u!114 &8855679618742029825
@@ -428,8 +429,8 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: -3.6276946, y: 2.2193935}
-      - {x: -5.3687425, y: 2.2917428}
-      - {x: -5.4751153, y: -1.2198784}
+      - {x: -11.178316, y: 2.3467824}
+      - {x: -11.202089, y: -1.4675562}
       - {x: 0.33238125, y: -1.0005707}
       - {x: 0.37639523, y: 0.18131459}
 --- !u!114 &8855679619389562784
@@ -500,7 +501,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8855679619761394561}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.25, y: 0, z: -6.500155}
+  m_LocalPosition: {x: -0.91, y: 0, z: -6.500155}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8855679618446101540}

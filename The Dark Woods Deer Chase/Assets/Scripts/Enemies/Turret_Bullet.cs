@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class Turret_Bullet : MonoBehaviour
 {
-   // private Player_Health_Collectible player_health;
-    private PlayerLogic player;
+    // private Player_Health_Collectible player_health;
+    private PlayerLogic player_logic;
     void Update()
     {
         Destroy(this.gameObject, 5);
     }
     private void Start()
     {
-       // player_health = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Health_Collectible>();
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerLogic>();
+        // player_health = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Health_Collectible>();
+        player_logic = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerLogic>();
     }
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -21,8 +21,11 @@ public class Turret_Bullet : MonoBehaviour
         {
             FindObjectOfType<AudioManager>().Play("EnemyTurretBulletHit");
 
-          //  player_health.Damage(1);
-           // player.StartCoroutine(player.KnockBack(0.02f, 100, player.transform.position));
+
+
+            StartCoroutine(player_logic.KnockBack(0.2f, 1000, Vector2.left));
+            //  player_health.Damage(1);
+            // player.StartCoroutine(player.KnockBack(0.02f, 100, player.transform.position));
             Destroy(this.gameObject, 1);
         }
     }

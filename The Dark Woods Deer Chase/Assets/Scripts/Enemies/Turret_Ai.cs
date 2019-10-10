@@ -54,7 +54,9 @@ public class Turret_Ai : MonoBehaviour
         distance = Vector3.Distance(transform.position, target.transform.position);
         if (distance < wakeRange)
         {
- 
+            animator.SetBool("attackleft", true);
+            animator.SetBool("attackright", false);
+            animator.SetBool("idle", false);
 
             awake = true;
             lookingRight = true;
@@ -62,9 +64,7 @@ public class Turret_Ai : MonoBehaviour
 
             if (target.transform.position.x < transform.position.x)
             {
-                animator.SetBool("attackleft", true);
-                animator.SetBool("attackright", false);
-                animator.SetBool("idle", false);
+               
 
             }
             else if (target.transform.position.x > transform.position.x)

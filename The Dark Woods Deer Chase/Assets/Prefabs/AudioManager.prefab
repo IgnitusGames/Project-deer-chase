@@ -46,79 +46,79 @@ MonoBehaviour:
   sounds:
   - name: Theme
     clip: {fileID: 8300000, guid: 65ecd9203ef675344bdbb90992871972, type: 3}
-    volume: 0.6
-    pitch: 0.548
-    loop: 0
+    volume: 0.677
+    pitch: 0.5
+    loop: 1
     source: {fileID: 0}
   - name: Wing
     clip: {fileID: 8300000, guid: 10add6401aee534498f29ad751412de9, type: 3}
-    volume: 0.212
+    volume: 0.527
     pitch: 0.548
     loop: 0
     source: {fileID: 0}
   - name: Fireball
     clip: {fileID: 8300000, guid: 4de83486828781e4e9fe9595547f74a3, type: 3}
-    volume: 0.542
+    volume: 0.844
     pitch: 0.548
     loop: 0
     source: {fileID: 0}
   - name: ShroomJump
     clip: {fileID: 8300000, guid: b1a155aef1fd54a418d143d513ee6078, type: 3}
-    volume: 0.542
+    volume: 0.641
     pitch: 0.548
     loop: 0
     source: {fileID: 0}
   - name: ShroomHit
     clip: {fileID: 8300000, guid: 680b631e7aef72449a2cb578af0c6bee, type: 3}
-    volume: 0.542
+    volume: 0.641
     pitch: 0.548
     loop: 0
     source: {fileID: 0}
   - name: EnemyTurretShoot
     clip: {fileID: 8300000, guid: 65cc4f990756e9949b2184c53f699f72, type: 3}
-    volume: 0.542
+    volume: 0.653
     pitch: 0.548
     loop: 0
     source: {fileID: 0}
   - name: ShroomDmg
     clip: {fileID: 8300000, guid: 680b631e7aef72449a2cb578af0c6bee, type: 3}
-    volume: 0.542
+    volume: 0.665
     pitch: 0.548
     loop: 0
     source: {fileID: 0}
   - name: GateOpen
     clip: {fileID: 8300000, guid: c77632afffe22f045834bbc076d4e5bc, type: 3}
-    volume: 0.464
+    volume: 0.629
     pitch: 0.491
     loop: 0
     source: {fileID: 0}
   - name: Trigger
     clip: {fileID: 8300000, guid: 95e6bc4211de37741b4ba43029e3fb66, type: 3}
-    volume: 0.542
+    volume: 0.748
     pitch: 0.548
     loop: 0
     source: {fileID: 0}
   - name: Portal
     clip: {fileID: 8300000, guid: 744ae8c2375227b4d9f9fcb7228ee0c5, type: 3}
-    volume: 0.542
+    volume: 0.683
     pitch: 0.548
     loop: 0
     source: {fileID: 0}
   - name: 100gold
     clip: {fileID: 8300000, guid: b268e521c76e7374aa5992c084e3764d, type: 3}
-    volume: 0.542
+    volume: 0.952
     pitch: 0.548
     loop: 0
     source: {fileID: 0}
   - name: 200gold
     clip: {fileID: 8300000, guid: 753db255dfeaacd4481e7aad515ffa42, type: 3}
-    volume: 0.542
+    volume: 0.88
     pitch: 0.548
     loop: 0
     source: {fileID: 0}
   - name: Gold1
     clip: {fileID: 8300000, guid: b3c5001cd9888984c97fb7212baba276, type: 3}
-    volume: 0.542
+    volume: 0.838
     pitch: 0.548
     loop: 0
     source: {fileID: 0}
