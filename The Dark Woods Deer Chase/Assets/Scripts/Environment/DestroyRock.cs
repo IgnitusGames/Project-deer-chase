@@ -15,15 +15,19 @@ public class DestroyRock : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
+
+           
             if (rock_health == 0)
             {
+               
                 Destroy(this.gameObject);
             }
             else
             {
-              
-                StartCoroutine(player_logic.SlowDown(2.0f));
-                StartCoroutine(player_logic.KnockBack(0.2f, 750, Vector2.left));
+                StartCoroutine(player_logic.SlowDown(2.5f));
+
+
+                StartCoroutine(player_logic.KnockBack(0.2f, 1000, Vector2.left));
                 rock_health -= 1;
             }
         }

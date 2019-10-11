@@ -20,6 +20,7 @@ public class Knockbackside : MonoBehaviour
            if (contact_point == new Vector2(1.0f, 0.0f))
             {
                 StartCoroutine(player_logic.KnockBack(0.2f, 1000, Vector2.left));
+                StartCoroutine(player_logic.SlowDown(2.0f));
             }
         }
     }
