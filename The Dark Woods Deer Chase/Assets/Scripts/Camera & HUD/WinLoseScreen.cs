@@ -44,11 +44,13 @@ public class WinLoseScreen : MonoBehaviour
         ui.SetActive(false);
         lose_screen.SetActive(true);
         Time.timeScale = 0;
+      
     }
     public void ActivateDeathScreen()
     {
         ui.SetActive(false);
         death_screen.SetActive(true);
         Time.timeScale = 0;
+        
     }
 }

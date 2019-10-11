@@ -146,13 +146,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doublejumptimer: 0
+  timer: 0
   gold_score: 0
   fire_ball: {fileID: 7843121306967399654, guid: 85ec0b6c05b13d74b8e8057c96cccba7,
     type: 3}
   animator: {fileID: 92666911}
-  player_speed: 0
+  player_speed: 15
   current_player_speed: 0
-  fire_ball_speed: 25
+  fire_ball_speed: 35
   jump_power: 1400
   player_mana: 0
   y_death_level: -100
@@ -195,13 +196,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 40468475bbf8f934b9d0e7cfab4bc540, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.318
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 154
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500

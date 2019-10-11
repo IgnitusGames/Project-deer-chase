@@ -22,6 +22,9 @@ public class Vines : MonoBehaviour
 
         }
     }
+
+   
+
     public void Die()
     {
         Destroy(gameObject);

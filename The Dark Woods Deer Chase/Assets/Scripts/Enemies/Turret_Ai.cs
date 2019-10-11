@@ -45,13 +45,16 @@ public class Turret_Ai : MonoBehaviour
     {
 
         RangeCheck();
-    
+       
+
     }
 
 
     void RangeCheck()
     {
         distance = Vector3.Distance(transform.position, target.transform.position);
+      
+       
         if (distance < wakeRange)
         {
             
@@ -62,22 +65,18 @@ public class Turret_Ai : MonoBehaviour
 
             if (target.transform.position.x < transform.position.x)
             {
-                animator.SetBool("attackleft", true);
-                animator.SetBool("attackright", false);
-                animator.SetBool("idle", false);
+    
 
             }
             else if (target.transform.position.x > transform.position.x)
             {
-                animator.SetBool("attackright", true);
-                animator.SetBool("attackleft", false);
-                animator.SetBool("idle", false);
+
             }
             
 
             //Attack(true);
         }
-        else animator.SetBool("idle", true);
+       // else animator.SetBool("idle", true);
        // animator.SetBool("attackleft", false);
        // animator.SetBool("attackright", false);
 
@@ -85,7 +84,7 @@ public class Turret_Ai : MonoBehaviour
         if (distance > wakeRange)
         {
             awake = false;
-            animator.SetBool("idle", true);
+           // animator.SetBool("idle", true);
         }
   
       
@@ -97,7 +96,7 @@ public class Turret_Ai : MonoBehaviour
         {
 
             FindObjectOfType<AudioManager>().Play("EnemyTurretDmg");
-            gameObject.GetComponent<Animation>().Play("enemyturretdmg");
+            gameObject.GetComponent<Animation>().Play("ShroomDmg");
         }
 
     }
@@ -118,6 +117,10 @@ public class Turret_Ai : MonoBehaviour
                 bulletClone.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
                 FindObjectOfType<AudioManager>().Play("EnemyTurretShoot");
                 bulletTimer = 0;
+                animator.SetBool("attackright", true);
+                animator.SetBool("attackleft", false);
+                animator.SetBool("idle", false);
+
 
             }
             if (attackingRight)
@@ -128,6 +131,9 @@ public class Turret_Ai : MonoBehaviour
                 FindObjectOfType<AudioManager>().Play("EnemyTurretShoot");
                 bulletTimer = 0;
 
+                animator.SetBool("attackright", false);
+                animator.SetBool("attackleft", true);
+                animator.SetBool("idle", false);
             }
         }
     }

@@ -13,11 +13,11 @@ GameObject:
   - component: {fileID: 160906975736370714}
   - component: {fileID: 691520865}
   - component: {fileID: 691520866}
-  - component: {fileID: 691520870}
   - component: {fileID: 691520871}
+  - component: {fileID: -1139081349102258467}
   m_Layer: 10
   m_Name: Vines_0
-  m_TagString: enemy
+  m_TagString: Slow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,7 +96,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -156,20 +156,8 @@ MonoBehaviour:
         m_CallState: 2
   take_damage: 0
   enemy_curr_health: 0
-  enemy_max_health: 2
+  enemy_max_health: 3
   take_dmg_time: 0
---- !u!114 &691520870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2278074573455136944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2507d258c342bd4b855c2b37c463bca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &691520871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,3 +170,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0df5d43d651bbf48a55bcb4d72c76d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-1139081349102258467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2278074573455136944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bae679c9c14f774984e70c166d3da2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rock_health: 1

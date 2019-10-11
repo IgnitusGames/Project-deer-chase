@@ -12,7 +12,7 @@ public class FireBallLogic : MonoBehaviour
     //Unity functions
     private void Start()
     {
-        destroy_on_collide = new string[3] { "enemy", "Ground", "movplat" };
+        destroy_on_collide = new string[4] { "enemy", "Ground", "movplat" , "Slow"};
     }
     private void Update()
     {
@@ -21,7 +21,7 @@ public class FireBallLogic : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Code below is executed when the fire prefab this script is attatched to comes in contact with an enemy
-        if (collision.gameObject.tag == "enemy")
+        if (collision.gameObject.tag == "enemy" || collision.gameObject.tag == "Slow")
         {
             collision.GetComponent<HealthComponent>().TakeDamage(Damage);
         }

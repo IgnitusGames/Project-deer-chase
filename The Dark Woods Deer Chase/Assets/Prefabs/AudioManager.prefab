@@ -46,8 +46,8 @@ MonoBehaviour:
   sounds:
   - name: Theme
     clip: {fileID: 8300000, guid: 65ecd9203ef675344bdbb90992871972, type: 3}
-    volume: 0.677
-    pitch: 0.5
+    volume: 1
+    pitch: 0.49
     loop: 1
     source: {fileID: 0}
   - name: Wing
@@ -88,13 +88,13 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: GateOpen
     clip: {fileID: 8300000, guid: c77632afffe22f045834bbc076d4e5bc, type: 3}
-    volume: 0.629
+    volume: 0.73
     pitch: 0.491
     loop: 0
     source: {fileID: 0}
   - name: Trigger
     clip: {fileID: 8300000, guid: 95e6bc4211de37741b4ba43029e3fb66, type: 3}
-    volume: 0.748
+    volume: 0.79
     pitch: 0.548
     loop: 0
     source: {fileID: 0}
@@ -113,13 +113,13 @@ MonoBehaviour:
   - name: 200gold
     clip: {fileID: 8300000, guid: 753db255dfeaacd4481e7aad515ffa42, type: 3}
     volume: 1
-    pitch: 0.748
+    pitch: 0.51
     loop: 0
     source: {fileID: 0}
   - name: Gold1
     clip: {fileID: 8300000, guid: b3c5001cd9888984c97fb7212baba276, type: 3}
     volume: 0.838
-    pitch: 0.784
+    pitch: 0.49
     loop: 0
     source: {fileID: 0}
   - name: 300gold
@@ -131,18 +131,48 @@ MonoBehaviour:
   - name: 400gold
     clip: {fileID: 8300000, guid: 0e0bbd4eff2c5a34791040707d93506b, type: 3}
     volume: 1
-    pitch: 0.796
+    pitch: 0.49
     loop: 0
     source: {fileID: 0}
   - name: 500gold
     clip: {fileID: 8300000, guid: a336f2d51a73eb74db4b563afd66a246, type: 3}
     volume: 1
-    pitch: 0.8
+    pitch: 0.61
     loop: 0
     source: {fileID: 0}
   - name: 600gold
     clip: {fileID: 8300000, guid: eb0cc195795647c4aa5dcf1b541623ce, type: 3}
     volume: 1
-    pitch: 0.844
+    pitch: 0.52
+    loop: 0
+    source: {fileID: 0}
+  - name: EnemyTurretBulletHit
+    clip: {fileID: 8300000, guid: 6365f3a968408d94eb7964a8e90e3cea, type: 3}
+    volume: 1
+    pitch: 0.47
+    loop: 0
+    source: {fileID: 0}
+  - name: EnemyTurretDmg
+    clip: {fileID: 8300000, guid: 535774a087181744bb452a5c0c0fded2, type: 3}
+    volume: 1
+    pitch: 0.58
+    loop: 0
+    source: {fileID: 0}
+  - name: ShroomKnockBack
+    clip: {fileID: 8300000, guid: d43b63670c164784a994c1867d1467ca, type: 3}
+    volume: 1
+    pitch: 0.58
+    loop: 0
+    source: {fileID: 0}
+  - name: VineDmg
+    clip: {fileID: 8300000, guid: 0f1fea42c7659a240b319c66d5dc12dc, type: 3}
+    volume: 1
+    pitch: 0.53
+    loop: 0
+    source: {fileID: 0}
+  - name: LoseSound
+    clip: {fileID: 8300000, guid: a03a9a2005e07cb4a9a452083ccf9fbc, type: 3}
+    volume: 1
+    pitch: 0.51
     loop: 0
     source: {fileID: 0}

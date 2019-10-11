@@ -10,12 +10,30 @@ public class Spike_Damage : MonoBehaviour
     {
         player_logic = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerLogic>();
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.CompareTag("Player"))
+        if (collision.gameObject.tag == "Player")
         {
-            //collision.gameObject.GetComponent<Player_Health_Collectible>().Damage(1);
-            //StartCoroutine(player_logic.KnockBack(0.02f, 350, player_logic.transform.position));
+            Vector2 contact_point = collision.GetContact(0).normal;
+            player_logic.player_speed = 0;
+            if (contact_point == new Vector2(0.0f, -1.0f))
+            {
+                StartCoroutine(player_logic.SlowDown(0.5f));
+                StartCoroutine(player_logic.KnockUp(0.2f, 300, Vector2.up));
+                StartCoroutine(player_logic.KnockBack(0.2f, 750, Vector2.left));
+
+            }
+            else if (contact_point == new Vector2(1.0f, 0.0f))
+            {
+                StartCoroutine(player_logic.SlowDown(0.5f));
+                StartCoroutine(player_logic.KnockUp(0.2f, 300, Vector2.up));
+                StartCoroutine(player_logic.KnockBack(0.2f, 750, Vector2.left));
+                // StartCoroutine(player_logic.KnockUp(0.2f, 150, Vector2.up));
+
+                FindObjectOfType<AudioManager>().Play("LoseSound");
+               
+
+            }
         }
     }
 }

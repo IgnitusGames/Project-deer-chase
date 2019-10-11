@@ -9,7 +9,8 @@ using UnityEngine.SceneManagement;
 public class PlayerLogic : MonoBehaviour
 {
     public float doublejumptimer;
-
+    public float timer = 0;
+    
     public int gold_score = 0;
     //VariablesF
     public GameObject fire_ball;
@@ -50,6 +51,8 @@ public class PlayerLogic : MonoBehaviour
     {
         Movement();
         Combat();
+        timer += Time.deltaTime;
+    
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -187,7 +190,10 @@ public class PlayerLogic : MonoBehaviour
     }
     private void Combat()
     {
-        if (((Input.touchCount > 0 && can_fire) || Input.GetButtonDown("Fire1")) && !PauseLogic.is_paused)
+       
+        
+
+        if (((Input.touchCount > 0 || Input.GetButtonDown("Fire1")) && !PauseLogic.is_paused && timer > 0.3f))
         {
             Vector2 player_pos = Camera.main.WorldToScreenPoint(this.transform.position);
             Vector2 target = new Vector2();
@@ -205,7 +211,9 @@ public class PlayerLogic : MonoBehaviour
             }
             else
             {
-                can_fire = false;
+
+                timer = 0;
+            
                 Vector2 direction = target - player_pos;
                 direction = direction.normalized;
                 //Rotation is calculated with the tangent function
@@ -213,7 +221,7 @@ public class PlayerLogic : MonoBehaviour
                 GameObject fire_ball_instance = Instantiate(fire_ball, this.transform.position, Quaternion.Euler(new Vector3(0, 0, rotation)));
                 FindObjectOfType<AudioManager>().Play("Fireball");
                 fire_ball_instance.GetComponent<Rigidbody2D>().velocity = direction * fire_ball_speed;
-                StartCoroutine(FireCooldown());
+              //  StartCoroutine(FireCooldown());
             }
         }
     }
@@ -225,31 +233,31 @@ public class PlayerLogic : MonoBehaviour
      
         player_speed = original_player_speed + gold_speed_mod;
         print(gold_score);
-        //if (gold_score > 25 && gold_score < 28)
-        //{
-        //    print("gold tussen 25 en 28");
-        //    FindObjectOfType<AudioManager>().Play("100gold");
-        //}
-        //if (gold_score > 50 && gold_score < 53)
-        //{
-        //    FindObjectOfType<AudioManager>().Play("200gold");
-        //}
-        //if (gold_score > 75 && gold_score < 88)
-        //{
-        //    FindObjectOfType<AudioManager>().Play("300gold");
-        //}
-        //if (gold_score > 100 && gold_score < 103)
-        //{
-        //    FindObjectOfType<AudioManager>().Play("400gold");
-        //}
-        //if (gold_score > 125 && gold_score < 128)
-        //{
-        //    FindObjectOfType<AudioManager>().Play("500gold");
-        //}
-        //if (gold_score > 150 && gold_score < 153)
-        //{
-        //    FindObjectOfType<AudioManager>().Play("600gold");
-        //}
+        if (gold_score > 25 && gold_score < 28)
+        {
+            print("gold tussen 25 en 28");
+            FindObjectOfType<AudioManager>().Play("100gold");
+        }
+        if (gold_score > 50 && gold_score < 53)
+        {
+            FindObjectOfType<AudioManager>().Play("200gold");
+        }
+        if (gold_score > 75 && gold_score < 88)
+        {
+            FindObjectOfType<AudioManager>().Play("300gold");
+        }
+        if (gold_score > 100 && gold_score < 103)
+        {
+            FindObjectOfType<AudioManager>().Play("400gold");
+        }
+        if (gold_score > 125 && gold_score < 128)
+        {
+            FindObjectOfType<AudioManager>().Play("500gold");
+        }
+        if (gold_score > 150 && gold_score < 153)
+        {
+            FindObjectOfType<AudioManager>().Play("600gold");
+        }
     }
     public IEnumerator KnockBack(float knockDur, float knockBackPwr, Vector2 knockBackDirection)
     {
@@ -301,9 +309,9 @@ public class PlayerLogic : MonoBehaviour
             yield return new WaitForSeconds(1.0f);
         }
     }
-    private IEnumerator FireCooldown()
-    {
-        yield return new WaitForSeconds(0.5f);
-        can_fire = true;
-    }
+    //private IEnumerator FireCooldown()
+    //{
+    //    yield return new WaitForSeconds(0.5f);
+    //    can_fire = true;
+    //}
 }

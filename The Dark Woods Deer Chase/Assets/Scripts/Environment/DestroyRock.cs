@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DestroyRock : MonoBehaviour
 {
-    private int rock_health = 1;
+    public int rock_health = 1;
     private PlayerLogic player_logic;
     // Start is called before the first frame update
     void Start()
