@@ -1022,30 +1022,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spritesheet_andor_0
       objectReference: {fileID: 0}
-    - target: {fileID: 1519432044526039836, guid: d0b78c018461bd74688f15ce67061474,
-        type: 3}
-      propertyPath: player_speed
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1519432044526039836, guid: d0b78c018461bd74688f15ce67061474,
-        type: 3}
-      propertyPath: y_death_level
-      value: -50
-      objectReference: {fileID: 0}
-    - target: {fileID: 1519432044526039836, guid: d0b78c018461bd74688f15ce67061474,
-        type: 3}
-      propertyPath: gold_score
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1519432044526039837, guid: d0b78c018461bd74688f15ce67061474,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -25.53
+      value: -24.85
       objectReference: {fileID: 0}
     - target: {fileID: 1519432044526039837, guid: d0b78c018461bd74688f15ce67061474,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.01
+      value: 3.19
       objectReference: {fileID: 0}
     - target: {fileID: 1519432044526039837, guid: d0b78c018461bd74688f15ce67061474,
         type: 3}
@@ -1093,12 +1078,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 92666917, guid: d0b78c018461bd74688f15ce67061474, type: 3}
-      propertyPath: Priority
-      value: 154
-      objectReference: {fileID: 0}
-    - target: {fileID: 92666917, guid: d0b78c018461bd74688f15ce67061474, type: 3}
-      propertyPath: m_Volume
-      value: 0.318
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0b78c018461bd74688f15ce67061474, type: 3}
@@ -1335,7 +1316,7 @@ PrefabInstance:
     - target: {fileID: 3660825092161375396, guid: 124b245aeebef0946b0145b07b8c6ad7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.49
+      value: 1.08
       objectReference: {fileID: 0}
     - target: {fileID: 3660825092161375396, guid: 124b245aeebef0946b0145b07b8c6ad7,
         type: 3}

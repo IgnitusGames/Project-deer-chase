@@ -10,13 +10,15 @@ public class PlayerLogic : MonoBehaviour
 {
     public float doublejumptimer;
     public float timer = 0;
-    
+    private ParticleSystem boost_sparkles;
+
     public int gold_score = 0;
     //VariablesF
     public GameObject fire_ball;
     public Animator animator;
     public float player_speed;
     public float current_player_speed;
+    
 
     public int fire_ball_speed = 11;
     public int jump_power = 250;
@@ -33,10 +35,14 @@ public class PlayerLogic : MonoBehaviour
     public float windspeed = 100;
     public float slow_speed = 5;
     public float gold_speed_mod;
-
+   
     private GameObject win_lose_canvas;
     private HealthComponent enemy_health;
     private bool can_fire = true;
+    //  BoostSparkles boost_sparkles = gameObject.GetComponent<BoostSparkles>();
+
+ 
+    // ParticleSystem ps;
     private void Start()
     {
         StartCoroutine(DeathCheck());
@@ -44,13 +50,26 @@ public class PlayerLogic : MonoBehaviour
         rb2d = this.gameObject.GetComponent<Rigidbody2D>();
         original_gravity = this.GetComponent<Rigidbody2D>().gravityScale;
         original_player_speed = player_speed;
+ 
         win_lose_canvas = GameObject.FindGameObjectWithTag("WinLose");
+        boost_sparkles = GetComponentInChildren<ParticleSystem>();
+
+      
+
+
+
+        // ps = GetComponent<ParticleSystem>();
+        //  GetComponentsInChildren<ParticleSystem>().Emit(5);
+
     }
+
+  
     // Update is called once per frame
     private void Update()
     {
         Movement();
         Combat();
+        
         timer += Time.deltaTime;
     
     }
@@ -180,7 +199,15 @@ public class PlayerLogic : MonoBehaviour
         {
             player_speed = original_player_speed + gold_speed_mod - 10;
         }
+        
+
     }
+
+
+
+  
+
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Slow")
@@ -235,28 +262,44 @@ public class PlayerLogic : MonoBehaviour
         print(gold_score);
         if (gold_score > 25 && gold_score < 28)
         {
+            boost_sparkles.Play();
             print("gold tussen 25 en 28");
             FindObjectOfType<AudioManager>().Play("100gold");
+            
+            // GameObject go = (GameObject)Instantiate(boostSparkles, transform.position, transform.rotation);
+            // //set sparkle effects parent to this transform
+            //// go.child = transform;
+            // //Destroy after 5 seconds
+            // Destroy(go, 5.0f);
         }
         if (gold_score > 50 && gold_score < 53)
         {
             FindObjectOfType<AudioManager>().Play("200gold");
+            boost_sparkles.Play();
         }
         if (gold_score > 75 && gold_score < 88)
         {
             FindObjectOfType<AudioManager>().Play("300gold");
+            boost_sparkles.Play();
+
         }
         if (gold_score > 100 && gold_score < 103)
         {
             FindObjectOfType<AudioManager>().Play("400gold");
+            boost_sparkles.Play();
+
         }
         if (gold_score > 125 && gold_score < 128)
         {
             FindObjectOfType<AudioManager>().Play("500gold");
+            boost_sparkles.Play();
+
         }
         if (gold_score > 150 && gold_score < 153)
         {
             FindObjectOfType<AudioManager>().Play("600gold");
+            boost_sparkles.Play();
+
         }
     }
     public IEnumerator KnockBack(float knockDur, float knockBackPwr, Vector2 knockBackDirection)
