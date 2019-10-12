@@ -62,7 +62,7 @@ public class Platformspawner : MonoBehaviour
 
 
         whatToSpawn = Random.Range(1, 5);
-        Debug.Log(whatToSpawn);
+    
 
         switch(whatToSpawn)
         {

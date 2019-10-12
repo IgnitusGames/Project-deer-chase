@@ -121,7 +121,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8855679618446101548}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -5.543484, y: -9.706562, z: 6.5001526}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -133,7 +133,7 @@ Transform:
   - {fileID: 3095029050142890402}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!212 &8855679618446101541
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -218,7 +218,7 @@ MonoBehaviour:
   cur_Health: 0
   max_Health: 0
   distance: 0
-  wakeRange: 15
+  wakeRange: 90
   shoot: 0
   bulletSpeed: 10
   bulletTimer: 1.8
@@ -465,8 +465,8 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: -3.6276946, y: 2.2193935}
-      - {x: -13.079655, y: 2.512575}
-      - {x: -13.181786, y: -1.4625742}
+      - {x: -15.578728, y: 2.7502823}
+      - {x: -15.323849, y: -1.5220013}
       - {x: -8.873396, y: -1.3963244}
       - {x: 0.33238125, y: -1.0005707}
       - {x: 0.37639523, y: 0.18131459}
@@ -542,8 +542,8 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: -3.6276946, y: 2.2193935}
-      - {x: -11.178316, y: 2.3467824}
-      - {x: -11.202089, y: -1.4675562}
+      - {x: -19.880175, y: 4.0739083}
+      - {x: -19.741732, y: -1.5759387}
       - {x: 0.33238125, y: -1.0005707}
       - {x: 0.37639523, y: 0.18131459}
 --- !u!114 &8855679619389562784

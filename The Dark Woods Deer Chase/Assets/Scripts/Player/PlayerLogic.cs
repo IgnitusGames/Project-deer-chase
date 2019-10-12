@@ -17,7 +17,7 @@ public class PlayerLogic : MonoBehaviour
     public GameObject fire_ball;
     public Animator animator;
     public float player_speed;
-    public float current_player_speed;
+    public float current_player_speed = 15;
     
 
     public int fire_ball_speed = 11;
@@ -69,7 +69,7 @@ public class PlayerLogic : MonoBehaviour
     {
         Movement();
         Combat();
-        
+        print(current_player_speed);
         timer += Time.deltaTime;
     
     }
@@ -197,7 +197,7 @@ public class PlayerLogic : MonoBehaviour
     {
         if (collision.gameObject.tag == "Slow" && !GameManager.game_manager.cheat_mode_is_enabled)
         {
-            player_speed = original_player_speed + gold_speed_mod - 10;
+            player_speed = 5;
         }
         
 
@@ -212,7 +212,7 @@ public class PlayerLogic : MonoBehaviour
     {
         if(collision.gameObject.tag == "Slow")
         {
-            player_speed = original_player_speed + gold_speed_mod;
+            player_speed = current_player_speed;
         }
     }
     private void Combat()
@@ -255,49 +255,91 @@ public class PlayerLogic : MonoBehaviour
     public void GoldScore(int goldscore)
     {
         gold_score += goldscore;
-        gold_speed_mod = gold_score / 100;
-        Debug.Log(string.Format("MOD  = {0}", gold_speed_mod));
-     
-        player_speed = original_player_speed + gold_speed_mod;
-        print(gold_score);
-        if (gold_score > 25 && gold_score < 28)
+
+
+
+        if (gold_score >= 0 && gold_score < 1)
         {
+
+            gold_speed_mod = 0.1f;
+            player_speed = original_player_speed + gold_speed_mod;
+            current_player_speed = original_player_speed + gold_speed_mod;
             boost_sparkles.Play();
-            print("gold tussen 25 en 28");
-            FindObjectOfType<AudioManager>().Play("100gold");
-            
-            // GameObject go = (GameObject)Instantiate(boostSparkles, transform.position, transform.rotation);
-            // //set sparkle effects parent to this transform
-            //// go.child = transform;
-            // //Destroy after 5 seconds
-            // Destroy(go, 5.0f);
+            FindObjectOfType<AudioManager>().Play("600gold");
         }
-        if (gold_score > 50 && gold_score < 53)
+
+
+        if (gold_score > 20 && gold_score < 23)
         {
+
+            gold_speed_mod = 0.2f;
+            player_speed = original_player_speed + gold_speed_mod;
+            current_player_speed = original_player_speed + gold_speed_mod;
+            boost_sparkles.Play();
+            print("gold tussen 10 en 13");
+            FindObjectOfType<AudioManager>().Play("100gold");
+     
+        }
+        if (gold_score > 40 && gold_score < 43)
+        {
+            gold_speed_mod = 0.4f;
+            player_speed = original_player_speed + gold_speed_mod;
+            current_player_speed = original_player_speed + gold_speed_mod;
+
             FindObjectOfType<AudioManager>().Play("200gold");
             boost_sparkles.Play();
         }
-        if (gold_score > 75 && gold_score < 88)
+        if (gold_score > 60 && gold_score < 63)
         {
+            gold_speed_mod = 0.6f;
+            player_speed = original_player_speed + gold_speed_mod;
+            current_player_speed = original_player_speed + gold_speed_mod;
             FindObjectOfType<AudioManager>().Play("300gold");
+            boost_sparkles.Play();
+
+        }
+        if (gold_score > 80 && gold_score < 83)
+        {
+            gold_speed_mod = 0.8f;
+            player_speed = original_player_speed + gold_speed_mod;
+            current_player_speed = original_player_speed + gold_speed_mod;
+            FindObjectOfType<AudioManager>().Play("400gold");
             boost_sparkles.Play();
 
         }
         if (gold_score > 100 && gold_score < 103)
         {
-            FindObjectOfType<AudioManager>().Play("400gold");
-            boost_sparkles.Play();
-
-        }
-        if (gold_score > 125 && gold_score < 128)
-        {
+            gold_speed_mod = 1.0f;
+            player_speed = original_player_speed + gold_speed_mod;
+            current_player_speed = original_player_speed + gold_speed_mod;
             FindObjectOfType<AudioManager>().Play("500gold");
             boost_sparkles.Play();
 
         }
-        if (gold_score > 150 && gold_score < 153)
+        if (gold_score > 120 && gold_score < 123)
         {
+            gold_speed_mod = 1.2f;
+            player_speed = original_player_speed + gold_speed_mod;
+            current_player_speed = original_player_speed + gold_speed_mod;
             FindObjectOfType<AudioManager>().Play("600gold");
+            boost_sparkles.Play();
+
+        }
+        if (gold_score > 140 && gold_score < 143)
+        {
+            gold_speed_mod = 1.4f;
+            player_speed = original_player_speed + gold_speed_mod;
+            current_player_speed = original_player_speed + gold_speed_mod;
+            FindObjectOfType<AudioManager>().Play("100gold");
+            boost_sparkles.Play();
+
+        }
+        if (gold_score > 160 && gold_score < 163)
+        {
+            gold_speed_mod = 1.6f;
+            player_speed = original_player_speed + gold_speed_mod;
+            current_player_speed = original_player_speed + gold_speed_mod;
+            FindObjectOfType<AudioManager>().Play("200gold");
             boost_sparkles.Play();
 
         }
@@ -321,7 +363,7 @@ public class PlayerLogic : MonoBehaviour
     }
     public IEnumerator KnockUp(float knockDur, float knockUpPwr, Vector2 knockBackDirection)
     {
-        player_speed = original_player_speed +  gold_speed_mod;
+        player_speed = current_player_speed;
         float timer = 0;
         while (knockDur > timer)
         {
@@ -338,7 +380,7 @@ public class PlayerLogic : MonoBehaviour
         print("geslowd");
         yield return new WaitForSeconds(duration);
 
-        player_speed = original_player_speed;
+        player_speed = current_player_speed;
     }
     public IEnumerator DeathCheck()
     {
