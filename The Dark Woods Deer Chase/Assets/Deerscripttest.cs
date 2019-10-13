@@ -45,6 +45,16 @@ public class Deerscripttest : MonoBehaviour
             animator.SetBool("is_jumping", false);
         }
     }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+           if (collision.gameObject.tag == "Ground")
+        {
+            is_grounded = true;
+            animator.SetBool("is_walking", true);
+            animator.SetBool("is_jumping", false);
+        }
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "jump_deer")
@@ -69,9 +79,11 @@ public class Deerscripttest : MonoBehaviour
         if (col.gameObject.tag == "movplat")
             this.transform.parent = null;
         //Check if player is no longer on the ground
-        if (col.gameObject.tag == "Ground" && col.gameObject.tag == "movplat")
+        if (col.gameObject.tag == "Ground")
         {
             is_grounded = false;
+            animator.SetBool("is_walking", false);
+            animator.SetBool("is_jumping", true);
         }
         player_speed = 15;
     }

@@ -69,7 +69,7 @@ public class PlayerLogic : MonoBehaviour
     {
         Movement();
         Combat();
-        print(current_player_speed);
+        
         timer += Time.deltaTime;
     
     }
@@ -258,7 +258,7 @@ public class PlayerLogic : MonoBehaviour
 
 
 
-        if (gold_score >= 0 && gold_score < 1)
+        if (gold_score == 1)
         {
 
             gold_speed_mod = 0.1f;
@@ -356,7 +356,7 @@ public class PlayerLogic : MonoBehaviour
         {
             timer += Time.deltaTime;
         
-            print(timer);
+        
             this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(knockBackDirection.x * knockBackPwr, knockBackDirection.y));
         }
         yield return 0;
