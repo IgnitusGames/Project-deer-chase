@@ -375,12 +375,13 @@ public class PlayerLogic : MonoBehaviour
 
     public IEnumerator SlowDown(float duration)
     {
-
-        player_speed = 5;
-        print("geslowd");
-        yield return new WaitForSeconds(duration);
-
-        player_speed = current_player_speed;
+        if (!GameManager.game_manager.cheat_mode_is_enabled)
+        {
+            player_speed = 5;
+            print("geslowd");
+            yield return new WaitForSeconds(duration);
+            player_speed = current_player_speed;
+        }
     }
     public IEnumerator DeathCheck()
     {
