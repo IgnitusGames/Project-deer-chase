@@ -7,6 +7,9 @@ public class GameManager : MonoBehaviour
     public static GameManager game_manager { get; private set; }
     public int cheat_mode_click_counter = 4;
     public bool cheat_mode_is_enabled = false;
+    public SaveData save = SaveSystem.LoadProgress();
+
+    private string[] unlocked_levels = new string[0];
     private void Awake()
     {
         if (game_manager == null)
@@ -22,5 +25,6 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         Application.targetFrameRate = 300;
+        this.unlocked_levels = this.save.completed_levels;
     }
 }

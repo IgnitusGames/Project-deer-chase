@@ -32,6 +32,8 @@ public class WinLoseScreen : MonoBehaviour
     }
     public void ActivateVictoryScreen()
     {
+        SaveData new_save = new SaveData(NewCompletedLevels(), false);
+        SaveSystem.SaveProgress(new_save);
         ui.SetActive(false);
         win_screen.SetActive(true);
         Time.timeScale = 0;
@@ -52,5 +54,15 @@ public class WinLoseScreen : MonoBehaviour
         death_screen.SetActive(true);
         Time.timeScale = 0;
         
+    }
+    private string[] NewCompletedLevels()
+    {
+        string[] result = new string[GameManager.game_manager.save.completed_levels.Length];
+        for(int current_level = 0; current_level < GameManager.game_manager.save.completed_levels.Length; current_level++)
+        {
+            result[current_level] = GameManager.game_manager.save.completed_levels[current_level];
+        }
+        result[result.Length - 1] = SceneManager.GetActiveScene().name;
+        return result;
     }
 }
