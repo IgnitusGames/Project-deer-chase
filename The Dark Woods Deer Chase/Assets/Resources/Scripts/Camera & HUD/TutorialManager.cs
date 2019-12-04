@@ -7,7 +7,7 @@ public class TutorialManager : MonoBehaviour
     // Variables
     public static bool is_in_tutorial = false;
     public GameObject tutorial_box;
-    //public Animator tutorial_animator;
+    public Animator tutorial_animator;
 
     //private Text tutorial_name;
     private Image tutorial_image1;
@@ -45,7 +45,7 @@ public class TutorialManager : MonoBehaviour
     public void StartDialogue(Tutorial CurrentDialogue)
     {
         is_in_tutorial = true;
-        //tutorial_animator.SetBool("IsOpen", true);
+        tutorial_animator.SetBool("IsOpen", true);
         //tutorial_name.text = CurrentDialogue.tutorial_name;
         tutorial_image1.sprite = CurrentDialogue.action_image;
         tutorial_image2.sprite = CurrentDialogue.result_image;
@@ -54,6 +54,7 @@ public class TutorialManager : MonoBehaviour
         {
             AllSentences.Enqueue(sentence);
         }
+        Time.timeScale = 0;
         NextDialogueSentence();
     }
     public void NextDialogueSentence()
@@ -72,8 +73,9 @@ public class TutorialManager : MonoBehaviour
     }
     void EndDialogue()
     {
+        Time.timeScale = 1;
         is_in_tutorial = false;
-        //tutorial_animator.SetBool("IsOpen", false);
+        tutorial_animator.SetBool("IsOpen", false);
     }
     IEnumerator TypeSentence(string Sentence)
     {

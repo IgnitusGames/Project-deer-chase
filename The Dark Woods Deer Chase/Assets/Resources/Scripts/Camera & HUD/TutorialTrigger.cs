@@ -8,10 +8,6 @@ namespace Scripts
     {
         public Tutorial current_tutorial;
 
-        private void Start()
-        {
-            InitiateDialogue();
-        }
         void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.gameObject.tag == "Player")
