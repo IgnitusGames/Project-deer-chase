@@ -7,6 +7,7 @@ public class TutorialManager : MonoBehaviour
     // Variables
     public static bool is_in_tutorial = false;
     public GameObject tutorial_box;
+    public GameObject jump_button;
     public Animator tutorial_animator;
 
     //private Text tutorial_name;
@@ -22,31 +23,11 @@ public class TutorialManager : MonoBehaviour
         tutorial_content = tutorial_box.transform.GetChild(2).GetComponent<Text>();
         AllSentences = new Queue<string>();
     }
-    private void Update()
-    {
-        if (Input.touchCount > 0)
-        {
-            if (is_in_tutorial)
-            {
-                if (Input.GetTouch(0).phase == TouchPhase.Ended)
-                {
-                    NextDialogueSentence();
-                }
-            }
-        }
-        else if(Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            if(is_in_tutorial)
-            {
-                NextDialogueSentence();
-            }
-        }
-    }
     public void StartDialogue(Tutorial CurrentDialogue)
     {
         is_in_tutorial = true;
+        jump_button.SetActive(false);
         tutorial_animator.SetBool("IsOpen", true);
-        //tutorial_name.text = CurrentDialogue.tutorial_name;
         tutorial_image1.sprite = CurrentDialogue.action_image;
         tutorial_image2.sprite = CurrentDialogue.result_image;
         AllSentences.Clear();
@@ -76,6 +57,7 @@ public class TutorialManager : MonoBehaviour
         Time.timeScale = 1;
         is_in_tutorial = false;
         tutorial_animator.SetBool("IsOpen", false);
+        jump_button.SetActive(true);
     }
     IEnumerator TypeSentence(string Sentence)
     {

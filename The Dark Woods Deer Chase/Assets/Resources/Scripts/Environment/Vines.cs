@@ -17,14 +17,8 @@ public class Vines : MonoBehaviour
         {
             gameObject.GetComponent<Animation>().Play("ShroomDmg");
             FindObjectOfType<AudioManager>().Play("VineDmg");
-
-
-
         }
     }
-
-   
-
     public void Die()
     {
         Destroy(gameObject);
