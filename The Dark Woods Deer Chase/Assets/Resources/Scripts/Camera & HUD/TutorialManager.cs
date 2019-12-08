@@ -28,8 +28,24 @@ public class TutorialManager : MonoBehaviour
         is_in_tutorial = true;
         jump_button.SetActive(false);
         tutorial_animator.SetBool("IsOpen", true);
-        tutorial_image1.sprite = CurrentDialogue.action_image;
-        tutorial_image2.sprite = CurrentDialogue.result_image;
+        if(CurrentDialogue.action_image != null)
+        {
+            tutorial_image1.color = new Color(1, 1, 1, 1);
+            tutorial_image1.sprite = CurrentDialogue.action_image;
+        }
+        else
+        {
+            tutorial_image1.color = new Color(0, 0, 0, 0);
+        }
+        if (CurrentDialogue.result_image != null)
+        {
+            tutorial_image2.color = new Color(1, 1, 1, 1);
+            tutorial_image2.sprite = CurrentDialogue.result_image;
+        }
+        else
+        {
+            tutorial_image2.color = new Color(0, 0, 0, 0);
+        }
         AllSentences.Clear();
         foreach(string sentence in CurrentDialogue.sentences)
         {
