@@ -8,7 +8,7 @@ public class StopDeer : MonoBehaviour
     {
         if(other.gameObject.tag == "deer")
         {
-            print("nigger");
+            other.gameObject.GetComponent<Deerscripttest>().player_speed = 0;
         }
     }
 }
