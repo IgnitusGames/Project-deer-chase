@@ -12,13 +12,15 @@ public class PlayerLogic : MonoBehaviour
     public float timer = 0;
     private ParticleSystem boost_sparkles;
 
+    public float speedupSpeed = 20;
+
     public int gold_score = 0;
     //VariablesF
     public GameObject fire_ball;
     public Animator animator;
     public float player_speed;
     public float current_player_speed = 15;
-    
+    private bool isSpeeding;
 
     public int fire_ball_speed = 11;
     public int jump_power = 250;
@@ -105,7 +107,14 @@ public class PlayerLogic : MonoBehaviour
         {
             animator.SetBool("is_jumping", true);
             is_grounded = false;
-            player_speed = original_player_speed + gold_speed_mod;
+            if (isSpeeding == false)
+            {
+                player_speed = original_player_speed + gold_speed_mod;
+            }
+            else
+            {
+                player_speed = speedupSpeed;
+            }
         }
         //  player_speed = original_player_speed + gold_speed_mod;
     }
@@ -375,6 +384,19 @@ public class PlayerLogic : MonoBehaviour
             player_speed = 5;
             print("geslowd");
             yield return new WaitForSeconds(duration);
+            player_speed = current_player_speed;
+        }
+    }
+
+    public IEnumerator SpeedUp(float duration)
+    {
+        if (!GameManager.game_manager.cheat_mode_is_enabled)
+        {
+            player_speed = speedupSpeed;
+            print("SpeedUp");
+            isSpeeding = true;
+            yield return new WaitForSeconds(duration);
+            isSpeeding = false;
             player_speed = current_player_speed;
         }
     }
