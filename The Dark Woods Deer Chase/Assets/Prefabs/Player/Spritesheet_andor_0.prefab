@@ -148,7 +148,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doublejumptimer: 0
   timer: 0
-  gold_score: 24
+  speedupSpeed: 20
+  gold_score: 0
   fire_ball: {fileID: 7843121306967399654, guid: 85ec0b6c05b13d74b8e8057c96cccba7,
     type: 3}
   animator: {fileID: 92666911}
@@ -163,7 +164,7 @@ MonoBehaviour:
   gliding: 0
   force: 100
   amount_of_jumps: 2
-  windspeed: 50
+  windspeed: 12
   slow_speed: 5
   gold_speed_mod: 0
 --- !u!95 &92666911

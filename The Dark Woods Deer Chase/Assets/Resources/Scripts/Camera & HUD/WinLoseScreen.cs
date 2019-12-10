@@ -35,7 +35,7 @@ public class WinLoseScreen : MonoBehaviour
     public void ActivateVictoryScreen()
     {
         //player is replaying a level
-        if(this.current_level_index <= GameManager.game_manager.save.level_index)
+        if (this.current_level_index <= GameManager.game_manager.save.level_index)
         {
             //if player got more collectables
             if(GameManager.game_manager.tutorial_scales > GameManager.game_manager.save.tutorial_scales || GameManager.game_manager.level1_scales > GameManager.game_manager.save.level1_scales || GameManager.game_manager.level2_scales > GameManager.game_manager.save.level2_scales)

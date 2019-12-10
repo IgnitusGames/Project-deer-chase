@@ -123,7 +123,7 @@ public class PlayerLogic : MonoBehaviour
         if (!is_grounded)
         {
             gliding = true;
-            rb2d.gravityScale = 0.1f;
+            rb2d.gravityScale = 0.5f;
             animator.SetBool("is_gliding", true);
         }
     }
