@@ -32,13 +32,14 @@ public class GameManager : MonoBehaviour
         this.tutorial_scales = this.save.tutorial_scales;
         this.level1_scales = this.save.level1_scales;
         this.level2_scales = this.save.level2_scales;
+        this.ResetLevelCollectables(SceneManager.GetActiveScene().name);
         Application.targetFrameRate = 300;
     }
     public void AddCollectable(string current_scene)
     {
         switch(current_scene)
         {
-            case "tutorial":
+            case "Tutorial Level":
                 this.tutorial_scales++;
                 break;
             case "level1":
@@ -55,7 +56,7 @@ public class GameManager : MonoBehaviour
     {
         switch (current_scene)
         {
-            case "tutorial":
+            case "Tutorial Level":
                 this.tutorial_scales = 0;
                 break;
             case "level1":
