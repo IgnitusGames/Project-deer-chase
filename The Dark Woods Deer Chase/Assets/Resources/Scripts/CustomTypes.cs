@@ -14,27 +14,18 @@ public class Tutorial
 [System.Serializable]
 public class SaveData
 {
-    public string[] completed_levels;
+    public string next_level;
     public bool is_dummy_save;
+    public int tutorial_scales;
+    public int level1_scales;
+    public int level2_scales;
 
-    public SaveData(string[] completed_levels,bool is_dummy)
+    public SaveData(string next_level, int levelt_scales, int level1_scales, int level2_scales, bool is_dummy)
     {
-        this.completed_levels = completed_levels;
+        this.next_level = next_level;
         this.is_dummy_save = is_dummy;
+        this.tutorial_scales = levelt_scales;
+        this.level1_scales = level1_scales;
+        this.level2_scales = level2_scales;
     }
-    //private float[] ConvertPosition(Vector3 player_position)
-    //{
-    //    if (player_position != null)
-    //    {
-    //        float[] converted_position = new float[3];
-    //        converted_position[0] = player_position.x;
-    //        converted_position[1] = player_position.y;
-    //        converted_position[2] = player_position.z;
-    //        return converted_position;
-    //    }
-    //    else
-    //    {
-    //        return new float[3];
-    //    }
-    //}
 }
