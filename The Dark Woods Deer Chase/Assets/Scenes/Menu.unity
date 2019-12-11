@@ -1295,6 +1295,7 @@ GameObject:
   - component: {fileID: 813668120}
   - component: {fileID: 813668119}
   - component: {fileID: 813668118}
+  - component: {fileID: 813668121}
   m_Layer: 5
   m_Name: MagicLevel
   m_TagString: Untagged
@@ -1365,8 +1366,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496799261}
-        m_MethodName: StartLevel
+      - m_Target: {fileID: 813668121}
+        m_MethodName: StartThisLevel
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1413,6 +1414,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 813668116}
   m_CullTransparentMesh: 0
+--- !u!114 &813668121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813668116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7455b4c66e2c26b4aa2cb11bc18acd82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  required_level_index: 2
 --- !u!1 &854092200
 GameObject:
   m_ObjectHideFlags: 0
@@ -1648,6 +1662,7 @@ GameObject:
   - component: {fileID: 973164950}
   - component: {fileID: 973164949}
   - component: {fileID: 973164948}
+  - component: {fileID: 973164951}
   m_Layer: 5
   m_Name: SwampLevel
   m_TagString: Untagged
@@ -1718,8 +1733,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496799261}
-        m_MethodName: StartLevel
+      - m_Target: {fileID: 973164951}
+        m_MethodName: StartThisLevel
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1766,6 +1781,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 973164946}
   m_CullTransparentMesh: 0
+--- !u!114 &973164951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973164946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7455b4c66e2c26b4aa2cb11bc18acd82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  required_level_index: 3
 --- !u!1 &1014255588
 GameObject:
   m_ObjectHideFlags: 0
@@ -2353,6 +2381,7 @@ GameObject:
   - component: {fileID: 1422601645}
   - component: {fileID: 1422601644}
   - component: {fileID: 1422601643}
+  - component: {fileID: 1422601646}
   m_Layer: 5
   m_Name: ThornsLevel
   m_TagString: Untagged
@@ -2423,8 +2452,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496799261}
-        m_MethodName: StartLevel
+      - m_Target: {fileID: 1422601646}
+        m_MethodName: StartThisLevel
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2471,6 +2500,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1422601641}
   m_CullTransparentMesh: 0
+--- !u!114 &1422601646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422601641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7455b4c66e2c26b4aa2cb11bc18acd82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  required_level_index: 1
 --- !u!1 &1457562810
 GameObject:
   m_ObjectHideFlags: 0
@@ -3111,6 +3153,7 @@ GameObject:
   - component: {fileID: 2008467260}
   - component: {fileID: 2008467259}
   - component: {fileID: 2008467258}
+  - component: {fileID: 2008467261}
   m_Layer: 5
   m_Name: Random
   m_TagString: Untagged
@@ -3181,8 +3224,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496799261}
-        m_MethodName: StartLevel
+      - m_Target: {fileID: 2008467261}
+        m_MethodName: StartThisLevel
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3229,6 +3272,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2008467256}
   m_CullTransparentMesh: 0
+--- !u!114 &2008467261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008467256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7455b4c66e2c26b4aa2cb11bc18acd82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  required_level_index: 4
 --- !u!1 &2011844911
 GameObject:
   m_ObjectHideFlags: 0
