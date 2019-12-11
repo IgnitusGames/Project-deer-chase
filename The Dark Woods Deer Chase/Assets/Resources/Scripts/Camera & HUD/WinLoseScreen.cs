@@ -10,8 +10,7 @@ public class WinLoseScreen : MonoBehaviour
     public GameObject win_screen;
     public GameObject lose_screen;
     public GameObject death_screen;
-    public string next_level_name;
-    public int current_level_index;
+    public int next_level_index;
 
     private GameObject ui;
     private GameObject player;
@@ -35,12 +34,12 @@ public class WinLoseScreen : MonoBehaviour
     public void ActivateVictoryScreen()
     {
         //player is replaying a level
-        if (this.current_level_index <= GameManager.game_manager.save.level_index)
+        if (this.next_level_index <= GameManager.game_manager.save.level_index)
         {
             //if player got more collectables
             if(GameManager.game_manager.tutorial_scales > GameManager.game_manager.save.tutorial_scales || GameManager.game_manager.level1_scales > GameManager.game_manager.save.level1_scales || GameManager.game_manager.level2_scales > GameManager.game_manager.save.level2_scales)
             {
-                SaveData new_save = new SaveData(GameManager.game_manager.save.level_index, GameManager.game_manager.save.next_level, GameManager.game_manager.tutorial_scales, GameManager.game_manager.level1_scales, GameManager.game_manager.level2_scales, false); ;
+                SaveData new_save = new SaveData(GameManager.game_manager.save.level_index, GameManager.game_manager.tutorial_scales, GameManager.game_manager.level1_scales, GameManager.game_manager.level2_scales, false); ;
                 SaveSystem.SaveProgress(new_save);
             }
             else
@@ -52,7 +51,7 @@ public class WinLoseScreen : MonoBehaviour
         //first play
         else
         {
-            SaveData new_save = new SaveData(this.current_level_index, this.next_level_name, GameManager.game_manager.tutorial_scales, GameManager.game_manager.level1_scales, GameManager.game_manager.level2_scales, false);
+            SaveData new_save = new SaveData(this.next_level_index, GameManager.game_manager.tutorial_scales, GameManager.game_manager.level1_scales, GameManager.game_manager.level2_scales, false);
             SaveSystem.SaveProgress(new_save);
         }
         ui.SetActive(false);
