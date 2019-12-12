@@ -11,6 +11,7 @@ public class CollectableScales : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             GameManager.game_manager.AddCollectable(SceneManager.GetActiveScene().name);
+            Destroy(this.gameObject);
         }
     }
 }
