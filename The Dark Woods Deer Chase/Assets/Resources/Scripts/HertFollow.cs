@@ -12,10 +12,10 @@ public class HertFollow : MonoBehaviour
     public Transform Hert;
     public Transform Andor;
 
-    public float greenDistance = 45;
-    public float orangeDistance = 70;
+    public float greenDistance = 100;
+    public float orangeDistance = 125;
     public Image hertFollowImage;
-    private float redDistance = 85;
+    private float redDistance = 135;
 
     void Update()
     {
