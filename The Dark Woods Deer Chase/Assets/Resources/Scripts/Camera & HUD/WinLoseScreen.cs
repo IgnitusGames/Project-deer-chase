@@ -25,6 +25,7 @@ public class WinLoseScreen : MonoBehaviour
     public void ReturnToMenu()
     {
         Time.timeScale = 1;
+        GameManager.game_manager.save = SaveSystem.LoadProgress();
         SceneManager.LoadScene("Menu");
     }
     public void Retry()
@@ -58,8 +59,8 @@ public class WinLoseScreen : MonoBehaviour
         win_screen.SetActive(true);
         Time.timeScale = 0;
         score_text = GameObject.FindGameObjectWithTag("FinalScore");
-        final_score = 3000 - Math.Floor(ui.GetComponentInChildren<TimeScoreDisplay>().time_counter) + player.GetComponent<PlayerLogic>().gold_score;
-        score_text.GetComponent<Text>().text = "Final score: " + final_score;
+        //final_score = 3000 - Math.Floor(ui.GetComponentInChildren<TimeScoreDisplay>().time_counter) + player.GetComponent<PlayerLogic>().gold_score;
+        //score_text.GetComponent<Text>().text = "Final score: " + final_score;
     }
     public void ActivateDefeatScreen()
     {
