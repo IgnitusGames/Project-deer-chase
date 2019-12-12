@@ -34,6 +34,12 @@ public class Deerscripttest : MonoBehaviour
     private void Update()
     {
         Movement();
+
+        if (player_speed < 5)
+        {
+            animator.SetBool("is_walking", false);
+            animator.SetBool("is_jumping", false);
+        }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
