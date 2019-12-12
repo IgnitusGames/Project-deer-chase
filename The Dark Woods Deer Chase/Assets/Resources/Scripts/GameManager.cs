@@ -51,10 +51,10 @@ public class GameManager : MonoBehaviour
             case "Tutorial Level":
                 this.tutorial_scales++;
                 break;
-            case "level1":
+            case "Level 1":
                 this.level1_scales++;
                 break;
-            case "level2":
+            case "Level 2":
                 this.level2_scales++;
                 break;
             case "level3":
@@ -71,10 +71,10 @@ public class GameManager : MonoBehaviour
             case "Tutorial Level":
                 this.tutorial_scales = 0;
                 break;
-            case "level1":
+            case "Level 1":
                 this.level1_scales = 0;
                 break;
-            case "level2":
+            case "Level 2":
                 this.level2_scales = 0;
                 break;
             case "level3":

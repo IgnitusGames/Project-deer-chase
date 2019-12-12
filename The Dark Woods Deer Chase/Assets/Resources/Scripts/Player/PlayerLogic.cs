@@ -216,7 +216,7 @@ public class PlayerLogic : MonoBehaviour
     {
         if(collision.gameObject.tag == "Slow")
         {
-            player_speed = current_player_speed;
+            //player_speed = current_player_speed;
         }
     }
     private void Combat()
