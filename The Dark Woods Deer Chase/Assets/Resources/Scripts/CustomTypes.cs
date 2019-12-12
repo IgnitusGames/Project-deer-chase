@@ -19,13 +19,15 @@ public class SaveData
     public int tutorial_scales;
     public int level1_scales;
     public int level2_scales;
+    public int level3_scales;
 
-    public SaveData(int level_index, int levelt_scales, int level1_scales, int level2_scales, bool is_dummy)
+    public SaveData(int level_index, int levelt_scales, int level1_scales, int level2_scales, int level3_scales, bool is_dummy)
     {
         this.level_index = level_index;
         this.is_dummy_save = is_dummy;
         this.tutorial_scales = levelt_scales;
         this.level1_scales = level1_scales;
         this.level2_scales = level2_scales;
+        this.level3_scales = level3_scales;
     }
 }

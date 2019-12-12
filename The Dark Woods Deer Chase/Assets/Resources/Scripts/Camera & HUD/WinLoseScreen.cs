@@ -38,9 +38,9 @@ public class WinLoseScreen : MonoBehaviour
         if (this.next_level_index <= GameManager.game_manager.save.level_index)
         {
             //if player got more collectables
-            if(GameManager.game_manager.tutorial_scales > GameManager.game_manager.save.tutorial_scales || GameManager.game_manager.level1_scales > GameManager.game_manager.save.level1_scales || GameManager.game_manager.level2_scales > GameManager.game_manager.save.level2_scales)
+            if(GameManager.game_manager.tutorial_scales > GameManager.game_manager.save.tutorial_scales || GameManager.game_manager.level1_scales > GameManager.game_manager.save.level1_scales || GameManager.game_manager.level2_scales > GameManager.game_manager.save.level2_scales || GameManager.game_manager.level3_scales > GameManager.game_manager.save.level3_scales)
             {
-                SaveData new_save = new SaveData(GameManager.game_manager.save.level_index, GameManager.game_manager.tutorial_scales, GameManager.game_manager.level1_scales, GameManager.game_manager.level2_scales, false); ;
+                SaveData new_save = new SaveData(GameManager.game_manager.save.level_index, GameManager.game_manager.tutorial_scales, GameManager.game_manager.level1_scales, GameManager.game_manager.level2_scales, GameManager.game_manager.level3_scales, false); ;
                 SaveSystem.SaveProgress(new_save);
             }
             else
@@ -52,7 +52,7 @@ public class WinLoseScreen : MonoBehaviour
         //first play
         else
         {
-            SaveData new_save = new SaveData(this.next_level_index, GameManager.game_manager.tutorial_scales, GameManager.game_manager.level1_scales, GameManager.game_manager.level2_scales, false);
+            SaveData new_save = new SaveData(this.next_level_index, GameManager.game_manager.tutorial_scales, GameManager.game_manager.level1_scales, GameManager.game_manager.level2_scales, GameManager.game_manager.level3_scales, false);
             SaveSystem.SaveProgress(new_save);
         }
         ui.SetActive(false);

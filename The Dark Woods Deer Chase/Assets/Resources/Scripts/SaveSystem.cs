@@ -29,6 +29,7 @@ public static class SaveSystem
         //create empty save file if one does not exist
         {
             CreateDummySave();
+            //CreateCheatSave();
             BinaryFormatter formatter = new BinaryFormatter();
             FileStream second_file_stream = new FileStream(save_path, FileMode.Open);
             SaveData saved_data = formatter.Deserialize(second_file_stream) as SaveData;
@@ -40,10 +41,21 @@ public static class SaveSystem
     {
         string save_path = Application.persistentDataPath + "/the_dark_woods.save";
         Debug.Log("Creating empty save file");
-        SaveData dummy_save = new SaveData(1, 0, 0, 0, true);
+        SaveData dummy_save = new SaveData(1, 0, 0, 0, 0, true);
         BinaryFormatter formatter = new BinaryFormatter();
         FileStream file_stream = new FileStream(save_path, FileMode.Create);
         formatter.Serialize(file_stream, dummy_save);
         file_stream.Close();
     }
+    public static void CreateCheatSave()
+    {
+        string save_path = Application.persistentDataPath + "/the_dark_woods.save";
+        Debug.Log("Creating empty save file");
+        SaveData dummy_save = new SaveData(5, 1, 5, 5, 5, false);
+        BinaryFormatter formatter = new BinaryFormatter();
+        FileStream file_stream = new FileStream(save_path, FileMode.Create);
+        formatter.Serialize(file_stream, dummy_save);
+        file_stream.Close();
+    }
+
 }

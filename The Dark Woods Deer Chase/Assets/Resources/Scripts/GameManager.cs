@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+public enum Level
+{
+    Tutorial,
+    Level1,
+    Level2,
+    Level3
+}
 public class GameManager : MonoBehaviour
 {
     public static GameManager game_manager { get; private set; }
@@ -12,6 +19,7 @@ public class GameManager : MonoBehaviour
     public int tutorial_scales;
     public int level1_scales;
     public int level2_scales;
+    public int level3_scales;
 
     private string[] unlocked_levels = new string[0];
     private void Awake()
@@ -32,6 +40,7 @@ public class GameManager : MonoBehaviour
         this.tutorial_scales = this.save.tutorial_scales;
         this.level1_scales = this.save.level1_scales;
         this.level2_scales = this.save.level2_scales;
+        this.level3_scales = this.save.level3_scales;
         this.ResetLevelCollectables(SceneManager.GetActiveScene().name);
         Application.targetFrameRate = 300;
     }
@@ -47,6 +56,9 @@ public class GameManager : MonoBehaviour
                 break;
             case "level2":
                 this.level2_scales++;
+                break;
+            case "level3":
+                this.level3_scales++;
                 break;
             default:
                 break;
@@ -64,6 +76,9 @@ public class GameManager : MonoBehaviour
                 break;
             case "level2":
                 this.level2_scales = 0;
+                break;
+            case "level3":
+                this.level3_scales = 0;
                 break;
             default:
                 break;
