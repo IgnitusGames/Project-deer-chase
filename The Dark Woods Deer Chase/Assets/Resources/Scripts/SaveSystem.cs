@@ -9,14 +9,14 @@ public static class SaveSystem
     public static void SaveProgress(SaveData data_to_save)
     {
         BinaryFormatter formatter = new BinaryFormatter();
-        string save_path = Application.persistentDataPath + "/the_dark_woods.save";
+        string save_path = Application.persistentDataPath + "/the_dark_woods_redo.save";
         FileStream file_stream = new FileStream(save_path, FileMode.Create);
         formatter.Serialize(file_stream, data_to_save);
         file_stream.Close();
     }
     public static SaveData LoadProgress()
     {
-        string save_path = Application.persistentDataPath + "/the_dark_woods.save";
+        string save_path = Application.persistentDataPath + "/the_dark_woods_redo.save";
         if(File.Exists(save_path))
         {
             BinaryFormatter formatter = new BinaryFormatter();
@@ -39,7 +39,7 @@ public static class SaveSystem
     }
     public static void CreateDummySave()
     {
-        string save_path = Application.persistentDataPath + "/the_dark_woods.save";
+        string save_path = Application.persistentDataPath + "/the_dark_woods_redo.save";
         Debug.Log("Creating empty save file");
         SaveData dummy_save = new SaveData(1, 0, 0, 0, 0, true);
         BinaryFormatter formatter = new BinaryFormatter();
@@ -49,7 +49,7 @@ public static class SaveSystem
     }
     public static void CreateCheatSave()
     {
-        string save_path = Application.persistentDataPath + "/the_dark_woods.save";
+        string save_path = Application.persistentDataPath + "/the_dark_woods_redo.save";
         Debug.Log("Creating empty save file");
         SaveData dummy_save = new SaveData(5, 1, 5, 5, 5, false);
         BinaryFormatter formatter = new BinaryFormatter();
