@@ -17,7 +17,7 @@ public class FadeScript : MonoBehaviour
     void Start()
     {
         //canFade = true;
-        fadeImage.DOFade(1, 1);
+        StartCoroutine(Fading());
 
         //alphaColor.a = 0;
         //currColor = new Color32(0, 0, 0, 255);
@@ -33,5 +33,11 @@ public class FadeScript : MonoBehaviour
 
        // obj.GetComponent<MeshRenderer>().material.color = Color.Lerp(obj.GetComponent<MeshRenderer>().material.color, alphaColor, timeToFade * Time.deltaTime);
         
+    }
+    private IEnumerator Fading()
+    {
+        fadeImage.DOFade(1, 1);
+        yield return new WaitForSeconds(3.0f);
+        fadeImage.DOFade(0, 1);
     }
 }
