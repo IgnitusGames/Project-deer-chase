@@ -71,7 +71,7 @@ public class PlayerLogic : MonoBehaviour
     {
         Movement();
         Combat();
-        
+      
         timer += Time.deltaTime;
     
     }

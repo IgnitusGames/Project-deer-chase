@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using DG.Tweening;
 using System;
 
 public class WinLoseScreen : MonoBehaviour
@@ -56,7 +57,9 @@ public class WinLoseScreen : MonoBehaviour
             SaveSystem.SaveProgress(new_save);
         }
         ui.SetActive(false);
+
         win_screen.SetActive(true);
+        
         Time.timeScale = 0;
         score_text = GameObject.FindGameObjectWithTag("FinalScore");
         //final_score = 3000 - Math.Floor(ui.GetComponentInChildren<TimeScoreDisplay>().time_counter) + player.GetComponent<PlayerLogic>().gold_score;
@@ -66,6 +69,7 @@ public class WinLoseScreen : MonoBehaviour
     {
         GameManager.game_manager.ResetLevelCollectables(SceneManager.GetActiveScene().name);
         ui.SetActive(false);
+        lose_screen.GetComponentInChildren<Image>().DOFade(0, 1);
         lose_screen.SetActive(true);
         Time.timeScale = 0;
     }
@@ -74,6 +78,6 @@ public class WinLoseScreen : MonoBehaviour
         GameManager.game_manager.ResetLevelCollectables(SceneManager.GetActiveScene().name);
         ui.SetActive(false);
         death_screen.SetActive(true);
-        Time.timeScale = 0;       
+       // Time.timeScale = 0;       
     }
 }
