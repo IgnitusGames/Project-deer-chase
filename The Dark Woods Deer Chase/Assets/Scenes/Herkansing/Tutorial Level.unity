@@ -1145,6 +1145,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8615339845490928064, guid: 4dee75235a4419746abb85797af80ed8,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1075475103
+      objectReference: {fileID: 0}
+    - target: {fileID: 8615339845490928064, guid: 4dee75235a4419746abb85797af80ed8,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dee75235a4419746abb85797af80ed8, type: 3}
 --- !u!1 &459650163
@@ -1642,6 +1652,15 @@ PrefabInstance:
       objectReference: {fileID: 82673242}
     - target: {fileID: 2029795408, guid: 943f7949e24d7b24c940b5344410a220, type: 3}
       propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 231473360, guid: 943f7949e24d7b24c940b5344410a220, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1f1ffd22d2a2d5242bbc25604e22485a,
+        type: 3}
+    - target: {fileID: 231473360, guid: 943f7949e24d7b24c940b5344410a220, type: 3}
+      propertyPath: m_Type
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2696,13 +2715,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 775478479862664514, guid: a8616276dc98bd14ebda7be37051c2fa,
         type: 3}
-      propertyPath: next_level_index
-      value: 2
+      propertyPath: next_level_name
+      value: Level 1
       objectReference: {fileID: 0}
     - target: {fileID: 775478479862664514, guid: a8616276dc98bd14ebda7be37051c2fa,
         type: 3}
-      propertyPath: next_level_name
-      value: Level 1
+      propertyPath: next_level_index
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 775478479862664514, guid: a8616276dc98bd14ebda7be37051c2fa,
         type: 3}
@@ -2716,6 +2735,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6346318911325233748, guid: acb6d02add93d4c499766597679f44cf,
         type: 3}
+    - target: {fileID: 775478481221788486, guid: a8616276dc98bd14ebda7be37051c2fa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7578201814346851482, guid: a8616276dc98bd14ebda7be37051c2fa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8616276dc98bd14ebda7be37051c2fa, type: 3}
 --- !u!1001 &1382513807

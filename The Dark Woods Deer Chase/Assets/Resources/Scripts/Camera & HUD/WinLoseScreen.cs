@@ -40,8 +40,8 @@ public class WinLoseScreen : MonoBehaviour
     }
     public void NextLevel()
     {
-        GameManager.game_manager.save = SaveSystem.LoadProgress();
         GameManager.game_manager.ResetLevelCollectables(this.next_level_name);
+        GameManager.game_manager.save = SaveSystem.LoadProgress();     
         SceneManager.LoadScene(this.next_level_name);
     }
     public void ActivateVictoryScreen()

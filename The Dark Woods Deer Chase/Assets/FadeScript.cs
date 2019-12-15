@@ -8,8 +8,8 @@ public class FadeScript : MonoBehaviour
 {
     public Image background;
     public Text title;
-    public Text retry;
-    public Text main_menu;
+    public Image retry;
+    public Image main_menu;
     public Image[] additionalImages;
 
     private float timeToFade = 1.0f;
