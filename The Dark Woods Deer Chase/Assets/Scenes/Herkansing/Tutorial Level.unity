@@ -1806,28 +1806,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &636029365 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 775478481221788486, guid: a8616276dc98bd14ebda7be37051c2fa,
-    type: 3}
-  m_PrefabInstance: {fileID: 1293140331}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &636029366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 636029365}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa24bf50f2df62548abcc6ca5241d173, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  background: {fileID: 0}
-  title: {fileID: 0}
-  retry: {fileID: 0}
-  main_menu: {fileID: 0}
 --- !u!4 &729644638 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5486568780558042824, guid: d287a2b99c478d24c88ab791114e76b4,
@@ -2711,6 +2689,33 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 775478479862664514, guid: a8616276dc98bd14ebda7be37051c2fa,
+        type: 3}
+      propertyPath: scaleNumbers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 775478479862664514, guid: a8616276dc98bd14ebda7be37051c2fa,
+        type: 3}
+      propertyPath: next_level_index
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 775478479862664514, guid: a8616276dc98bd14ebda7be37051c2fa,
+        type: 3}
+      propertyPath: next_level_name
+      value: Level 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 775478479862664514, guid: a8616276dc98bd14ebda7be37051c2fa,
+        type: 3}
+      propertyPath: scaleNumbers.Array.data[0]
+      value: 
+      objectReference: {fileID: 6839960018944070908, guid: acb6d02add93d4c499766597679f44cf,
+        type: 3}
+    - target: {fileID: 775478479862664514, guid: a8616276dc98bd14ebda7be37051c2fa,
+        type: 3}
+      propertyPath: scaleNumbers.Array.data[1]
+      value: 
+      objectReference: {fileID: 6346318911325233748, guid: acb6d02add93d4c499766597679f44cf,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8616276dc98bd14ebda7be37051c2fa, type: 3}
 --- !u!1001 &1382513807

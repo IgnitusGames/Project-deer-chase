@@ -4453,6 +4453,11 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 92666910}
+    - target: {fileID: 7670938500180486080, guid: e3b396ea89f82a047aa5aa46e27bc258,
+        type: 3}
+      propertyPath: y_min
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3b396ea89f82a047aa5aa46e27bc258, type: 3}
 --- !u!1001 &1107424303
@@ -5026,11 +5031,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinLoseCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 775478479862664527, guid: a8616276dc98bd14ebda7be37051c2fa,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 775478479862664515, guid: a8616276dc98bd14ebda7be37051c2fa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5138,18 +5138,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 775478479862664514, guid: a8616276dc98bd14ebda7be37051c2fa,
         type: 3}
-      propertyPath: next_level_name
-      value: level2
-      objectReference: {fileID: 0}
-    - target: {fileID: 775478479862664514, guid: a8616276dc98bd14ebda7be37051c2fa,
-        type: 3}
-      propertyPath: current_level_index
+      propertyPath: level
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 775478479862664514, guid: a8616276dc98bd14ebda7be37051c2fa,
-        type: 3}
-      propertyPath: next_level_index
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8616276dc98bd14ebda7be37051c2fa, type: 3}
@@ -8055,6 +8045,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spritesheet_andor_0
       objectReference: {fileID: 0}
+    - target: {fileID: 1519432044526039836, guid: d0b78c018461bd74688f15ce67061474,
+        type: 3}
+      propertyPath: windspeed
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 1519432044526039837, guid: d0b78c018461bd74688f15ce67061474,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8109,11 +8104,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1519432044526039836, guid: d0b78c018461bd74688f15ce67061474,
-        type: 3}
-      propertyPath: windspeed
-      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0b78c018461bd74688f15ce67061474, type: 3}

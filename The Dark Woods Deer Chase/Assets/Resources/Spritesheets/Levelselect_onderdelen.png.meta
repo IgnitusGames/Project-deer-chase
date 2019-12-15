@@ -50,6 +50,12 @@ TextureImporter:
   - first:
       213: -7267992508242405511
     second: CollectedCrystal
+  - first:
+      213: 6839960018944070908
+    second: 01
+  - first:
+      213: 6346318911325233748
+    second: 11
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -448,7 +454,7 @@ TextureImporter:
         width: 39
         height: 71
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -469,7 +475,7 @@ TextureImporter:
         width: 38
         height: 71
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -477,6 +483,48 @@ TextureImporter:
       bones: []
       spriteID: 7979aefdea559414ea109c60f6424335
       internalID: -7267992508242405511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 01
+      rect:
+        serializedVersion: 2
+        x: 1634
+        y: 936
+        width: 50
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18be43fe5c93c9e4198067a7fa4affa8
+      internalID: 6839960018944070908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11
+      rect:
+        serializedVersion: 2
+        x: 1749
+        y: 937
+        width: 48
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 033f0587d430c8a4fa94a7bc8fc2e603
+      internalID: 6346318911325233748
       vertices: []
       indices: 
       edges: []

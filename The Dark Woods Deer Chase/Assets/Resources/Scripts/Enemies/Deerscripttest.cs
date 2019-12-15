@@ -162,10 +162,10 @@ public class Deerscripttest : MonoBehaviour
                 //GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerLogic>().Die();
                 win_lose_canvas.GetComponent<WinLoseScreen>().ActivateDefeatScreen();
             }
-            if(this.transform.position.x < player_position.x)
-            {
-                win_lose_canvas.GetComponent<WinLoseScreen>().ActivateVictoryScreen();
-            }
+            //if(this.transform.position.x < player_position.x)
+            //{
+            //    win_lose_canvas.GetComponent<WinLoseScreen>().ActivateVictoryScreen();
+            //}
             yield return new WaitForSeconds(2.0f);
         }
     }

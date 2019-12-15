@@ -10,6 +10,7 @@ public class FadeScript : MonoBehaviour
     public Text title;
     public Text retry;
     public Text main_menu;
+    public Image[] additionalImages;
 
     private float timeToFade = 1.0f;
 
@@ -21,5 +22,9 @@ public class FadeScript : MonoBehaviour
         title.DOFade(1, 1);
         retry.DOFade(1, 1);
         main_menu.DOFade(1, 1);
+        foreach(Image i in this.additionalImages)
+        {
+            i.DOFade(1, 1);
+        }
     }
 }

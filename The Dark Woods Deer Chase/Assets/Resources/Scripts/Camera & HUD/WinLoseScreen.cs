@@ -8,16 +8,19 @@ using System;
 
 public class WinLoseScreen : MonoBehaviour
 {
+    public Level level;
+    public Sprite[] scaleNumbers;
     public GameObject edge;
     public GameObject win_screen;
+    public GameObject scaleScore;
     public GameObject lose_screen;
     public GameObject death_screen;
     public int next_level_index;
+    public string next_level_name;
 
     private GameObject ui;
     private GameObject player;
     private GameObject deer;
-    private double final_score;
     // Start is called before the first frame update
     private void Start()
     {
@@ -34,6 +37,12 @@ public class WinLoseScreen : MonoBehaviour
     public void Retry()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    public void NextLevel()
+    {
+        GameManager.game_manager.save = SaveSystem.LoadProgress();
+        GameManager.game_manager.ResetLevelCollectables(this.next_level_name);
+        SceneManager.LoadScene(this.next_level_name);
     }
     public void ActivateVictoryScreen()
     {
@@ -61,6 +70,23 @@ public class WinLoseScreen : MonoBehaviour
             SaveSystem.SaveProgress(new_save);
         }
         ui.SetActive(false);
+        switch (level)
+        {
+            case Level.Tutorial:
+                this.scaleScore.GetComponent<Image>().sprite = this.scaleNumbers[GameManager.game_manager.tutorial_scales];
+                break;
+            case Level.Level1:
+                this.scaleScore.GetComponent<Image>().sprite = this.scaleNumbers[GameManager.game_manager.level1_scales];
+                break;
+            case Level.Level2:
+                this.scaleScore.GetComponent<Image>().sprite = this.scaleNumbers[GameManager.game_manager.level2_scales];
+                break;
+            case Level.Level3:
+                this.scaleScore.GetComponent<Image>().sprite = this.scaleNumbers[GameManager.game_manager.level3_scales];
+                break;
+            default:
+                break;
+        }
         edge.SetActive(true);
         win_screen.SetActive(true);
     }
