@@ -8,6 +8,7 @@ using System;
 
 public class WinLoseScreen : MonoBehaviour
 {
+    public GameObject edge;
     public GameObject win_screen;
     public GameObject lose_screen;
     public GameObject death_screen;
@@ -15,13 +16,14 @@ public class WinLoseScreen : MonoBehaviour
 
     private GameObject ui;
     private GameObject player;
-    private GameObject score_text;
+    private GameObject deer;
     private double final_score;
     // Start is called before the first frame update
     private void Start()
     {
         ui = GameObject.FindGameObjectWithTag("UI");
         player = GameObject.FindGameObjectWithTag("Player");
+        deer = GameObject.FindGameObjectWithTag("deer");
     }
     public void ReturnToMenu()
     {
@@ -35,6 +37,8 @@ public class WinLoseScreen : MonoBehaviour
     }
     public void ActivateVictoryScreen()
     {
+        player.GetComponent<PlayerLogic>().player_speed = 0;
+        deer.GetComponent<Deerscripttest>().player_speed = 0;
         //player is replaying a level
         if (this.next_level_index <= GameManager.game_manager.save.level_index)
         {
@@ -57,27 +61,25 @@ public class WinLoseScreen : MonoBehaviour
             SaveSystem.SaveProgress(new_save);
         }
         ui.SetActive(false);
-
+        edge.SetActive(true);
         win_screen.SetActive(true);
-        
-        Time.timeScale = 0;
-        score_text = GameObject.FindGameObjectWithTag("FinalScore");
-        //final_score = 3000 - Math.Floor(ui.GetComponentInChildren<TimeScoreDisplay>().time_counter) + player.GetComponent<PlayerLogic>().gold_score;
-        //score_text.GetComponent<Text>().text = "Final score: " + final_score;
     }
     public void ActivateDefeatScreen()
     {
+        player.GetComponent<PlayerLogic>().player_speed = 0;
+        deer.GetComponent<Deerscripttest>().player_speed = 0;
         GameManager.game_manager.ResetLevelCollectables(SceneManager.GetActiveScene().name);
         ui.SetActive(false);
-        lose_screen.GetComponentInChildren<Image>().DOFade(0, 1);
+        edge.SetActive(true);
         lose_screen.SetActive(true);
-        Time.timeScale = 0;
     }
     public void ActivateDeathScreen()
     {
+        player.GetComponent<PlayerLogic>().player_speed = 0;
+        deer.GetComponent<Deerscripttest>().player_speed = 0;
         GameManager.game_manager.ResetLevelCollectables(SceneManager.GetActiveScene().name);
         ui.SetActive(false);
-        death_screen.SetActive(true);
-       // Time.timeScale = 0;       
+        edge.SetActive(true);
+        death_screen.SetActive(true);    
     }
 }
