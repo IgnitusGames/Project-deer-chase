@@ -2430,6 +2430,40 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1682446268, guid: 943f7949e24d7b24c940b5344410a220, type: 3}
+      propertyPath: possibleScores.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1682446268, guid: 943f7949e24d7b24c940b5344410a220, type: 3}
+      propertyPath: possibleScores.Array.data[2]
+      value: 
+      objectReference: {fileID: 8914089594741642868, guid: acb6d02add93d4c499766597679f44cf,
+        type: 3}
+    - target: {fileID: 1682446268, guid: 943f7949e24d7b24c940b5344410a220, type: 3}
+      propertyPath: possibleScores.Array.data[3]
+      value: 
+      objectReference: {fileID: 735763825654373507, guid: acb6d02add93d4c499766597679f44cf,
+        type: 3}
+    - target: {fileID: 1682446268, guid: 943f7949e24d7b24c940b5344410a220, type: 3}
+      propertyPath: possibleScores.Array.data[4]
+      value: 
+      objectReference: {fileID: 1744244361374601134, guid: acb6d02add93d4c499766597679f44cf,
+        type: 3}
+    - target: {fileID: 1682446268, guid: 943f7949e24d7b24c940b5344410a220, type: 3}
+      propertyPath: possibleScores.Array.data[5]
+      value: 
+      objectReference: {fileID: 4904758942712418305, guid: acb6d02add93d4c499766597679f44cf,
+        type: 3}
+    - target: {fileID: 1682446268, guid: 943f7949e24d7b24c940b5344410a220, type: 3}
+      propertyPath: possibleScores.Array.data[0]
+      value: 
+      objectReference: {fileID: 3823623766657365831, guid: acb6d02add93d4c499766597679f44cf,
+        type: 3}
+    - target: {fileID: 1682446268, guid: 943f7949e24d7b24c940b5344410a220, type: 3}
+      propertyPath: possibleScores.Array.data[1]
+      value: 
+      objectReference: {fileID: -3165705482850905674, guid: acb6d02add93d4c499766597679f44cf,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 943f7949e24d7b24c940b5344410a220, type: 3}
 --- !u!1 &546872476 stripped
