@@ -12,6 +12,8 @@ public enum Level
 }
 public class GameManager : MonoBehaviour
 {
+    public AudioSource ploink;
+    public AudioSource powerPloink;
     public static GameManager game_manager { get; private set; }
     public int cheat_mode_click_counter = 4;
     public bool cheat_mode_is_enabled = false;
@@ -63,6 +65,15 @@ public class GameManager : MonoBehaviour
             default:
                 break;
         }
+        int scale_amount = game_manager.GetCollectableAmount(SceneManager.GetActiveScene().name);
+        if (scale_amount > 3)
+        {
+            powerPloink.Play();
+        }
+        else
+        {
+            ploink.Play();
+        }
     }
     public void ResetLevelCollectables(string current_scene)
     {
@@ -82,6 +93,22 @@ public class GameManager : MonoBehaviour
                 break;
             default:
                 break;
+        }
+    }
+    public int GetCollectableAmount(string current_scene)
+    { 
+        switch(current_scene)
+        {
+            case "Tutorial Level":
+                return this.tutorial_scales;
+            case "Level 1":
+                return this.level1_scales;
+            case "Level 2":
+                return this.level2_scales;
+            case "Level 3":
+                return this.level3_scales;
+            default:
+                return 0;
         }
     }
 }
