@@ -25,9 +25,10 @@ public class FireBallLogic : MonoBehaviour
         {
             collision.GetComponent<HealthComponent>().TakeDamage(Damage);
         }
-        foreach(string tag in destroy_on_collide)
+  
+        foreach (string tag in destroy_on_collide)
         {
-            if(collision.gameObject.tag == tag)
+            if(collision.gameObject.tag == tag || collision.gameObject.tag == "Vines")
             {
                 Destroy(this.gameObject);
             }

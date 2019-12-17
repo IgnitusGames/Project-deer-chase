@@ -81,9 +81,9 @@ public class PlayerLogic : MonoBehaviour
         if ((collision.gameObject.tag == "Ground" || collision.gameObject.tag == "movplat"))
         {
             is_grounded = true;
-            
+            animator.SetBool("is_grounded", true);
             amount_of_jumps = 2;
-          
+           
             animator.SetBool("is_gliding", false);
             animator.SetBool("is_jumping", false);
             animator.SetBool("is_double_jumping", false);
@@ -91,6 +91,7 @@ public class PlayerLogic : MonoBehaviour
         if (collision.gameObject.tag == "movplat")
         {
             player_speed = 0;
+            animator.SetBool("is_grounded", true);
             is_grounded = true;
             this.transform.parent = collision.transform;
 
@@ -107,6 +108,7 @@ public class PlayerLogic : MonoBehaviour
         //Check if player is no longer on the ground
         if (col.gameObject.tag == "Ground" || col.gameObject.tag == "movplat" )
         {
+            animator.SetBool("is_grounded", false);
             animator.SetBool("is_jumping", true);
             is_grounded = false;
             if (isSpeeding == false)
@@ -127,6 +129,7 @@ public class PlayerLogic : MonoBehaviour
             gliding = true;
             rb2d.gravityScale = 0.5f;
             animator.SetBool("is_gliding", true);
+            animator.SetBool("is_grounded", false);
         }
     }
     public void StopGlide()
@@ -183,6 +186,7 @@ public class PlayerLogic : MonoBehaviour
         //animator.SetFloat("Speed", Mathf.Abs(player_speed));
         //Automatically move the player forwards
         animator.SetFloat("Speed", Mathf.Abs(player_speed));
+        
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(player_speed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
         if(Input.GetButtonDown("Jump"))
         {

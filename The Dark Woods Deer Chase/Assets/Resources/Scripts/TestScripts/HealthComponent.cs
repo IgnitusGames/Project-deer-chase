@@ -79,16 +79,24 @@ public sealed class HealthComponent : MonoBehaviour
         if(damage > 0)
         {
             take_damage = true;
-
-           
         }
        
         // Has the player just died?
         if (enemy_curr_health <= 0)
         {
             this.OnDiedEvent();
-            Destroy(gameObject);
+            StartCoroutine(WaitForAnimation());
+            print("stevrz");
+            //Destroy(gameObject);
         }
-   
+     
+      
+
+    }
+    public IEnumerator WaitForAnimation()
+    {
+
+        yield return new WaitForSeconds(3.0f);
+
     }
 }
