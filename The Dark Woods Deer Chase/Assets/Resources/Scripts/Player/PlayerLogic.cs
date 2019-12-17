@@ -218,6 +218,10 @@ public class PlayerLogic : MonoBehaviour
         {
             StartCoroutine(SlowDown(1.5f));
         }
+        if (collision.gameObject.tag == "Vines")
+        {
+            StartCoroutine(SlowDown(1.5f));
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
