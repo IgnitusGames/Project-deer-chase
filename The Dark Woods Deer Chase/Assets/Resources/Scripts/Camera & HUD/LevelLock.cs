@@ -41,13 +41,13 @@ public class LevelLock : MonoBehaviour
             switch(level)
             {
                 case Level.Level1:
-                    this.scaleScore.GetComponent<Image>().sprite = this.numbers[GameManager.game_manager.level1_scales];
+                    this.scaleScore.GetComponent<Image>().sprite = this.numbers[GameManager.game_manager.save.level1_scales];
                     break;
                 case Level.Level2:
-                    this.scaleScore.GetComponent<Image>().sprite = this.numbers[GameManager.game_manager.level2_scales];
+                    this.scaleScore.GetComponent<Image>().sprite = this.numbers[GameManager.game_manager.save.level2_scales];
                     break;
                 case Level.Level3:
-                    this.scaleScore.GetComponent<Image>().sprite = this.numbers[GameManager.game_manager.level3_scales];
+                    this.scaleScore.GetComponent<Image>().sprite = this.numbers[GameManager.game_manager.save.level3_scales];
                     break;
                 default:
                     break;
@@ -72,13 +72,13 @@ public class LevelLock : MonoBehaviour
             switch (level)
             {
                 case Level.Level1:
-                    this.scaleScore.GetComponent<Image>().sprite = this.numbers[GameManager.game_manager.level1_scales];
+                    this.scaleScore.GetComponent<Image>().sprite = this.numbers[GameManager.game_manager.save.level1_scales];
                     break;
                 case Level.Level2:
-                    this.scaleScore.GetComponent<Image>().sprite = this.numbers[GameManager.game_manager.level2_scales];
+                    this.scaleScore.GetComponent<Image>().sprite = this.numbers[GameManager.game_manager.save.level2_scales];
                     break;
                 case Level.Level3:
-                    this.scaleScore.GetComponent<Image>().sprite = this.numbers[GameManager.game_manager.level3_scales];
+                    this.scaleScore.GetComponent<Image>().sprite = this.numbers[GameManager.game_manager.save.level3_scales];
                     break;
                 default:
                     break;
