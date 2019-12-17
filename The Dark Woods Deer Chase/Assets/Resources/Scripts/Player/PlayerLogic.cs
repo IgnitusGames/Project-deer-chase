@@ -394,6 +394,7 @@ public class PlayerLogic : MonoBehaviour
             player_speed = 5;
             print("geslowd");
             yield return new WaitForSeconds(duration);
+            print("resetting");
             player_speed = current_player_speed;
         }
     }

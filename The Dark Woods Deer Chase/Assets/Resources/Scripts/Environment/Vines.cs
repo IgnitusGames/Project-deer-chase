@@ -28,7 +28,7 @@ public class Vines : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
            
-            StartCoroutine(player_logic.SlowDown(2.5f));
+            StartCoroutine(player_logic.SlowDown(0.5f));
         }
     }
 
