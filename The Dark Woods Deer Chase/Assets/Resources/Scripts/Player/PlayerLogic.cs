@@ -81,7 +81,9 @@ public class PlayerLogic : MonoBehaviour
         if ((collision.gameObject.tag == "Ground" || collision.gameObject.tag == "movplat"))
         {
             is_grounded = true;
+            
             amount_of_jumps = 2;
+          
             animator.SetBool("is_gliding", false);
             animator.SetBool("is_jumping", false);
             animator.SetBool("is_double_jumping", false);
@@ -141,12 +143,11 @@ public class PlayerLogic : MonoBehaviour
     {
         if(amount_of_jumps > 1)
         {
-            animator.SetBool("is_gliding", false);
-            animator.SetBool("is_jumping", true);
-            animator.SetBool("is_double_jumping", false);
+            
         }
         if (amount_of_jumps == 1)
         {
+            animator.SetBool("is_grounded", false);
             animator.SetBool("is_gliding", false);
             animator.SetBool("is_jumping", false);
             animator.SetBool("is_double_jumping", true);
@@ -154,6 +155,7 @@ public class PlayerLogic : MonoBehaviour
         }
         if (amount_of_jumps < 1)
         {
+            animator.SetBool("is_grounded", false);
             animator.SetBool("is_jumping", true);
             animator.SetBool("is_double_jumping", false);
         }
@@ -185,6 +187,10 @@ public class PlayerLogic : MonoBehaviour
         if(Input.GetButtonDown("Jump"))
         {
             Jump();
+            animator.SetBool("is_grounded", false);
+            animator.SetBool("is_gliding", false);
+            animator.SetBool("is_jumping", true);
+            
         }
         if(Input.GetKeyDown(KeyCode.LeftShift))
         {
@@ -395,6 +401,8 @@ public class PlayerLogic : MonoBehaviour
             player_speed = speedupSpeed;
             print("SpeedUp");
             isSpeeding = true;
+            boost_sparkles.Play();
+            FindObjectOfType<AudioManager>().Play("600gold");
             yield return new WaitForSeconds(duration);
             isSpeeding = false;
             player_speed = current_player_speed;

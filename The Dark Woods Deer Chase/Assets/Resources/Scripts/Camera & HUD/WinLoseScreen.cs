@@ -6,9 +6,12 @@ using UnityEngine.UI;
 using DG.Tweening;
 using System;
 
+
+
 public class WinLoseScreen : MonoBehaviour
 {
     public Level level;
+    
     public Sprite[] scaleNumbers;
     public GameObject edge;
     public GameObject win_screen;
@@ -17,7 +20,7 @@ public class WinLoseScreen : MonoBehaviour
     public GameObject death_screen;
     public int next_level_index;
     public string next_level_name;
-
+    public GameObject winAnimatie;
     private GameObject ui;
     private GameObject player;
     private GameObject deer;
@@ -27,6 +30,7 @@ public class WinLoseScreen : MonoBehaviour
         ui = GameObject.FindGameObjectWithTag("UI");
         player = GameObject.FindGameObjectWithTag("Player");
         deer = GameObject.FindGameObjectWithTag("deer");
+        winAnimatie.SetActive(false);
     }
     public void ReturnToMenu()
     {
@@ -88,7 +92,10 @@ public class WinLoseScreen : MonoBehaviour
                 break;
         }
         edge.SetActive(true);
-        win_screen.SetActive(true);
+
+        StartCoroutine(WinsScreenAnimation());
+
+       
     }
     public void ActivateDefeatScreen()
     {
@@ -107,5 +114,13 @@ public class WinLoseScreen : MonoBehaviour
         ui.SetActive(false);
         edge.SetActive(true);
         death_screen.SetActive(true);    
+    }
+    public IEnumerator WinsScreenAnimation()
+    {
+        winAnimatie.SetActive(true);
+        edge.SetActive(false);
+        yield return new WaitForSeconds(3.0f);
+        edge.SetActive(true);
+        win_screen.SetActive(true);
     }
 }
