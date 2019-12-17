@@ -50,8 +50,8 @@ public static class SaveSystem
     public static void CreateCheatSave()
     {
         string save_path = Application.persistentDataPath + "/the_dark_woods_redo.save";
-        Debug.Log("Creating empty save file");
-        SaveData dummy_save = new SaveData(5, 1, 5, 5, 5, false);
+        Debug.Log("Creating cheat save file");
+        SaveData dummy_save = new SaveData(5, 1, 5, 5, 0, false);
         BinaryFormatter formatter = new BinaryFormatter();
         FileStream file_stream = new FileStream(save_path, FileMode.Create);
         formatter.Serialize(file_stream, dummy_save);

@@ -216,12 +216,13 @@ public class PlayerLogic : MonoBehaviour
     {
         if (collision.gameObject.tag == "Slow" && !GameManager.game_manager.cheat_mode_is_enabled)
         {
-            player_speed = 5;
+            StartCoroutine(SlowDown(1.5f));
         }
-        
-
+        if (collision.gameObject.tag == "Vines")
+        {
+            StartCoroutine(SlowDown(1.5f));
+        }
     }
-
     private void OnTriggerExit2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Slow")
@@ -425,9 +426,4 @@ public class PlayerLogic : MonoBehaviour
             yield return new WaitForSeconds(1.0f);
         }
     }
-    //private IEnumerator FireCooldown()
-    //{
-    //    yield return new WaitForSeconds(0.5f);
-    //    can_fire = true;
-    //}
 }

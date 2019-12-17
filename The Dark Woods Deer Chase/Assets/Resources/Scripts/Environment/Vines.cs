@@ -19,24 +19,16 @@ public class Vines : MonoBehaviour
    
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        print("asdnasjdaskdasndja");
         gameObject.GetComponent<Animation>().Play("ShroomDmg");
         FindObjectOfType<AudioManager>().Play("VineDmg");
         StartCoroutine(WaitForAnimation());
-
+        this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
         fire.Play();
-        if (collision.gameObject.tag == "Player")
-        {
-           
-            StartCoroutine(player_logic.SlowDown(0.5f));
-        }
     }
 
     public IEnumerator WaitForAnimation()
-    {
-        
+    {      
         yield return new WaitForSeconds(1.0f);
         Destroy(this.gameObject);
-
     }
 }
