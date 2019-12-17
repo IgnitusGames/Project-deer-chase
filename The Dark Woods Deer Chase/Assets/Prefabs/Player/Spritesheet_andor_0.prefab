@@ -154,7 +154,7 @@ MonoBehaviour:
     type: 3}
   animator: {fileID: 92666911}
   player_speed: 15
-  current_player_speed: 0
+  current_player_speed: 15
   fire_ball_speed: 35
   jump_power: 1400
   player_mana: 0
@@ -164,7 +164,7 @@ MonoBehaviour:
   gliding: 0
   force: 100
   amount_of_jumps: 2
-  windspeed: 12
+  windspeed: 20
   slow_speed: 5
   gold_speed_mod: 0
 --- !u!95 &92666911
