@@ -609,6 +609,8 @@ MonoBehaviour:
   death_screen: {fileID: 775478481485754881}
   next_level_index: 3
   next_level_name: level 2
+  winAnimatie: {fileID: 0}
+  nextLevelButton: {fileID: 775478480494738806}
 --- !u!1 &775478479946450761
 GameObject:
   m_ObjectHideFlags: 0

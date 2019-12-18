@@ -21,6 +21,7 @@ public class WinLoseScreen : MonoBehaviour
     public int next_level_index;
     public string next_level_name;
     public GameObject winAnimatie;
+    public GameObject nextLevelButton;
     private GameObject ui;
     private GameObject player;
     private GameObject deer;
@@ -91,11 +92,15 @@ public class WinLoseScreen : MonoBehaviour
             default:
                 break;
         }
+        if(next_level_name == "Level 3")
+        {
+            if (GameManager.game_manager.save.tutorial_scales != 1 || GameManager.game_manager.save.level1_scales != 5 || GameManager.game_manager.save.level2_scales != 5)
+            {
+                nextLevelButton.GetComponent<Button>().interactable = false;
+            }
+        }
         edge.SetActive(true);
-
         StartCoroutine(WinsScreenAnimation());
-
-       
     }
     public void ActivateDefeatScreen()
     {
