@@ -111,26 +111,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4566217752325501251, guid: 1e17b771cf6e3264a938c69c1e10fa24,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 4.007
-      objectReference: {fileID: 0}
-    - target: {fileID: 4566217752325501251, guid: 1e17b771cf6e3264a938c69c1e10fa24,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 4.007
-      objectReference: {fileID: 0}
-    - target: {fileID: 1426013409945423854, guid: 1e17b771cf6e3264a938c69c1e10fa24,
-        type: 3}
-      propertyPath: m_Animations.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1426013409945423854, guid: 1e17b771cf6e3264a938c69c1e10fa24,
-        type: 3}
-      propertyPath: m_Animations.Array.data[1]
-      value: 
-      objectReference: {fileID: 7400000, guid: a0866c640eaefd34a8e83148787866ea, type: 2}
     - target: {fileID: 1426013409945423854, guid: 1e17b771cf6e3264a938c69c1e10fa24,
         type: 3}
       propertyPath: m_Animation
@@ -141,7 +121,8 @@ PrefabInstance:
       propertyPath: m_Animations.Array.data[0]
       value: 
       objectReference: {fileID: 7400000, guid: a0866c640eaefd34a8e83148787866ea, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1426013409945423848, guid: 1e17b771cf6e3264a938c69c1e10fa24, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1e17b771cf6e3264a938c69c1e10fa24, type: 3}
 --- !u!1 &5073198857528703368 stripped
 GameObject:
