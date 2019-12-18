@@ -26,7 +26,7 @@ public class LevelLock : MonoBehaviour
         }
         else if(isFinalLevel)
         {
-            if (GameManager.game_manager.save.tutorial_scales != 1 && GameManager.game_manager.save.level1_scales != 5 && GameManager.game_manager.save.level2_scales != 5 && GameManager.game_manager.save.level_index < this.required_level_index)
+            if (GameManager.game_manager.save.tutorial_scales != 1 || GameManager.game_manager.save.level1_scales != 5 || GameManager.game_manager.save.level2_scales != 5 || GameManager.game_manager.save.level_index < this.required_level_index)
             {
                 this.gameObject.GetComponent<Button>().interactable = false;
                 this.lockImage.SetActive(true);
