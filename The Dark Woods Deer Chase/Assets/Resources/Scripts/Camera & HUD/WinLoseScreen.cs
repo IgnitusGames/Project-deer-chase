@@ -101,6 +101,7 @@ public class WinLoseScreen : MonoBehaviour
         if(SceneManager.GetActiveScene().name == "Level 3")
         {
             winTitle.text = "You retrieved the final crystal!";
+            nextLevelButton.GetComponent<Button>().interactable = false;
         }
         edge.SetActive(true);
         StartCoroutine(WinsScreenAnimation());
