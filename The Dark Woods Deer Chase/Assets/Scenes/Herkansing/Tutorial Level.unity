@@ -2991,7 +2991,7 @@ PrefabInstance:
     - target: {fileID: 5486568780558042825, guid: d287a2b99c478d24c88ab791114e76b4,
         type: 3}
       propertyPath: current_tutorial.sentences.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5486568780558042825, guid: d287a2b99c478d24c88ab791114e76b4,
         type: 3}
@@ -3001,12 +3001,12 @@ PrefabInstance:
     - target: {fileID: 5486568780558042825, guid: d287a2b99c478d24c88ab791114e76b4,
         type: 3}
       propertyPath: current_tutorial.sentences.Array.data[1]
-      value: Collect them all to unlock the final level!
+      value: You gain a small speed boost when you pick up a scale
       objectReference: {fileID: 0}
     - target: {fileID: 5486568780558042825, guid: d287a2b99c478d24c88ab791114e76b4,
         type: 3}
       propertyPath: current_tutorial.sentences.Array.data[2]
-      value: Fireballs can be used to destroy or interact with objects in the environment
+      value: Collect all scales in each level to unlock the final level
       objectReference: {fileID: 0}
     - target: {fileID: 5486568780558042825, guid: d287a2b99c478d24c88ab791114e76b4,
         type: 3}
