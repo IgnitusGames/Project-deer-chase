@@ -6,8 +6,6 @@ using UnityEngine.UI;
 using DG.Tweening;
 using System;
 
-
-
 public class WinLoseScreen : MonoBehaviour
 {
     public Level level;
