@@ -20,6 +20,7 @@ public class WinLoseScreen : MonoBehaviour
     public string next_level_name;
     public GameObject winAnimatie;
     public GameObject nextLevelButton;
+    public Text winTitle;
     private GameObject ui;
     private GameObject player;
     private GameObject deer;
@@ -96,6 +97,10 @@ public class WinLoseScreen : MonoBehaviour
             {
                 nextLevelButton.GetComponent<Button>().interactable = false;
             }
+        }
+        if(SceneManager.GetActiveScene().name == "Level 3")
+        {
+            winTitle.text = "You retrieved the final crystal!";
         }
         edge.SetActive(true);
         StartCoroutine(WinsScreenAnimation());
