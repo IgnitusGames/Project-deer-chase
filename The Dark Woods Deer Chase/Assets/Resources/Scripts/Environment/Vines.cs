@@ -20,6 +20,7 @@ public class Vines : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         gameObject.GetComponent<Animation>().Play("ShroomDmg");
+        //gameObject.GetComponent<Animation>().Play("VineDie");
         FindObjectOfType<AudioManager>().Play("VineDmg");
         StartCoroutine(WaitForAnimation());
         this.gameObject.GetComponent<BoxCollider2D>().enabled = false;

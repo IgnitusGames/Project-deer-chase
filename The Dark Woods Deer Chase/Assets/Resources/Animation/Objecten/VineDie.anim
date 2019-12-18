@@ -6,9 +6,9 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ShroomDmg
+  m_Name: VineDie
   serializedVersion: 6
-  m_Legacy: 1
+  m_Legacy: 0
   m_Compressed: 0
   m_UseHighQualityCurve: 1
   m_RotationCurves: []
@@ -17,27 +17,7 @@ AnimationClip:
   m_PositionCurves: []
   m_ScaleCurves: []
   m_FloatCurves: []
-  m_PPtrCurves:
-  - curve:
-    - time: 0
-      value: {fileID: 9033925154482818827, guid: ee37b2cd720bfa94ca1701ac9419e3c4,
-        type: 3}
-    - time: 0.25
-      value: {fileID: -6213817031909320412, guid: ee37b2cd720bfa94ca1701ac9419e3c4,
-        type: 3}
-    - time: 0.5
-      value: {fileID: 7280138425674593775, guid: ee37b2cd720bfa94ca1701ac9419e3c4,
-        type: 3}
-    - time: 0.75
-      value: {fileID: 5128692484601512901, guid: ee37b2cd720bfa94ca1701ac9419e3c4,
-        type: 3}
-    - time: 1
-      value: {fileID: 2626595464096830341, guid: ee37b2cd720bfa94ca1701ac9419e3c4,
-        type: 3}
-    attribute: m_Sprite
-    path: 
-    classID: 212
-    script: {fileID: 0}
+  m_PPtrCurves: []
   m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
@@ -51,7 +31,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.0166667
+    m_StopTime: 1
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
