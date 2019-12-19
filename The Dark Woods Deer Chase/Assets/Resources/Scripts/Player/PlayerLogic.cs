@@ -241,7 +241,14 @@ public class PlayerLogic : MonoBehaviour
             Vector2 target = new Vector2();
             if(Input.touchCount > 0)
             {
-                target = Input.GetTouch(0).position;
+                if(!gliding)
+                {
+                    target = Input.GetTouch(0).position;
+                }
+                else
+                {
+                    target = Input.GetTouch(1).position;
+                }
             }
             else
             {
