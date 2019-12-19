@@ -449,11 +449,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8573146708307261312, guid: a672973b69d1db84989f312f0e3fda77,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a672973b69d1db84989f312f0e3fda77, type: 3}
 --- !u!114 &67248930 stripped
@@ -5765,38 +5760,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 775478479862664514, guid: a8616276dc98bd14ebda7be37051c2fa,
         type: 3}
-      propertyPath: level
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 775478479862664514, guid: a8616276dc98bd14ebda7be37051c2fa,
-        type: 3}
-      propertyPath: next_level_name
-      value: Level 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 775478479862664514, guid: a8616276dc98bd14ebda7be37051c2fa,
-        type: 3}
       propertyPath: winAnimatie
       value: 
       objectReference: {fileID: 293702917}
-    - target: {fileID: 775478479862664514, guid: a8616276dc98bd14ebda7be37051c2fa,
-        type: 3}
-      propertyPath: winTitle
-      value: 
-      objectReference: {fileID: 1293140332}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8616276dc98bd14ebda7be37051c2fa, type: 3}
---- !u!114 &1293140332 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 775478479610978632, guid: a8616276dc98bd14ebda7be37051c2fa,
-    type: 3}
-  m_PrefabInstance: {fileID: 1293140331}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1293579176
 PrefabInstance:
   m_ObjectHideFlags: 0
