@@ -402,17 +402,14 @@ public class PlayerLogic : MonoBehaviour
 
     public IEnumerator SpeedUp(float duration)
     {
-        if (!GameManager.game_manager.cheat_mode_is_enabled)
-        {
-            player_speed = speedupSpeed;
-            print("SpeedUp");
-            isSpeeding = true;
-            boost_sparkles.Play();
-            FindObjectOfType<AudioManager>().Play("600gold");
-            yield return new WaitForSeconds(duration);
-            isSpeeding = false;
-            player_speed = current_player_speed;
-        }
+        player_speed = speedupSpeed;
+        print("SpeedUp");
+        isSpeeding = true;
+        boost_sparkles.Play();
+        FindObjectOfType<AudioManager>().Play("600gold");
+        yield return new WaitForSeconds(duration);
+        isSpeeding = false;
+        player_speed = current_player_speed;
     }
     public IEnumerator DeathCheck()
     {

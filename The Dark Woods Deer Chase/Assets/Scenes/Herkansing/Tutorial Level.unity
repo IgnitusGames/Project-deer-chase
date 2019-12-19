@@ -991,6 +991,11 @@ PrefabInstance:
       propertyPath: jump_button
       value: 
       objectReference: {fileID: 1629418050}
+    - target: {fileID: 2641578757679068315, guid: a2b15b84317f9a54eaa8e95c56dedc18,
+        type: 3}
+      propertyPath: pause_button
+      value: 
+      objectReference: {fileID: 546872477}
     - target: {fileID: 2641578757679068314, guid: a2b15b84317f9a54eaa8e95c56dedc18,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1700,6 +1705,12 @@ PrefabInstance:
 --- !u!1 &546872476 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2015950107, guid: 943f7949e24d7b24c940b5344410a220,
+    type: 3}
+  m_PrefabInstance: {fileID: 546872475}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &546872477 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 969729545175765070, guid: 943f7949e24d7b24c940b5344410a220,
     type: 3}
   m_PrefabInstance: {fileID: 546872475}
   m_PrefabAsset: {fileID: 0}
@@ -3245,6 +3256,11 @@ PrefabInstance:
       propertyPath: winAnimatie
       value: 
       objectReference: {fileID: 1458227393}
+    - target: {fileID: 775478479862664514, guid: a8616276dc98bd14ebda7be37051c2fa,
+        type: 3}
+      propertyPath: winTitle
+      value: 
+      objectReference: {fileID: 1293140332}
     - target: {fileID: 7578201814346851482, guid: a8616276dc98bd14ebda7be37051c2fa,
         type: 3}
       propertyPath: m_IsActive
@@ -3262,6 +3278,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8616276dc98bd14ebda7be37051c2fa, type: 3}
+--- !u!114 &1293140332 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 775478479610978632, guid: a8616276dc98bd14ebda7be37051c2fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 1293140331}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1336179974
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,6 +8,7 @@ public class TutorialManager : MonoBehaviour
     public static bool is_in_tutorial = false;
     public GameObject tutorial_box;
     public GameObject jump_button;
+    public GameObject pause_button;
     public Animator tutorial_animator;
 
     //private Text tutorial_name;
@@ -27,6 +28,7 @@ public class TutorialManager : MonoBehaviour
     {
         is_in_tutorial = true;
         jump_button.SetActive(false);
+        pause_button.SetActive(false);
         tutorial_animator.SetBool("IsOpen", true);
         if(CurrentDialogue.action_image != null)
         {
@@ -74,6 +76,7 @@ public class TutorialManager : MonoBehaviour
         is_in_tutorial = false;
         tutorial_animator.SetBool("IsOpen", false);
         jump_button.SetActive(true);
+        pause_button.SetActive(true);
     }
     IEnumerator TypeSentence(string Sentence)
     {

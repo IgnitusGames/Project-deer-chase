@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
             case "Level 2":
                 this.level2_scales++;
                 break;
-            case "level3":
+            case "Level 3":
                 this.level3_scales++;
                 break;
             default:
@@ -88,7 +88,7 @@ public class GameManager : MonoBehaviour
             case "Level 2":
                 this.level2_scales = 0;
                 break;
-            case "level3":
+            case "Level 3":
                 this.level3_scales = 0;
                 break;
             default:

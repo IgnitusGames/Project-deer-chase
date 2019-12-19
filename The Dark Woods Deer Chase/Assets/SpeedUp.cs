@@ -16,7 +16,6 @@ public class SpeedUp : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-
             StartCoroutine(player_logic.SpeedUp(speedDuration));
         }
     }

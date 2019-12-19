@@ -1685,6 +1685,11 @@ PrefabInstance:
       propertyPath: jump_button
       value: 
       objectReference: {fileID: 1021044629}
+    - target: {fileID: 2641578757679068315, guid: a2b15b84317f9a54eaa8e95c56dedc18,
+        type: 3}
+      propertyPath: pause_button
+      value: 
+      objectReference: {fileID: 1081151603}
     - target: {fileID: 2641578757679068314, guid: a2b15b84317f9a54eaa8e95c56dedc18,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2779,7 +2784,7 @@ PrefabInstance:
     - target: {fileID: 443788137863301861, guid: 3e31d64ad36740543b6a3d053f53769e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 846.3
+      value: 847.2
       objectReference: {fileID: 0}
     - target: {fileID: 443788137863301861, guid: 3e31d64ad36740543b6a3d053f53769e,
         type: 3}
@@ -5828,6 +5833,12 @@ PrefabInstance:
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 943f7949e24d7b24c940b5344410a220, type: 3}
+--- !u!1 &1081151603 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 969729545175765070, guid: 943f7949e24d7b24c940b5344410a220,
+    type: 3}
+  m_PrefabInstance: {fileID: 1081151602}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1089270287
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7032,8 +7043,25 @@ PrefabInstance:
       propertyPath: next_level_index
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 775478479862664514, guid: a8616276dc98bd14ebda7be37051c2fa,
+        type: 3}
+      propertyPath: winTitle
+      value: 
+      objectReference: {fileID: 1293140332}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8616276dc98bd14ebda7be37051c2fa, type: 3}
+--- !u!114 &1293140332 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 775478479610978632, guid: a8616276dc98bd14ebda7be37051c2fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 1293140331}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1297618073
 PrefabInstance:
   m_ObjectHideFlags: 0
