@@ -1566,11 +1566,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CameraCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 3695629362392842634, guid: 943f7949e24d7b24c940b5344410a220,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 690441896755462001, guid: 943f7949e24d7b24c940b5344410a220,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1700,6 +1695,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 82673242}
+    - target: {fileID: 2563072952015286833, guid: 943f7949e24d7b24c940b5344410a220,
+        type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 943f7949e24d7b24c940b5344410a220, type: 3}
 --- !u!1 &546872476 stripped
