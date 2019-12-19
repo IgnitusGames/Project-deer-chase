@@ -3261,6 +3261,11 @@ PrefabInstance:
       propertyPath: winTitle
       value: 
       objectReference: {fileID: 1293140332}
+    - target: {fileID: 775478479862664514, guid: a8616276dc98bd14ebda7be37051c2fa,
+        type: 3}
+      propertyPath: level
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7578201814346851482, guid: a8616276dc98bd14ebda7be37051c2fa,
         type: 3}
       propertyPath: m_IsActive
